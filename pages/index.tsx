@@ -1,7 +1,5 @@
-export default function Home() {
-  return (
-    <div className="w-full">
+import Home from "@/features/home";
 
-    </div>
-  )
+export default function HomePage() {
+  return <Home />
 }

@@ -12,7 +12,7 @@ export const links = [
   {
     _id: 'link-3',
     title: 'Our Service',
-    url: '/our-service',
+    url: '/our-services',
   },
   {
     _id: 'link-4',

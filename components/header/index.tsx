@@ -4,14 +4,14 @@ import Logo from "../logo";
 
 export default function Header() {
   const output = links.map((link) => (
-    <Link href={link.url} className="px-6 hover:underline">
+    <Link key={link._id} href={link.url} className="px-6 hover:underline">
       {link.title}
     </Link>
   ));
 
   return (
-    <div className="bg-white w-full flex items-center justify-center p-3 px-4">
-      <div className="w-full flex items-center justify-between bg-white p-4 px-10 rounded-full shadow-md">
+    <div className="bg-white w-full flex items-center justify-center p-6">
+      <div className="container mx-auto -mb-14 w-full flex items-center justify-between bg-white p-4 px-10 rounded-full shadow-md z-10">
         <Logo size={100} />
         <div className="flex items-center">
           {output}

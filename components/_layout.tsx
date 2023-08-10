@@ -8,9 +8,11 @@ interface LayoutProps {
 
 export default function Layout(props: LayoutProps) {
   return (
-    <div className="w-full border-4 border-red-400">
+    <div className="w-full bg-white">
       <Header />
-      {props.children}
+      <div>
+        {props.children}
+      </div>
       <Footer />
     </div>
   )

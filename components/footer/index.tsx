@@ -5,8 +5,8 @@ import { FiLinkedin, FiInstagram, FiFacebook, FiTwitter } from 'react-icons/fi';
 
 export default function Footer() {
   return (
-    <div className="w-full p-4 bg-white">
-      <div className="w-full rounded-2xl p-10 bg-white flex drop-shadow-md">
+    <div className="w-full py-20 bg-white">
+      <div className="container mx-auto w-full rounded-2xl p-10 bg-white flex drop-shadow-md">
         <div className="w-full md:w-6/12">
           <Logo size={300} />
           <p className="me-44 my-5">
@@ -25,7 +25,7 @@ export default function Footer() {
           <h1 className="font-bold text-4xl">Products</h1>
           <div className="flex flex-col mt-3">
             {products_data.map((link) => (
-              <Link href={link.url} className="w-full mb-2 hover:underline">
+              <Link key={link._id} href={link.url} className="w-full mb-2 hover:underline">
                 {link.title}
               </Link>
             ))}
@@ -36,7 +36,7 @@ export default function Footer() {
           <h1 className="font-bold text-4xl">Company</h1>
           <div className="flex flex-col mt-3">
             {company_links.map((link) => (
-              <Link href={link.url} className="w-full mb-2 hover:underline">
+              <Link key={link._id} href={link.url} className="w-full mb-2 hover:underline">
                 {link.title}
               </Link>
             ))}
