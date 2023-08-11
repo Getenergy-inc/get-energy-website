@@ -2,22 +2,33 @@ import { FaBars } from 'react-icons/fa'
 import { links } from "./data";
 import Link from "next/link";
 import Logo from "../logo";
+import React from 'react';
 
 export default function Header() {
+  const [show, setShow] = React.useState(false);
   const output = links.map((link) => (
-    <Link key={link._id} href={link.url} className="px-6 hover:underline">
+    <Link key={link._id} href={link.url} className="px-6 hover:underline mb-4 md:mb-0">
       {link.title}
     </Link>
   ));
 
   return (
     <div className="bg-white w-full flex items-center justify-center p-6">
-      <div className="container flex lg:hidden items-center justify-between">
-        <Logo size={100} />
+      <div className="container lg:hidden">
+        <div className='w-full flex items-center justify-between'>
+          <Logo size={100} />
 
-        <button type="button">
-          <FaBars size="20px" />
-        </button>
+          <button type="button" onClick={() => setShow(prev => !prev)}>
+            <FaBars size="20px" />
+          </button>
+        </div>
+
+        {
+          show &&
+          <div className="lg:hidden border-b w-full flex flex-col md:flex-row items-center justify-center mt-4">
+            {output}
+          </div>
+        }
       </div>
 
 
