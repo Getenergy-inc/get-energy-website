@@ -1,4 +1,4 @@
-import FAQ from "@/features/faq";
+import FAQS from "@/features/faq";
 export default function FAQsPage() {
-  return <FAQ />
+  return <FAQS />
 }

@@ -13,7 +13,7 @@ export default function TitleHeader(props: TitleHeaderProps) {
   return (
     <div className="w-full relative flex items-center justify-center">
       <Image
-        src={assets.container_img}
+        src={props.type === "1" ? assets.container_img : assets.quick_buy_img_1}
         alt="container-img"
         className="w-full"
       />

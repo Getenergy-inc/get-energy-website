@@ -4,6 +4,9 @@ import faq from '@/assets/faq.svg';
 import download from '@/assets/download.svg';
 import container_img from '@/assets/container-img-1.png';
 
+// QUICK BUY
+import quick_buy_img_1 from '@/assets/quick-buy/quick-buy-img-1.png';
+
 // LANDING
 import frame_1 from '@/assets/landing-assets/frame-1.svg';
 import frame_2 from '@/assets/landing-assets/frame-2.svg';
@@ -39,6 +42,11 @@ import brand4 from '@/assets/brands/brand-4.png';
 import brand5 from '@/assets/brands/brand-5.png';
 import brand6 from '@/assets/brands/brand-6.png';
 
+// CONTACT US
+import contact_img_1 from '@/assets/contact-us/img-1.png';
+import contact_icon_1 from '@/assets/contact-us/icon-1.svg';
+import contact_icon_2 from '@/assets/contact-us/icon-2.svg';
+import contact_icon_3 from '@/assets/contact-us/icon-3.svg';
 
 export {
   //GENERAL
@@ -81,5 +89,12 @@ export {
   brand5,
   brand6,
 
-  container_img
+  container_img,
+  contact_img_1,
+  contact_icon_1,
+  contact_icon_2,
+  contact_icon_3,
+
+  // QUICK BUY
+  quick_buy_img_1
 }

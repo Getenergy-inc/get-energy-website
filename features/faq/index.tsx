@@ -1,8 +1,9 @@
 import Info from "@/components/info";
 import TitleHeader from "@/components/title-header";
 import { faq_data } from "./data";
+import FAQ from './faq';
 
-export default function FAQ() {
+export default function FAQS() {
   const body = `
     Have questions? We've got answers. 
     Welcome to the Get Energy FAQ section, 
@@ -23,10 +24,12 @@ export default function FAQ() {
         title="FAQ"
       />
       <Info body={body} />
-      <div className="w-full mt-10 bg-zinc-100 rounded p-10 grid grid-cols-2 gap-4">
-        {faq_data.map((item) => (
-          <FAQ key={item._id} {...item} />
-        ))}
+      <div className="w-full flex justify-center my-20">
+        <div className="container mt-10 bg-zinc-100 rounded p-10 grid grid-cols-2 gap-4">
+          {faq_data.map((item) => (
+            <FAQ key={item._id} {...item} />
+          ))}
+        </div>
       </div>
     </div>
   )

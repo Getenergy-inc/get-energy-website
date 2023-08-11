@@ -16,7 +16,7 @@ export default function Header() {
         <div className="flex items-center">
           {output}
         </div>
-        <Link className="sub-button p-2 px-6 rounded-full" href="/">
+        <Link className="sub-button p-2 px-6 rounded-full" href="/quick-buy">
           Get Started
         </Link>
       </div>
