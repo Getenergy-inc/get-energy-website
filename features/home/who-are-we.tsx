@@ -1,23 +1,23 @@
+import { FaArrowRight } from 'react-icons/fa';
 import Logo from "@/components/logo";
 import Link from "next/link";
-import { FaArrowRight } from 'react-icons/fa';
 
 export default function WhoAreWe() {
   return (
-    <div className="w-full rounded-xl p-20 shadow-md">
-      <div className="w-full">
-        <div className="w-full flex justify-center">
-          <h1 className="text-6xl font-bold main-text border-b-8 border-sky-900">Who we are</h1>
+    <div className="w-full rounded-xl p-4 lg:p-20 shadow-md mb-10 lg:mb-0">
+      <div className="w-full p-4 md:p-10 lg:p-0">
+        <div className="w-full flex justify-center mb-10">
+          <h1 className="text-5xl lg:text-6xl text-center font-bold main-text border-b-8 border-sky-900">Who we are</h1>
         </div>
 
-        <div className="w-full flex items-center">
-          <div className="w-1/3">
+        <div className="w-full flex flex-col lg:flex-row items-center">
+          <div className="w-full lg:w-1/3">
             <div className="w-full py-32 rounded-2xl flex items-center justify-center shadow-xl">
               <Logo size={300} classnames="shadow-md p-4 px-6 rounded-xl" />
             </div>
           </div>
 
-          <div className="w-2/3 p-28 text-gray-600">
+          <div className="mt-10 lg:mt-0 w-full lg:w-2/3 p-4 lg:p-28 text-gray-600">
             <p className="w-full text-justify leading-[30px]">
               At Get Energy Trading Services,
               we are driven by a passion for innovation

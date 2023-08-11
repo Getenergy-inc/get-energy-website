@@ -25,7 +25,7 @@ export default function FAQS() {
       />
       <Info body={body} />
       <div className="w-full flex justify-center my-20">
-        <div className="container mt-10 bg-zinc-100 rounded p-10 grid grid-cols-2 gap-4">
+        <div className="container mt-10 bg-zinc-100 rounded p-4 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-4">
           {faq_data.map((item) => (
             <FAQ key={item._id} {...item} />
           ))}

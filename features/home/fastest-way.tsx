@@ -4,12 +4,12 @@ import Link from "next/link";
 
 export default function FastestWay() {
   return (
-    <div className="py-20 w-full flex items-center">
+    <div className="hidden lg:flex py-20 w-full items-center">
       <div className="w-7/12">
         <h1 className="text-3xl font-bold pe-96 leading-[40px] mb-20">
           Fastest Way To Buy Airtime Or Data
         </h1>
-        <Link href="/" className="main-button p-3 px-10 rounded-full">
+        <Link href="/quick-buy" className="main-button p-3 px-10 rounded-full">
           Get Recharged
         </Link>
       </div>

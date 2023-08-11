@@ -6,9 +6,9 @@ import Link from "next/link";
 export default function ServiceList() {
   return (
     <div className="w-full flex justify-center my-20">
-      <div className="container px-20 flex flex-wrap p-2 justify-center">
+      <div className="container px-4 lg:px-20 flex flex-wrap p-2 justify-center">
         {service_data.map((item) => (
-          <div className="w-[calc(95%/3)] m-2 bg-zinc-100 rounded-xl p-8 py-12 bg-white" key={item._id}>
+          <div className="w-full md:w-[calc(94%/2)] lg:w-[calc(95%/3)] m-2 bg-zinc-100 rounded-xl p-8 py-12 bg-white" key={item._id}>
             <Image
               alt="our-service-img"
               src={item.icon}

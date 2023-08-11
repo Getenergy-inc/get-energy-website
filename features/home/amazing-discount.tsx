@@ -4,12 +4,12 @@ import Link from "next/link";
 
 export default function AmazingDiscount() {
   return (
-    <div className="w-full flex items-center py-10">
-      <div className="w-1/2">
+    <div className="w-full flex flex-col lg:flex-row items-center py-10">
+      <div className="w-full lg:w-1/2 p-2 lg:p-0 flex justify-center lg:justify-start">
         <Image src={assets.map} alt="map" />
       </div>
 
-      <div className="w-1/2 flex flex-col p-10">
+      <div className="w-full lg:w-1/2 flex flex-col p-4 lg:p-10">
         <p className="font-bold self-start p-2 mb-5 rounded-full px-4 text-sm bg-violet-200 main-text">
           Up To 25% Off
         </p>

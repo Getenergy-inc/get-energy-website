@@ -1,5 +1,6 @@
 import { assets } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 import classNames from "classnames";
 
 interface LogoProps {
@@ -17,12 +18,14 @@ function Logo(props: LogoProps) {
   ]);
 
   return (
-    <Image
-      width={props.size}
-      src={assets.logo}
-      alt="logo"
-      className={image_classname}
-    />
+    <Link href="/">
+      <Image
+        width={props.size}
+        src={assets.logo}
+        alt="logo"
+        className={image_classname}
+      />
+    </Link>
   )
 }
 

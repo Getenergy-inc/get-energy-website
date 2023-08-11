@@ -12,14 +12,14 @@ export default function GlobalBrands() {
   ];
 
   return (
-    <div className="p-5 my-10 py-10 bg-zinc-100 flex items-center">
-      <div className="w-1/2 flex justify-center">
-        <h1 className="border-b-4 border-sky-800 text-4xl font-bold">
+    <div className="p-5 my-10 py-10 bg-zinc-100 flex flex-col lg:flex-row items-center">
+      <div className="w-full lg:w-1/2 flex justify-center">
+        <h1 className="border-b-4 border-sky-800 text-2xl lg:text-4xl font-bold">
           Trusted by <span className="main-text">Global</span> Brands
         </h1>
       </div>
 
-      <div className="w-1/2 grid grid-cols-3 gap-4">
+      <div className="mt-5 lt:mt-0 w-full lg:w-1/2 grid grid-cols-2 md:grid-cols-3 gap-4 place-items-center">
         {brands_data.map((brand, idx) => (
           <Image
             src={brand}

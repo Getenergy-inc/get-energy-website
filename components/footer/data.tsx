@@ -55,6 +55,6 @@ export const company_links = [
   {
     _id: 'company-4',
     title: 'About Us',
-    url: '/'
+    url: '/about-us'
   }
 ];

@@ -21,10 +21,10 @@ export default function FAQ(props: FAQProps) {
 
   const container_class = classNames([
     {
-      "h-[200px]": show,
-      "h-[100px]": !show
+      "lg:h-[200px]": show,
+      "lg:h-[100px]": !show
     },
-    "w-full border rounded-xl bg-white p-8 shadow-md"
+    "w-full border rounded-xl bg-white p-5 lg:p-8 shadow-md"
   ])
 
   return (
@@ -41,7 +41,7 @@ export default function FAQ(props: FAQProps) {
       </div>
       {
         show &&
-        <div className='text-sm text-gray-500 pe-20 leading-[25px] mt-4'>
+        <div className='text-sm text-gray-500 lg:pe-20 leading-[25px] mt-4'>
           {props.body}
         </div>
       }

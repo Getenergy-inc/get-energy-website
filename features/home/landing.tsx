@@ -3,25 +3,31 @@ import LandingImage from "./landing-img";
 
 export default function Landing() {
   return (
-    <div className="w-full flex items-center py-10 pt-24">
-      <div className="w-7/12">
-        <h1 className="text-4xl font-bold pe-60 leading-[45px]">
+    <div className="w-full flex flex-col lg:flex-row items-center py-10 p-0 lg:pt-24">
+      <div className="w-full lg:w-7/12">
+        <h1 className="text-start md:text-center lg:text-start text-4xl font-bold p-4 lg:pe-60 leading-[45px]">
           <span>Unlocking Sustainable Energy Solutions, Discover the Power of</span>
           <span className="main-text ms-3">GetEnergy</span>
         </h1>
-        <p className="w-full text-sm my-5 pe-72 mb-8">
+        <p className="w-full text-start md:text-center lg:text-start text-sm my-5 p-4 lg:pe-72 mb-8">
           We are a leading provider of
           energy trading solutions,
           offering a comprehnsive range of
           services to clients in the energy sector
         </p>
-        <Link className="main-button p-3 px-10 text-sm rounded-full" href="/">
-          Get Started
-        </Link>
+        <div className="flex justify-center lg:justify-start">
+          <Link className="main-button p-3 px-10 text-sm rounded-full" href="/quick-buy">
+            Get Started
+          </Link>
+        </div>
       </div>
-      <div className="w-5/12">
+
+      <div className="w-2/3 lg:w-5/12 mt-20 lg:mt-0 flex justify-center">
         <LandingImage />
-        <div className="w-[500px] h-[800px] absolute top-0 right-0" style={{ background: 'rgba(102, 153, 204, 0.6)' }} />
+        <div
+          className="hidden lg:block lg:w-[500px] lg:h-[800px] absolute top-0 right-0"
+          style={{ background: 'rgba(102, 153, 204, 0.6)' }}
+        />
       </div>
     </div>
   )

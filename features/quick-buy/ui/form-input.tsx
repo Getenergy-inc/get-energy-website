@@ -8,7 +8,7 @@ interface FormInputProps extends React.DetailedHTMLProps<
   subInfo?: string
 }
 function FormInput(props: FormInputProps) {
-  const { onchange, isLoading, ...theRest } = props;
+  const { onchange, isLoading, subInfo, ...theRest } = props;
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     const value = event.currentTarget.value;

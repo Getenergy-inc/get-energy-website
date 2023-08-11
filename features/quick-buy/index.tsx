@@ -56,22 +56,22 @@ export default function QuickBuy() {
         title="Quick Buy"
       />
       <div className="w-full flex justify-center my-20">
-        <div className="container flex flex-col items-center">
-          <div className="p-2 px-4 w-1/3 rounded-xl shadow-xl flex items-center justify-between">
+        <div className="container flex flex-col items-center px-4 md:px-0">
+          <div className="p-2 px-4 w-full md:w-2/3 lg:w-1/3 rounded-xl shadow-xl flex items-center justify-between">
             {buttonsOutput}
           </div>
 
-          <div className="w-3/5 my-10 p-6 px-10 text-white main-bg rounded-xl">
+          <div className="w-full md:w-3/5 my-10 p-6 px-10 text-white main-bg rounded-xl">
             <p>
               Register on the GetEnergy Platform and Download the <Link className="underline" href="/">app</Link> to enjoy more discounted features, in-app features, pay on credit, etc.
             </p>
           </div>
 
-          <div className="w-3/5 mb-5">
+          <div className="w-4/5 lg:w-3/5 mb-5">
             {currentScreen}
           </div>
 
-          <div className="w-3/5 p-3 main-bg rounded-xl h-[300px] flex flex-col items-center justify-center">
+          <div className="w-full md:w-3/5 p-3 main-bg rounded-xl h-[300px] flex flex-col items-center justify-center">
             <h1 className="text-white text-xl">Get More Services from Get Energy</h1>
             <button className="mt-8 p-3 px-10 rounded-xl text-black bg-white hover:scale-[1.03]" type="button">
               Take me There

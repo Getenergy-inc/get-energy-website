@@ -10,7 +10,7 @@ export default function GetElectricity() {
   }
   return (
     <form className="w-full flex flex-col items-center" onSubmit={handleSubimt}>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <FormInput
           placeholder="xxx-xxxx-xxxx"
           label="Meter Number"
