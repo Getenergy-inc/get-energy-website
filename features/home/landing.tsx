@@ -1,15 +1,17 @@
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import LandingImage from "./landing-img";
+
+const LandingImage = dynamic(() => import('./landing-img'), { ssr: false });
 
 export default function Landing() {
   return (
     <div className="w-full flex flex-col lg:flex-row items-center py-10 p-0 lg:pt-24">
       <div className="w-full lg:w-7/12">
-        <h1 className="text-start md:text-center lg:text-start text-4xl font-bold p-4 lg:pe-60 leading-[45px]">
+        <h1 className="text-start md:text-center lg:text-start text-5xl font-bold p-4 lg:pe-32 leading-[50px]">
           <span>Unlocking Sustainable Energy Solutions, Discover the Power of</span>
           <span className="main-text ms-3">GetEnergy</span>
         </h1>
-        <p className="w-full text-start md:text-center lg:text-start text-sm my-5 p-4 lg:pe-72 mb-8">
+        <p className="w-full text-start md:text-center lg:text-start text-sm p-4 lg:pe-72 mb-2">
           We are a leading provider of
           energy trading solutions,
           offering a comprehnsive range of

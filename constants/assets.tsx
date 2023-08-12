@@ -3,6 +3,7 @@ import logo from '@/assets/logo.svg';
 import faq from '@/assets/faq.svg';
 import download from '@/assets/download.svg';
 import container_img from '@/assets/container-img-1.png';
+import download_bg from '@/assets/download-bg.png';
 
 // QUICK BUY
 import quick_buy_img_1 from '@/assets/quick-buy/quick-buy-img-1.png';
@@ -96,5 +97,6 @@ export {
   contact_icon_3,
 
   // QUICK BUY
-  quick_buy_img_1
+  quick_buy_img_1,
+  download_bg
 }

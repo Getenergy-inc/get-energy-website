@@ -1,12 +1,19 @@
-import { FaApple, FaGooglePlay } from 'react-icons/fa'
+import { FaApple, FaGooglePlay } from 'react-icons/fa';
+import { assets } from '@/constants';
+import Image from 'next/image';
 
 export default function Download() {
   return (
-    <div className="w-full lg:rounded-3xl bg-white lg:bg-sky-800 flex flex-col items-center justify-center h-[300px]">
+    <div className="w-full relative lg:rounded-3xl bg-white lg:bg-[#003B6D] flex flex-col items-center justify-center h-[300px]">
+      <Image
+        src={assets.download_bg}
+        alt='background'
+        className='hidden lg:block w-full h-full object-cover absolute top-0 left-0'
+      />
       <h1 className='text-sky-800 lg:text-white font-bold text-xl lg:text-3xl mb-4 text-center'>
         Download the GetEnergy App Now
       </h1>
-      <p className='w-full md:w-4/6 lg:w-2/4 text-xs lg:text-md text-gray-500 text-center px-5'>
+      <p className='w-full md:w-4/6 lg:w-2/4 text-xs lg:text-md text-gray-300 text-center px-5'>
         Join us on this exciting journey as we
         empower you to optimize your energy
         trading strategies,

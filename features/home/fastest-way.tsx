@@ -6,7 +6,7 @@ export default function FastestWay() {
   return (
     <div className="hidden lg:flex py-20 w-full items-center">
       <div className="w-7/12">
-        <h1 className="text-3xl font-bold pe-96 leading-[40px] mb-20">
+        <h1 className="text-5xl font-bold pe-60 leading-[50px] mb-10">
           Fastest Way To Buy Airtime Or Data
         </h1>
         <Link href="/quick-buy" className="main-button p-3 px-10 rounded-full">

@@ -7,7 +7,9 @@ export default function WhoAreWe() {
     <div className="w-full rounded-xl p-4 lg:p-20 shadow-md mb-10 lg:mb-0">
       <div className="w-full p-4 md:p-10 lg:p-0">
         <div className="w-full flex justify-center mb-10">
-          <h1 className="text-5xl lg:text-6xl text-center font-bold main-text border-b-8 border-sky-900">Who we are</h1>
+          <h1 className="text-5xl lg:text-6xl text-center font-bold main-text border-b-8 border-[#003B6D]">
+            Who we are
+          </h1>
         </div>
 
         <div className="w-full flex flex-col lg:flex-row items-center">
