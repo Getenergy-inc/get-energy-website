@@ -7,6 +7,7 @@ import download_bg from '@/assets/download-bg.png';
 
 // QUICK BUY
 import quick_buy_img_1 from '@/assets/quick-buy/quick-buy-img-1.png';
+import quick_buy_img_2 from '@/assets/quick-buy/quick-buy-img-2.png';
 
 // LANDING
 import frame_1 from '@/assets/landing-assets/frame-1.svg';
@@ -98,5 +99,6 @@ export {
 
   // QUICK BUY
   quick_buy_img_1,
-  download_bg
+  download_bg,
+  quick_buy_img_2
 }

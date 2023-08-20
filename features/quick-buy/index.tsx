@@ -1,32 +1,16 @@
 import TitleHeader from "@/components/title-header";
+import { assets } from '@/constants';
+import { buttons, screens as DataScreens } from "./data";
+import Image from "next/image";
 import Link from "next/link";
 import useMultiScreens from "./hooks/use-multi-screens";
 import classNames from "classnames";
 import React from "react";
-import GetData from "./screens/get-data";
-import GetAirtime from "./screens/get-airtime";
-import GetElectricity from "./screens/get-electricity";
 
 export default function QuickBuy() {
-  const screens: React.ReactElement[] = [<GetData />, <GetAirtime />, <GetElectricity />];
+  const screens: React.ReactElement[] = DataScreens;
   const { currentStep, goto, currentScreen } = useMultiScreens(screens);
-  const buttons = [
-    {
-      _id: 'quick-buy-1',
-      title: 'GetData',
-      screen: 0
-    },
-    {
-      _id: 'quick-buy-2',
-      title: 'GetAirtime',
-      screen: 1
-    },
-    {
-      _id: 'quick-buy-3',
-      title: 'GetElectricity',
-      screen: 2
-    }
-  ];
+
   const buttonsOutput = buttons.map((item) => {
     const button_classnames = classNames([
       {
@@ -71,11 +55,21 @@ export default function QuickBuy() {
             {currentScreen}
           </div>
 
-          <div className="w-full md:w-3/5 p-3 main-bg rounded-xl h-[300px] flex flex-col items-center justify-center">
-            <h1 className="text-white text-xl">Get More Services from Get Energy</h1>
-            <button className="mt-8 p-3 px-10 rounded-xl text-black bg-white hover:scale-[1.03]" type="button">
-              Take me There
-            </button>
+          <div className="relative w-full md:w-3/5 p-3 main-bg rounded-xl h-[300px]">
+            <Image
+              src={assets.quick_buy_img_2}
+              className="w-full h-full object-cover absolute top-0 left-0 z-10 rounded-xl "
+              alt="background-img"
+            />
+            <div className="absolute top-0 left-0 w-full h-full z-20 bg-[#003B6D] rounded-xl opacity-50" />
+            <div className="absolute top-0 left-0 w-full h-full z-30  flex flex-col items-center justify-center">
+              <h1 className="text-white text-xl">
+                Get More Services from Get Energy
+              </h1>
+              <button className="mt-8 p-3 px-10 rounded-xl text-black bg-white hover:scale-[1.03]" type="button">
+                Take me There
+              </button>
+            </div>
           </div>
         </div>
       </div>

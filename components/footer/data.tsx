@@ -54,7 +54,7 @@ export const company_links = [
   },
   {
     _id: 'company-4',
-    title: 'About Us',
-    url: '/about-us'
+    title: 'Home',
+    url: '/'
   }
 ];
