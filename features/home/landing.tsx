@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 
 const LandingImage = dynamic(() => import('./landing-img'), { ssr: false });
+const DashboardUrl = process.env.NEXT_PUBLIC_DASHBOARD_URL || "";
 
 export default function Landing() {
   return (
@@ -18,7 +19,7 @@ export default function Landing() {
           services to clients in the energy sector
         </p>
         <div className="flex justify-center lg:justify-start">
-          <Link className="main-button p-3 px-10 text-sm rounded-full" href="/quick-buy">
+          <Link className="main-button p-3 px-10 text-sm rounded-full" href={DashboardUrl}>
             Get Started
           </Link>
         </div>
