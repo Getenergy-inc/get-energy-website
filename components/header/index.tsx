@@ -4,8 +4,11 @@ import Link from "next/link";
 import Logo from "../logo";
 import React from 'react';
 
+const DashboardUrl = process.env.NEXT_PUBLIC_DASHBOARD_URL || "";
+
 export default function Header() {
   const [show, setShow] = React.useState(false);
+
   const output = links.map((link) => (
     <Link key={link._id} href={link.url} className="px-6 hover:underline mb-4 md:mb-0">
       {link.title}
@@ -37,7 +40,7 @@ export default function Header() {
         <div className="flex items-center">
           {output}
         </div>
-        <Link className="sub-button p-2 px-6 rounded-full" href="/quick-buy">
+        <Link className="sub-button p-2 px-6 rounded-full" href={DashboardUrl} passHref={true}>
           Get Started
         </Link>
       </div>
