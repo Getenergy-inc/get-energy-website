@@ -1,5 +1,5 @@
 import { assets } from "@/constants";
-import { faq_data } from '../faq/data'
+import { faq_data } from '../faq/general_data'
 import Image from "next/image";
 import FAQ from "../faq/faq";
 

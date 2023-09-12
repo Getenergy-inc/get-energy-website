@@ -1,6 +1,6 @@
 import Info from "@/components/info";
 import TitleHeader from "@/components/title-header";
-import { faq_data } from "./data";
+import { faq_data } from "./general_data";
 import FAQ from './faq';
 
 export default function FAQS() {
