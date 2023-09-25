@@ -52,6 +52,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:description" content="Discover sustainable energy solutions and products at your convenience which includes energy equipments, commodities and services" />
         <meta property="og:url" content="https://getenergy.ng" />
         <meta property="og:type" content="website" />
+
+        <meta property="og:image" content="opengraph-image.jpeg" /> 
+        <link rel="icon" href="favicon.ico" /> 
+        
       </Head>
       <div className={satoshi.className}>
         <Component {...pageProps} />
