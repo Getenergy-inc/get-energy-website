@@ -39,7 +39,19 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Head>
-        <title>GetEnergy</title>
+        <title>GetEnergy - Energy Products & Services</title>
+        <meta name="description" content="Discover sustainable energy solutions and products at your convenience which includes energy equipments, commodities and services" />
+        <meta name="keywords" content="get energy, getEnergy, energy products, renewable energy, solar power, wind power, energy efficiency, sustainability, energy consulting, clean energy, Energy Management." /> 
+        <link
+          rel="canonical"
+          href="https://getenergy.ng"
+          key="canonical"
+        />
+
+        <meta property="og:title" content="GetEnergy - Energy Products & Services" />
+        <meta property="og:description" content="Discover sustainable energy solutions and products at your convenience which includes energy equipments, commodities and services" />
+        <meta property="og:url" content="https://getenergy.ng" />
+        <meta property="og:type" content="website" />
       </Head>
       <div className={satoshi.className}>
         <Component {...pageProps} />
