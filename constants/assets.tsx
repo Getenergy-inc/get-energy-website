@@ -41,6 +41,13 @@ import buy_1 from '@/assets/amazing-discount/buy-1.png';
 import buy_2 from '@/assets/amazing-discount/buy-2.png';
 import buy_3 from '@/assets/amazing-discount/buy-3.png';
 
+// ABOUT US
+import about_us_1 from '@/assets/about-us/about-us-1.png';
+import about_us_2 from '@/assets/about-us/video-frame.png';
+import team_1 from '@/assets/about-us/team-1.png';
+import team_2 from '@/assets/about-us/team-2.png';
+import team_3 from '@/assets/about-us/team-3.png';
+
 // BRANDS
 import brand1 from '@/assets/brands/brand-1.png';
 import brand2 from '@/assets/brands/brand-2.png';
@@ -110,5 +117,12 @@ export {
     // QUICK BUY
     quick_buy_img_1,
     download_bg,
-    quick_buy_img_2
+    quick_buy_img_2,
+
+    // ABOUT US
+    about_us_1,
+    about_us_2,
+    team_1,
+    team_2,
+    team_3,
 }

@@ -3,11 +3,17 @@ import { links } from "./data";
 import Link from "next/link";
 import Logo from "../logo";
 import React from 'react';
+import { useRouter } from 'next/router';
 
 export default function Header() {
     const [show, setShow] = React.useState(false);
+    const location = useRouter().pathname;
     const output = links.map((link) => (
-        <Link key={link._id} href={link.url} className="px-6 hover:underline mb-4 md:mb-0">
+        <Link
+            key={link._id}
+            href={link.url}
+            className={`px-6 hover:underline mb-4 md:mb-0 ${location === link.url && "underline"}`}
+        >
             {link.title}
         </Link>
     ));
