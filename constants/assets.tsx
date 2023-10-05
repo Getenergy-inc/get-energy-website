@@ -17,6 +17,7 @@ import frame_4 from '@/assets/landing-assets/frame-4.svg';
 import frame_5 from '@/assets/landing-assets/frame-5.svg';
 import landing_1 from '@/assets/landing-assets/landing-1.png';
 import landing_2 from '@/assets/landing-assets/landing-2.png';
+import landing_3 from '@/assets/landing-assets/landing-3.png';
 
 // FASTEST WAY
 import frame_6 from '@/assets/fastest-way/frame-6.png';
@@ -32,9 +33,13 @@ import icon5 from '@/assets/our-service/icon-5.svg';
 import arrow_right from '@/assets/our-service/arrow-right.svg';
 import arrow_n from '@/assets/our-service/arrows-n.svg';
 import arrow_u from '@/assets/our-service/arrows-u.svg';
+import see_all from '@/assets/our-service/see-all.png';
 
 // AMAZING DISCOUNT
 import map from '@/assets/amazing-discount/map.png';
+import buy_1 from '@/assets/amazing-discount/buy-1.png';
+import buy_2 from '@/assets/amazing-discount/buy-2.png';
+import buy_3 from '@/assets/amazing-discount/buy-3.png';
 
 // BRANDS
 import brand1 from '@/assets/brands/brand-1.png';
@@ -51,54 +56,59 @@ import contact_icon_2 from '@/assets/contact-us/icon-2.svg';
 import contact_icon_3 from '@/assets/contact-us/icon-3.svg';
 
 export {
-  //GENERAL
-  logo,
-  faq,
-  download,
+    //GENERAL
+    logo,
+    faq,
+    download,
 
-  // LANDING
-  frame_1,
-  frame_2,
-  frame_3,
-  frame_4,
-  frame_5,
-  landing_1,
-  landing_2,
+    // LANDING
+    frame_1,
+    frame_2,
+    frame_3,
+    frame_4,
+    frame_5,
+    landing_1,
+    landing_2,
+    landing_3,
 
-  // FASTEST WAY
-  frame_6,
-  frame_7,
-  frame_8,
+    // FASTEST WAY
+    frame_6,
+    frame_7,
+    frame_8,
 
-  // OUR SERVICE
-  icon1,
-  icon2,
-  icon3,
-  icon4,
-  icon5,
-  arrow_right,
-  arrow_n,
-  arrow_u,
+    // OUR SERVICE
+    icon1,
+    icon2,
+    icon3,
+    icon4,
+    icon5,
+    arrow_right,
+    arrow_n,
+    arrow_u,
+    see_all,
 
-  // AMAZING DISCOUNT
-  map,
+    // AMAZING DISCOUNT
+    map,
+    buy_1,
+    buy_2,
+    buy_3,
 
-  // BRANDS
-  brand1,
-  brand2,
-  brand3,
-  brand4,
-  brand5,
-  brand6,
+    // BRANDS
+    brand1,
+    brand2,
+    brand3,
+    brand4,
+    brand5,
+    brand6,
 
-  container_img,
-  contact_img_1,
-  contact_icon_1,
-  contact_icon_2,
-  contact_icon_3,
+    container_img,
+    contact_img_1,
+    contact_icon_1,
+    contact_icon_2,
+    contact_icon_3,
 
-  // QUICK BUY
-  quick_buy_img_1,
-  download_bg,
-  quick_buy_img_2
+    // QUICK BUY
+    quick_buy_img_1,
+    download_bg,
+    quick_buy_img_2
 }
