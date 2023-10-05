@@ -5,6 +5,8 @@ import Logo from "../logo";
 import React from 'react';
 import { useRouter } from 'next/router';
 
+const DashboardUrl = process.env.NEXT_PUBLIC_DASHBOARD_URL || "";
+
 export default function Header() {
     const [show, setShow] = React.useState(false);
     const location = useRouter().pathname;
