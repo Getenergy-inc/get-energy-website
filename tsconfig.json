@@ -16,6 +16,7 @@
     "incremental": true,
     "paths": {
       "@/*": ["./*"],
+      "@ui/*": ["./components/ui/*"],
       "@features/*": ["./features/*"],
     }
   },

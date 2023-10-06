@@ -1,39 +1,39 @@
 import React from "react";
 interface FormInputProps extends React.DetailedHTMLProps<
-  React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement
+    React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement
 > {
-  label: string
-  onchange: (e: string) => void
-  isLoading?: boolean
-  subInfo?: string
+    label?: string
+    onchange: (e: string) => void
+    isLoading?: boolean
+    subInfo?: string
 }
 function FormInput(props: FormInputProps) {
-  const { onchange, isLoading, subInfo, ...theRest } = props;
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    event.preventDefault();
-    const value = event.currentTarget.value;
-    return onchange(value);
-  }
+    const { onchange, isLoading, subInfo, ...theRest } = props;
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        event.preventDefault();
+        const value = event.currentTarget.value;
+        return onchange(value);
+    }
 
-  return (
-    <div className="w-full">
-      <label className="text-sm font-bold">{props.label}</label>
-      <input
-        {...theRest}
-        className="w-full p-2 border-2 rounded-xl"
-        onChange={handleChange}
-        disabled={isLoading && true}
-      />
-      {
-        props.subInfo &&
-        <label className="text-xs text-gray-600">{props.subInfo}</label>
-      }
-    </div>
-  );
+    return (
+        <div className="w-full">
+            {props.label && <label className="text-sm font-bold">{props.label}</label>}
+            <input
+                {...theRest}
+                className="w-full p-2 border-2 rounded-xl"
+                onChange={handleChange}
+                disabled={isLoading && true}
+            />
+            {
+                props.subInfo &&
+                <label className="text-xs text-gray-600">{props.subInfo}</label>
+            }
+        </div>
+    );
 }
 
 FormInput.defaultProps = {
-  isLoading: false
+    isLoading: false
 }
 
 export default FormInput;
