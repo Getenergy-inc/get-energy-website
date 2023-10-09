@@ -1,5 +1,4 @@
 import { assets } from "@/constants";
-import Link from "next/link";
 import Image from "next/image";
 
 const teamData = [
@@ -10,20 +9,38 @@ const teamData = [
         position: "CEO - PKIS"
     },
     {
-        id: 1,
+        id: 2,
         img: assets.team_2,
         title: "Anna Simelia.",
         position: "CTO - PKIS"
     },
     {
-        id: 1,
+        id: 3,
+        img: assets.team_3,
+        title: "Martins Scott.",
+        position: "Head of Design - PKIS"
+    },
+    {
+        id: 4,
+        img: assets.team_1,
+        title: "Babashola Santos A.",
+        position: "CEO - PKIS"
+    },
+    {
+        id: 5,
+        img: assets.team_2,
+        title: "Anna Simelia.",
+        position: "CTO - PKIS"
+    },
+    {
+        id: 6,
         img: assets.team_3,
         title: "Martins Scott.",
         position: "Head of Design - PKIS"
     }
 ]
 
-export default function OurTeam() {
+export default function TeamList() {
     return (
         <div className='w-full flex justify-center'>
             <div className="container my-10 w-full">
@@ -47,12 +64,6 @@ export default function OurTeam() {
                             </div>
                         </div>
                     ))}
-                </div>
-
-                <div className="w-full flex items-center justify-center">
-                    <Link className="sub-button p-2 px-6 rounded-full" href="/our-team">
-                        See More
-                    </Link>
                 </div>
             </div>
         </div>

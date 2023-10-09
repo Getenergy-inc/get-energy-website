@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { assets } from "@/constants";
+import { AiOutlineArrowRight } from 'react-icons/ai'
 import Image from "next/image";
 import Link from "next/link";
 
@@ -32,18 +34,33 @@ export default function AmazingDiscount() {
                     Get Started
                 </Link>
 
-                <div className="w-full mt-4 flex grid grid-cols-3">
-                    <div className="w-full h-[200px]">
-                        <Image src={assets.buy_1} alt="get-energy-2" />
-                    </div>
-
-                    <div className="w-full h-[200px]">
-                        <Image src={assets.buy_2} alt="get-energy-2" />
-                    </div>
-
-                    <div className="w-full h-[200px]">
-                        <Image src={assets.buy_3} alt="get-energy-2" />
-                    </div>
+                <div className="w-full mt-4 flex grid grid-cols-3 gap-4">
+                    {[
+                        {
+                            id: 1,
+                            img: assets.buy_1
+                        },
+                        {
+                            id: 1,
+                            img: assets.buy_2
+                        },
+                        {
+                            id: 1,
+                            img: assets.buy_3
+                        },
+                    ].map((item) => (
+                        <div className="w-full h-[200px] shadow-xl rounded-xl border relative px-5 flex items-center justify-center" key={item.id}>
+                            <Image
+                                src={item.img}
+                                alt="get-energy-2"
+                                className="object-cover w-full"
+                            />
+                            <Button className="absolute main-bg bottom-10 flex items-center">
+                                <span className="me-2">Shop now</span>
+                                <AiOutlineArrowRight />
+                            </Button>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

@@ -1,9 +1,10 @@
+import { useRouter } from 'next/router';
 import { FaBars } from 'react-icons/fa'
 import { links } from "./data";
+import { variables } from '@/constants';
 import Link from "next/link";
 import Logo from "../logo";
 import React from 'react';
-import { useRouter } from 'next/router';
 
 const DashboardUrl = process.env.NEXT_PUBLIC_DASHBOARD_URL || "";
 
@@ -46,10 +47,10 @@ export default function Header() {
                     {output}
                 </div>
                 <div className='flex items-center'>
-                    <Link className="sub-button p-2 px-6 me-3 rounded-full" href="/quick-buy">
+                    <Link className="sub-button p-2 px-6 me-3 rounded-full" href={variables.SHOP_NOW_ADDRESS}>
                         Shop Now
                     </Link>
-                    <Link className="main-button p-2 px-6 rounded-full" href="/quick-buy">
+                    <Link className="main-button p-2 px-6 rounded-full" href={variables.GET_STARTED_ADDRESS}>
                         Get Started
                     </Link>
                 </div>

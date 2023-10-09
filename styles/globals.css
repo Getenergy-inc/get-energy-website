@@ -146,3 +146,36 @@ body::-webkit-scrollbar {
         @apply bg-background text-foreground;
     }
 }
+
+.m-scroll {
+    overflow: hidden;
+    height: 100%;
+    white-space: nowrap;
+    animation: scrollText 10s infinite linear;
+    margin: 0;
+}
+.n-scroll {
+    overflow: hidden;
+    height: 100%;
+    white-space: nowrap;
+    animation: reverseScrollText 10s infinite linear;
+    margin: 0;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes reverseScrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
