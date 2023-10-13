@@ -14,7 +14,7 @@ export default function Download() {
     setPopoverShow(false);
     
     createPopper(btnRefi.current, popoverRef.current, {
-      placement: side
+      placement: "top"
     });
   
     setPopoverShow(true);
