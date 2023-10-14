@@ -1,9 +1,11 @@
+import dynamic from 'next/dynamic'
 import TitleHeader from "@/components/title-header";
 import OurFunctions from "./our-functions";
 import Info from "@/components/info";
 import IlluminatingTomorrow from "./illuminating-tomorrow";
-import WhoWeAreVideo from "./who-we-are-video";
 import OurTeam from "./our-team";
+
+const WhoWeAreVideo = dynamic(() => import('./who-we-are-video'), { ssr: false });
 
 export default function AboutUs() {
     const body = `
