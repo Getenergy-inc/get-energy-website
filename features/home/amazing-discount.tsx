@@ -3,8 +3,10 @@ import { assets } from "@/constants";
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import Image from "next/image";
 import Link from "next/link";
+import { Tooltip } from "react-tooltip";
 
 export default function AmazingDiscount() {
+    
     return (
         <div className="w-full flex flex-col lg:flex-row items-center py-10">
             <div className="w-full lg:w-1/2 p-2 lg:p-0 flex justify-center lg:justify-start">
@@ -55,10 +57,17 @@ export default function AmazingDiscount() {
                                 alt="get-energy-2"
                                 className="object-cover w-full"
                             />
-                            <Button className="absolute main-bg bottom-10 flex items-center">
+                            <Button className="absolute main-bg bottom-10 flex items-center"
+                                data-tooltip-id={String(item.id)}
+                                data-tooltip-content="Coming Soon!"
+                                data-tooltip-place="top"
+                            >
                                 <span className="me-2">Shop now</span>
                                 <AiOutlineArrowRight />
+                                
                             </Button>
+                            <Tooltip id={String(item.id)} />
+                            
                         </div>
                     ))}
                 </div>

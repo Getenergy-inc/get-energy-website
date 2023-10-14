@@ -43,15 +43,21 @@ export default function Header() {
 
             <div className="hidden lg:flex container mx-auto -mb-14 w-full items-center justify-between bg-white p-4 px-10 rounded-full shadow-md z-10">
                 <Logo size={100} />
+                
                 <div className="flex items-center">
                     {output}
                 </div>
                 <div className='flex items-center'>
+                    {/**
                     <Link className="sub-button p-2 px-6 me-3 rounded-full" href={variables.SHOP_NOW_ADDRESS}>
                         Shop Now
                     </Link>
                     <Link className="main-button p-2 px-6 rounded-full" href={variables.GET_STARTED_ADDRESS}>
                         Get Started
+                    </Link>
+                    */}
+                    <Link className="main-button p-2 px-6 rounded-full" href={variables.WAITLIST_ADDRESS}>
+                        Join Wait List
                     </Link>
                 </div>
             </div>

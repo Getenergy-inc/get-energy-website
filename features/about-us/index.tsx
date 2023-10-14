@@ -28,7 +28,7 @@ export default function AboutUs() {
             <IlluminatingTomorrow />
             <OurFunctions />
             <WhoWeAreVideo />
-            <OurTeam />
+            {/** <OurTeam /> **/}
         </div>
     )
 }

@@ -18,9 +18,16 @@ export default function Landing() {
                     offering a comprehnsive range of
                     services to clients in the energy sector
                 </p>
+                {/**
                 <div className="flex justify-center lg:justify-start">
                     <Link className="main-button p-3 px-10 text-sm rounded-full" href={variables.GET_STARTED_ADDRESS}>
                         Get Started
+                    </Link>
+                </div>
+                */}
+                <div className="flex justify-center lg:justify-start">
+                    <Link className="main-button p-3 px-10 text-sm rounded-full" href={variables.WAITLIST_ADDRESS}>
+                        Join Wait List
                     </Link>
                 </div>
             </div>

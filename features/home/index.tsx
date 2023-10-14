@@ -8,6 +8,8 @@ import WhoAreWe from "./who-are-we";
 import Download from "./download";
 import HowItWorks from "../our-service/how-it-works";
 import Process from "../our-service/process";
+import "react-tooltip/dist/react-tooltip.css";
+
 
 export default function Home() {
     return (

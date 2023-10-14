@@ -41,7 +41,7 @@ export default function Footer() {
                         <h1 className="font-bold text-4xl">Products</h1>
                         <div className="flex flex-col mt-3">
                             {products_data.map((link) => (
-                                <Link key={link._id} href={link.url} className="w-full mb-2 hover:underline">
+                                <Link key={link._id} href="#" className="w-full mb-2 hover:underline">
                                     {link.title}
                                 </Link>
                             ))}
