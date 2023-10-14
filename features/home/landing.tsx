@@ -25,6 +25,11 @@ export default function Landing() {
                     </Link>
                 </div>
                 */}
+                <div className="flex justify-center lg:justify-start">
+                    <Link className="main-button p-3 px-10 text-sm rounded-full" href={variables.WAITLIST_ADDRESS}>
+                        Join Wait List
+                    </Link>
+                </div>
             </div>
 
             <div className="w-2/3 lg:w-5/12 mt-20 lg:mt-0 flex justify-center">
