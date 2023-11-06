@@ -5,8 +5,7 @@ import { variables } from '@/constants';
 import Link from "next/link";
 import Logo from "../logo";
 import React from 'react';
-
-const DashboardUrl = process.env.NEXT_PUBLIC_DASHBOARD_URL || "";
+import { Dropdown } from 'flowbite-react';
 
 export default function Header() {
     const [show, setShow] = React.useState(false);
@@ -22,7 +21,7 @@ export default function Header() {
     ));
 
     return (
-        <div className="bg-white w-full flex items-center justify-center p-6">
+        <div className="bg-white w-full flex items-center justify-center p-6 mb-10">
             <div className="container lg:hidden">
                 <div className='w-full flex items-center justify-between'>
                     <Logo size={100} />
@@ -55,10 +54,26 @@ export default function Header() {
                     <Link className="main-button p-2 px-6 rounded-full" href={variables.GET_STARTED_ADDRESS}>
                         Get Started
                     </Link>
-                    */}
+                    
                     <Link className="main-button p-2 px-6 rounded-full" href={variables.WAITLIST_ADDRESS}>
                         Join Wait List
                     </Link>
+                    */} 
+                    <div className='main-button p-2 px-6 rounded-full'>
+                        <Dropdown className='absolute z-50 font-medium text-xl' inline={true} label="Join Us">
+                    
+                            <Dropdown.Item className='z-50'>
+                                <Link href={variables.INTERN_FORM_URL}>As an Intern</Link>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <Link href={variables.VOLUNTEER_FORM_URL}>As a Volunteer</Link>
+                            </Dropdown.Item>
+                            
+                        </Dropdown>
+                    </div>
+                    
+
+
                 </div>
             </div>
         </div>

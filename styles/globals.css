@@ -45,6 +45,14 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
+.drop-button {
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out all;
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+}
+
 .sub-button {
     box-sizing: border-box;
     transition: 0.3s ease-in-out all;
