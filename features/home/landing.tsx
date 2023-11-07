@@ -26,25 +26,30 @@ export default function Landing() {
                     </Link>
                 </div>
                 */}
-                <div className="flex justify-center lg:justify-start">
-                    {/** 
-                    <Link className="main-button p-3 px-10 text-sm rounded-full" href={variables.WAITLIST_ADDRESS}>
-                        Join Wait List
-                    </Link>
-                    **/}
-                    <div className='main-button p-2 px-6 rounded-full mb-7'>
-                        <Dropdown className='absolute z-50 font-medium text-xl' inline={true} label="Join Us">
+                <div className="flex justify-center lg:justify-start my-10">
                     
-                            <Dropdown.Item className='z-50'>
-                                <Link href={variables.INTERN_FORM_URL}>As an Intern</Link>
-                            </Dropdown.Item>
-                            <Dropdown.Item>
-                                <Link href={variables.VOLUNTEER_FORM_URL}>As a Volunteer</Link>
-                            </Dropdown.Item>
-                            
-                        </Dropdown>
+                    <div className="flex items-center justify-center">
+                        <Link className="main-button p-2 px-6 rounded-full" href={variables.WAITLIST_ADDRESS}>
+                            Join Wait List
+                        </Link>
+                        <div className='main-button p-2 px-6 rounded-full mx-4'>
+                            <Dropdown className='font-medium text-xl' inline={true} label="Join Us">
+                        
+                                <Dropdown.Item>
+                                    <Link href={variables.INTERN_FORM_URL}>As an Intern</Link>
+                                </Dropdown.Item>
+                                <Dropdown.Item>
+                                    <Link href={variables.VOLUNTEER_FORM_URL}>As a Volunteer</Link>
+                                </Dropdown.Item>
+                                
+                            </Dropdown>
+                        </div>
                     </div>
+                   
+                    
+                    
                 </div>
+                
             </div>
 
             <div className="w-2/3 lg:w-5/12 mt-20 lg:mt-0 flex justify-center">

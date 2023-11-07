@@ -54,12 +54,12 @@ export default function Header() {
                     <Link className="main-button p-2 px-6 rounded-full" href={variables.GET_STARTED_ADDRESS}>
                         Get Started
                     </Link>
-                    
+                    */}
                     <Link className="main-button p-2 px-6 rounded-full" href={variables.WAITLIST_ADDRESS}>
                         Join Wait List
                     </Link>
-                    */} 
-                    <div className='main-button p-2 px-6 rounded-full'>
+                     
+                    <div className='main-button p-2 px-6 mx-3 rounded-full'>
                         <Dropdown className='absolute z-50 font-medium text-xl' inline={true} label="Join Us">
                     
                             <Dropdown.Item className='z-50'>
