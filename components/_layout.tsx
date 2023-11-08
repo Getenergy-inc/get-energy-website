@@ -2,6 +2,7 @@ import Header from "./header";
 import Footer from "./footer";
 import React from "react";
 import { satoshi } from "@/pages/_app";
+import SmoothScroll from "@/features/smooth-scroll";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -9,10 +10,13 @@ interface LayoutProps {
 
 export default function Layout(props: LayoutProps) {
   return (
-    <div className={` ${satoshi.className} w-full bg-white`}>
-      <Header />
-      <div>{props.children}</div>
-      <Footer />
-    </div>
+    <>
+      <SmoothScroll />
+      <div className={` ${satoshi.className} w-full bg-white`}>
+        <Header />
+        <div>{props.children}</div>
+        <Footer />
+      </div>
+    </>
   );
 }

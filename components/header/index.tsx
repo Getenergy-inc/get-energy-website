@@ -14,8 +14,8 @@ export default function Header() {
     <Link
       key={link._id}
       href={link.url}
-      className={`px-2 py-1 border-b-2 transition-colors duration-200 mb-4 md:mb-0 hover:border-[#003b6d] border-transparent ${
-        location === link.url && "border-[#003b6d]"
+      className={`px-2 py-1 border-b-2 transition-colors duration-200 mb-4 md:mb-0 ${
+        location === link.url ? "border-[#003b6d]" : "hover:border-[#003b6d] border-transparent"
       }`}
     >
       {link.title}
