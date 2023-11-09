@@ -4,34 +4,30 @@ import Link from "next/link";
 import classNames from "classnames";
 
 interface LogoProps {
-  size?: number
-  showBorder?: boolean
-  classnames?: string
+  size?: number;
+  showBorder?: boolean;
+  classnames?: string;
+  id?: string;
 }
 
 function Logo(props: LogoProps) {
   const image_classname = classNames([
     {
-      "border rounded-xl p-4 bg-white": props.showBorder
+      "border rounded-xl p-4 bg-white": props.showBorder,
     },
-    props.classnames
+    props.classnames,
   ]);
 
   return (
     <Link href="/">
-      <Image
-        width={props.size}
-        src={assets.logo}
-        alt="logo"
-        className={image_classname}
-      />
+      <Image width={props.size} src={assets.logo} id={props.id} alt="logo" className={image_classname} />
     </Link>
-  )
+  );
 }
 
 Logo.defaultProps = {
   showBorder: false,
-  size: 20
-}
+  size: 20,
+};
 
 export default Logo;

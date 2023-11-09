@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Logo from "./logo";
-import GetEnergyLogo from "./common/logos/get-energy";
 
 type TitleHeaderProps = {
   type: "1" | "2";

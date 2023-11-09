@@ -9,21 +9,38 @@ import Download from "./download";
 import HowItWorks from "../our-service/how-it-works";
 import Process from "../our-service/process";
 import "react-tooltip/dist/react-tooltip.css";
+import { RefObject, useRef } from "react";
+import { create } from "zustand";
+import dynamic from "next/dynamic";
 
+interface HomeStore {
+  homeRef: RefObject<HTMLDivElement>;
+  updateRef: (ref: RefObject<HTMLDivElement>) => void;
+}
+
+export const useHomeStore = create<HomeStore>((set) => ({
+  homeRef: null as unknown as RefObject<HTMLDivElement>,
+  updateRef: (ref: RefObject<HTMLDivElement>) => set(() => ({ homeRef: ref })),
+}));
 
 export default function Home() {
-    return (
-        <div className="container mx-auto w-full bg-white">
-            <Landing />
-            <FastestWay />
-            <WhoAreWe />
-            <OurService />
-            <AmazingDiscount />
-            <GlobalBrands />
-            {/* <FAQs /> */}
-            <HowItWorks />
-            <Process />
-            <Download />
-        </div>
-    )
+  const GsapContain = dynamic(() => import("@/lib/utils/providers"), { ssr: false });
+  const { homeRef } = useHomeStore();
+
+  return (
+    <div className="container mx-auto w-full bg-white" ref={homeRef}>
+      <GsapContain>
+        <Landing />
+        <FastestWay />
+        <WhoAreWe />
+        <OurService />
+        <AmazingDiscount />
+        <GlobalBrands />
+        {/* <FAQs /> */}
+        <HowItWorks />
+        <Process />
+        <Download />
+      </GsapContain>
+    </div>
+  );
 }
