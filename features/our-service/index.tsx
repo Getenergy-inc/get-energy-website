@@ -5,7 +5,7 @@ import HowItWorks from "./how-it-works";
 import Process from "./process";
 
 export default function OurService() {
-    const body = `
+  const body = `
         Discover the power of Get Energy Services. 
         From electricity to solar, cooking gas, 
         and more, we offer a comprehensive range 
@@ -16,17 +16,13 @@ export default function OurService() {
         greener future together.
     `;
 
-    return (
-        <div className="w-full">
-            <TitleHeader
-                location="Our Service"
-                type="1"
-                title="Our Service"
-            />
-            <Info body={body} />
-            <ServiceList />
-            <HowItWorks />
-            <Process />
-        </div>
-    )
+  return (
+    <div className="w-full">
+      <TitleHeader location="Our Service" type="1" title="Our Service" />
+      <Info body={body} />
+      <ServiceList />
+      <HowItWorks />
+      <Process />
+    </div>
+  );
 }
