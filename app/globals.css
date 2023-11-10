@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 body {
-  background-color: rgba(0, 59, 109, 1);
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
-  padding: 0px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }

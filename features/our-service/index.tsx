@@ -1,3 +1,4 @@
+"use client";
 import TitleHeader from "@/components/title-header";
 import ServiceList from "./service-list";
 import Info from "@/components/info";

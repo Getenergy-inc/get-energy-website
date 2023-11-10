@@ -1,3 +1,4 @@
+"use client";
 import AmazingDiscount from "./amazing-discount";
 import FAQs from "./faqs";
 import FastestWay from "./fastest-way";
@@ -11,7 +12,6 @@ import Process from "../our-service/process";
 import "react-tooltip/dist/react-tooltip.css";
 import { RefObject, useRef } from "react";
 import { create } from "zustand";
-import dynamic from "next/dynamic";
 
 interface HomeStore {
   homeRef: RefObject<HTMLDivElement>;

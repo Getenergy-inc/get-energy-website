@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { FaBars } from "react-icons/fa";
 import { links } from "./data";
 import { variables } from "@/constants";
@@ -11,7 +11,7 @@ import { gsap } from "gsap";
 
 export default function Header() {
   const [show, setShow] = React.useState(false);
-  const location = useRouter().pathname;
+  const location = usePathname();
 
   const navRef = useRef<HTMLElement>(null);
 

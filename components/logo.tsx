@@ -10,24 +10,19 @@ interface LogoProps {
   id?: string;
 }
 
-function Logo(props: LogoProps) {
+function Logo({ showBorder = false, size = 20, ...remaining }: LogoProps) {
   const image_classname = classNames([
     {
-      "border rounded-xl p-4 bg-white": props.showBorder,
+      "border rounded-xl p-4 bg-white": showBorder,
     },
-    props.classnames,
+    remaining.classnames,
   ]);
 
   return (
     <Link href="/">
-      <Image width={props.size} src={assets.logo} id={props.id} alt="logo" className={image_classname} />
+      <Image width={size} src={assets.logo} id={remaining.id} alt="logo" className={image_classname} />
     </Link>
   );
 }
-
-Logo.defaultProps = {
-  showBorder: false,
-  size: 20,
-};
 
 export default Logo;

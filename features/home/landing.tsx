@@ -1,8 +1,9 @@
+"use client";
 import { variables } from "@/constants";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Dropdown } from "flowbite-react";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { useHomeStore } from ".";
 

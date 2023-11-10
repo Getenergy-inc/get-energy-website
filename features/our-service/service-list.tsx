@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import { assets } from "@/constants";
 import { service_data } from "./data";

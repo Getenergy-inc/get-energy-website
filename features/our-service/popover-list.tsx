@@ -3,7 +3,7 @@ import { PopoverContent } from "@/components/ui/popover";
 import { FiChevronDown } from "react-icons/fi";
 import { data } from "./popover-data-list";
 import { Accordion, AccordionContent, AccordionTrigger, AccordionItem } from "@/components/ui/accordion";
-import { satoshi } from "@/pages/_app";
+import { satoshi } from "@/lib/utils/fonts";
 
 export default function PopoverList() {
   return (

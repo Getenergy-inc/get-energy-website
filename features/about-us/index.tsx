@@ -1,3 +1,4 @@
+"use client";
 import dynamic from "next/dynamic";
 import TitleHeader from "@/components/title-header";
 import OurFunctions from "./our-functions";

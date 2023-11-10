@@ -12,7 +12,6 @@ interface LayoutProps {
 export default function Layout(props: LayoutProps) {
   return (
     <>
-      <SmoothScroll />
       <AnimatePresence>
         <div className={`${satoshi.className} w-full bg-white`}>
           <Header />
