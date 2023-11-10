@@ -1,7 +1,7 @@
 "use client";
 import { FC, PropsWithChildren } from "react";
-import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 

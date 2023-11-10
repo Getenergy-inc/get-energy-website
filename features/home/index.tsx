@@ -24,23 +24,20 @@ export const useHomeStore = create<HomeStore>((set) => ({
 }));
 
 export default function Home() {
-  const GsapContain = dynamic(() => import("@/lib/utils/providers"), { ssr: false });
   const { homeRef } = useHomeStore();
 
   return (
     <div className="container mx-auto w-full bg-white" ref={homeRef}>
-      <GsapContain>
-        <Landing />
-        <FastestWay />
-        <WhoAreWe />
-        <OurService />
-        <AmazingDiscount />
-        <GlobalBrands />
-        {/* <FAQs /> */}
-        <HowItWorks />
-        <Process />
-        <Download />
-      </GsapContain>
+      <Landing />
+      <FastestWay />
+      <WhoAreWe />
+      <OurService />
+      <AmazingDiscount />
+      <GlobalBrands />
+      {/* <FAQs /> */}
+      <HowItWorks />
+      <Process />
+      <Download />
     </div>
   );
 }
