@@ -16,7 +16,7 @@ import {
   fromLeftAloneVarianSlow,
   defaultParentVariantInSlow,
 } from "./variants";
-import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from "react";
+import { DetailedHTMLProps, FC, HTMLAttributes, PropsWithChildren } from "react";
 
 interface TransitionProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, PropsWithChildren {
   addClass?: string;
@@ -252,3 +252,13 @@ export const TransitionFromRightAlone: React.FC<TransitionProps> = (props) => {
     </motion.div>
   );
 };
+
+export const FromBottomTransition: FC<PropsWithChildren> = ({ children }) => (
+  <motion.div
+    initial={{ y: "100%", opacity: 0 }}
+    whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1, duration: 0.4, ease: "backInOut" } }}
+    viewport={{ once: true }}
+  >
+    {children}
+  </motion.div>
+);

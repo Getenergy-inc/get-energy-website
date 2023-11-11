@@ -1,7 +1,8 @@
+"use client";
 import Info from "@/components/info";
 import TitleHeader from "@/components/title-header";
 import { faq_data } from "./general_data";
-import FAQ from './faq';
+import FAQ from "./faq";
 
 export default function FAQS() {
   const body = `
@@ -18,11 +19,7 @@ export default function FAQS() {
 
   return (
     <div className="w-full border">
-      <TitleHeader
-        location="FAQ"
-        type="1"
-        title="FAQ"
-      />
+      <TitleHeader location="FAQ" type="1" title="FAQ" />
       <Info body={body} />
       <div className="w-full flex justify-center my-20">
         <div className="container mt-10 bg-zinc-100 rounded p-4 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -32,5 +29,5 @@ export default function FAQS() {
         </div>
       </div>
     </div>
-  )
+  );
 }

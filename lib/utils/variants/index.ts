@@ -15,17 +15,17 @@ export const transStartVariant = {
 // -------------------------PARENTS-------------------------
 // parents for staggering children
 export const defaultParentVariant = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { staggerChildren: 0.1 } },
+  initial: {},
+  animate: { transition: { staggerChildren: 0.1 } },
 };
 
 export const defaultParentVariantInView = {
   initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { staggerChildren: 0.08 } },
+  animate: { opacity: 1, transition: { staggerChildren: 0.15 } },
 };
 
 export const defaultParentVariantInSlow = {
-  initial: { opacity: 0 },
+  initial: {},
   animate: { opacity: 1, transition: { staggerChildren: 0.4 } },
 };
 export const defaultParentFastVariant = {
@@ -63,7 +63,7 @@ export const fromTopVariant = {
 // Standalone
 export const opacityAloneVariant = {
   initial: { opacity: 0 },
-  animate: { opacity: 1 },
+  animate: { opacity: 1, transition: { duration: 0.2 } },
 };
 
 export const fromTopAloneVariant = {

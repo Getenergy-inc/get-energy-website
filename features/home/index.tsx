@@ -1,6 +1,5 @@
 "use client";
 import AmazingDiscount from "./amazing-discount";
-import FAQs from "./faqs";
 import FastestWay from "./fastest-way";
 import GlobalBrands from "./global-brands";
 import Landing from "./landing";
@@ -10,7 +9,7 @@ import Download from "./download";
 import HowItWorks from "../our-service/how-it-works";
 import Process from "../our-service/process";
 import "react-tooltip/dist/react-tooltip.css";
-import { RefObject, useRef } from "react";
+import { RefObject } from "react";
 import { create } from "zustand";
 
 interface HomeStore {

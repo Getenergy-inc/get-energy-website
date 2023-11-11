@@ -1,13 +1,11 @@
 "use client";
 import { variables } from "@/constants";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Dropdown } from "flowbite-react";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { useHomeStore } from ".";
-
-const LandingImage = dynamic(() => import("./landing-img"), { ssr: false });
+import dynamic from "next/dynamic";
 
 export default function Landing() {
   const { homeRef } = useHomeStore();
@@ -31,6 +29,12 @@ export default function Landing() {
 
     return () => cxt.revert();
   }, []);
+
+  const LandingImage = dynamic(() => import("./landing-img"), {
+    loading: () => (
+      <div className="w-16 h-16 border-primaryBlue border-8 border-t-transparent animate-spin rounded-full"></div>
+    ),
+  });
 
   return (
     <div className="w-full flex flex-col lg:flex-row items-center py-10 p-0 lg:pt-24">

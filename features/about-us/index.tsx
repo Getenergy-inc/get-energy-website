@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import TitleHeader from "@/components/title-header";
 import OurFunctions from "./our-functions";
 import IlluminatingTomorrow from "./illuminating-tomorrow";
-import { useState } from "react";
+import Info from "@/components/info";
 
 const WhoWeAreVideo = dynamic(() => import("./who-we-are-video"), { ssr: false });
 
@@ -46,51 +46,24 @@ export const whoWeAreContent = [
 ];
 
 export default function AboutUs() {
-  // const body = `
-  //       Getenergy your comprehensive
-  //       hub for all your energy needs!
-  //       As a leading energy service
-  //       provider in Nigeria, we are
-  //       dedicated to delivering innovative
-  //       and efficient energy solutions
-  //       to businesses and individuals.
-  //   `;
-
-  const [showmore, setShowmore] = useState(false);
+  const body = `
+        Getenergy your comprehensive
+        hub for all your energy needs!
+        As a leading energy service
+        provider in Nigeria, we are
+        dedicated to delivering innovative
+        and efficient energy solutions
+        to businesses and individuals.
+    `;
 
   return (
     <div className="w-full bg-white">
       <TitleHeader title="Who we are" type="1" location="About Us" />
-
-      <div className="mt-[6rem] container">
-        <div className="max-w-2xl space-y-4">
-          {!showmore ? (
-            <>
-              {whoWeAreContent.slice(0, 3).map((content, idx) => (
-                <p key={idx}>{content}</p>
-              ))}
-            </>
-          ) : (
-            <>
-              {whoWeAreContent.map((content, idx) => (
-                <p key={idx}>{content}</p>
-              ))}
-            </>
-          )}
-
-          <button
-            className="border-[#003b6d] border-b-2 px-2 py-1 font-semibold"
-            onClick={() => setShowmore(!showmore)}
-          >
-            Show {showmore ? "Less" : "More"}
-          </button>
-        </div>
-      </div>
-
+      <Info body={body} />
       <IlluminatingTomorrow />
       <OurFunctions />
       <WhoWeAreVideo />
-      {/** <OurTeam /> **/}
+      {/* <OurTeam /> */}
     </div>
   );
 }

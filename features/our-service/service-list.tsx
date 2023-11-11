@@ -7,14 +7,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Popover, PopoverTrigger } from "@/components/ui/popover";
 import PopoverList from "./popover-list";
+import { TransitionOpacity, TransitionParentInView } from "@/lib/utils/transitions";
 
 export default function ServiceList() {
   return (
     <React.Fragment>
       <div className="w-full flex justify-center my-20">
-        <div className="container px-4 lg:px-20 flex flex-wrap p-2 justify-center">
+        <TransitionParentInView className="container px-4 lg:px-20 flex flex-wrap p-2 justify-center">
           {service_data.map((item) => (
-            <div
+            <TransitionOpacity
               className="w-full md:w-[calc(94%/2)] lg:w-[calc(95%/3)] m-2 rounded-xl p-8 py-12 bg-white"
               key={item._id}
             >
@@ -25,9 +26,9 @@ export default function ServiceList() {
                 <Image src={assets.arrow_right} alt="arrow-right" className="me-2" />
                 <p>{item.link.title}</p>
               </Link>
-            </div>
+            </TransitionOpacity>
           ))}
-        </div>
+        </TransitionParentInView>
       </div>
       <div className="w-full flex items-center justify-center">
         <Popover>

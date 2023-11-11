@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "@/lib/utils/providers";
-import Header from "@/components/header";
+import Header from "@/components/layout/header";
 import { satoshi } from "@/lib/utils/fonts";
-import Footer from "@/components/footer";
+import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "GetEnergy - Energy Products & Services",

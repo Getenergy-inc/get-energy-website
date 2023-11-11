@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "../logo";
+import Logo from "../../logo";
 import { company_links, products_data } from "./data";
 import { FiLinkedin, FiInstagram, FiFacebook, FiTwitter, FiYoutube } from "react-icons/fi";
 
