@@ -65,33 +65,9 @@ export default function Landing() {
             Get Started
           </Link>
         </div>
-        {/* <div className="flex justify-center lg:justify-start my-10">
-          <div className="flex items-center justify-center">
-            <div className="jumbo_action">
-              <Link className="main-button p-2 px-6 rounded-full" href={variables.WAITLIST_ADDRESS}>
-                Join Wait List
-              </Link>
-            </div>
-            <div className="jumbo_action">
-              <div className="main-button p-2 px-6 rounded-full mx-4">
-                <Dropdown className="font-medium text-xl" inline={true} label="Join Us">
-                  <Dropdown.Item>
-                    <Link href={variables.INTERN_FORM_URL}>As an Intern</Link>
-                  </Dropdown.Item>
-                  <Dropdown.Item>
-                    <Link href={variables.VOLUNTEER_FORM_URL}>As a Volunteer</Link>
-                  </Dropdown.Item>
-                </Dropdown>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </div>
 
       <LandingIllus />
     </div>
   );
 }
-
-// animate-spin [animation-duration:10s] direction-reverse
-// animate-spin [animation-duration:10s]

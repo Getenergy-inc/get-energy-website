@@ -11,6 +11,8 @@ import Process from "../our-service/process";
 import "react-tooltip/dist/react-tooltip.css";
 import { RefObject } from "react";
 import { create } from "zustand";
+import Features from "./feature";
+import KnowUsMore from "./know-us-more";
 
 interface HomeStore {
   homeRef: RefObject<HTMLDivElement>;
@@ -26,7 +28,7 @@ export default function Home() {
   const { homeRef } = useHomeStore();
 
   return (
-    <div className="w-full bg-white" ref={homeRef}>
+    <div className="w-full bg-[#fdfdfd]" ref={homeRef}>
       <div className="container mx-auto ">
         <Landing />
       </div>
@@ -35,19 +37,9 @@ export default function Home() {
         <GetElectricitySection />
       </div>
       <Services />
-      <div className="container mx-auto ">
-        <AmazingDiscount />
-      </div>
-      {/* <FAQs /> */}
-      <div className="container mx-auto ">
-        <HowItWorks />
-      </div>
-      <div className="container mx-auto ">
-        <Process />
-      </div>
-      <div className="container mx-auto ">
-        <Download />
-      </div>
+      <Features />
+      <HowItWorks />
+      <KnowUsMore />
     </div>
   );
 }

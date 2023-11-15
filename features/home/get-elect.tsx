@@ -234,7 +234,7 @@ export default function GetElectricitySection() {
           </div>
         </div>
 
-        <div className="relative flex justify-center -mt-8">
+        <div className="relative flex justify-center -mt-10">
           <div className="absolute bottom-20 py-4 px-8 text-sm bg-white shadow-xl -left-10 rounded-xl">
             <div className="flex items-center gap-16 justify-between">
               <p className="font-medium">Investment</p>
@@ -253,9 +253,8 @@ export default function GetElectricitySection() {
             </div>
           </div>
 
-          <div className="w-full bg-primaryBlue rounded-[5rem] absolute h-3/4 bottom-0 -z-10"></div>
           <Image
-            src={"/images/bg/saving-guy.png"}
+            src={"/images/bg/man-holding-piggy-bank.png"}
             alt="a guy holding a piggy bank"
             width={400}
             height={600}
