@@ -1,10 +1,10 @@
 "use client";
 import AmazingDiscount from "./amazing-discount";
-import FastestWay from "./fastest-way";
+import GetElectricitySection from "./get-elect";
 import GlobalBrands from "./global-brands";
 import Landing from "./landing";
 import OurService from "./our-services";
-import WhoAreWe from "./who-are-we";
+import Services from "./services";
 import Download from "./download";
 import HowItWorks from "../our-service/how-it-works";
 import Process from "../our-service/process";
@@ -26,17 +26,28 @@ export default function Home() {
   const { homeRef } = useHomeStore();
 
   return (
-    <div className="container mx-auto w-full bg-white" ref={homeRef}>
-      <Landing />
-      <FastestWay />
-      <WhoAreWe />
-      <OurService />
-      <AmazingDiscount />
+    <div className="w-full bg-white" ref={homeRef}>
+      <div className="container mx-auto ">
+        <Landing />
+      </div>
       <GlobalBrands />
+      <div className="container mx-auto ">
+        <GetElectricitySection />
+      </div>
+      <Services />
+      <div className="container mx-auto ">
+        <AmazingDiscount />
+      </div>
       {/* <FAQs /> */}
-      <HowItWorks />
-      <Process />
-      <Download />
+      <div className="container mx-auto ">
+        <HowItWorks />
+      </div>
+      <div className="container mx-auto ">
+        <Process />
+      </div>
+      <div className="container mx-auto ">
+        <Download />
+      </div>
     </div>
   );
 }

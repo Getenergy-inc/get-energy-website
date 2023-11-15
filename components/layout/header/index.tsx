@@ -37,7 +37,7 @@ export default function Header() {
     <Link
       key={link._id}
       href={link.url}
-      className={`px-2 py-1 border-b-2 transition-colors duration-200 mb-4 nav_link md:mb-0 ${
+      className={`px-2 py-1 border-b-2 transition-colors duration-200 mb-4 nav_link font-medium\ md:mb-0 ${
         location === link.url ? "border-[#003b6d]" : "hover:border-[#003b6d] border-transparent"
       }`}
     >
@@ -46,7 +46,7 @@ export default function Header() {
   ));
 
   return (
-    <nav ref={navRef} className="bg-white w-full flex items-center justify-center p-6 mb-10">
+    <nav ref={navRef} className="bg-white w-full flex items-center justify-center mb-10">
       <div className="container lg:hidden">
         <div className="w-full flex items-center justify-between">
           <Logo size={100} id="logo" />
@@ -63,33 +63,35 @@ export default function Header() {
         )}
       </div>
 
-      <div className="hidden lg:flex container mx-auto -mb-14 w-full items-center justify-between bg-white p-4 px-10 rounded-full shadow-md z-10">
-        <Logo size={100} />
+      <div className="bg-white rounded-b-[2rem] w-full big-shadow z-10">
+        <div className="hidden lg:flex container w-full items-center py-4 justify-between">
+          <Logo size={100} />
 
-        <div className="flex items-center gap-3 overflow-hidden">{output}</div>
-        <div className="flex items-center">
-          {/* <Link className="sub-button p-2 px-6 me-3 rounded-full" href={variables.SHOP_NOW_ADDRESS}>
+          <div className="flex items-center gap-3 overflow-hidden">{output}</div>
+          <div className="flex items-center">
+            {/* <Link className="sub-button p-2 px-6 me-3 rounded-full" href={variables.SHOP_NOW_ADDRESS}>
             Shop Now
           </Link>
           <Link className="main-button p-2 px-6 rounded-full" href={variables.GET_STARTED_ADDRESS}>
             Get Started
           </Link> */}
-          <div className="nav_link_op">
-            <Link className="main-button p-2 px-6 rounded-full" href={variables.WAITLIST_ADDRESS}>
-              Join Wait List
-            </Link>
-          </div>
+            <div className="nav_link_op">
+              <Link className="main-button p-2 px-6 rounded-full" href={variables.WAITLIST_ADDRESS}>
+                Join Wait List
+              </Link>
+            </div>
 
-          <div className="nav_link_op">
-            <div className="main-button p-2 px-6 mx-3 rounded-full">
-              <Dropdown className="absolute z-50 font-medium text-xl" inline={true} label="Join Us">
-                <Dropdown.Item className="z-50">
-                  <Link href={variables.INTERN_FORM_URL}>As an Intern</Link>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <Link href={variables.VOLUNTEER_FORM_URL}>As a Volunteer</Link>
-                </Dropdown.Item>
-              </Dropdown>
+            <div className="nav_link_op">
+              <div className="main-button p-2 px-6 mx-3 rounded-full">
+                <Dropdown className="absolute z-50 font-medium text-xl" inline={true} label="Join Us">
+                  <Dropdown.Item className="z-50">
+                    <Link href={variables.INTERN_FORM_URL}>As an Intern</Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Link href={variables.VOLUNTEER_FORM_URL}>As a Volunteer</Link>
+                  </Dropdown.Item>
+                </Dropdown>
+              </div>
             </div>
           </div>
         </div>

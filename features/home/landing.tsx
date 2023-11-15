@@ -1,11 +1,13 @@
 "use client";
-import { variables } from "@/constants";
+import { assets, variables } from "@/constants";
 import Link from "next/link";
 import { Dropdown } from "flowbite-react";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { useHomeStore } from ".";
 import dynamic from "next/dynamic";
+import { montserrat } from "@/lib/utils/fonts";
+import Image from "next/image";
 
 export default function Landing() {
   const { homeRef } = useHomeStore();
@@ -30,34 +32,40 @@ export default function Landing() {
     return () => cxt.revert();
   }, []);
 
-  const LandingImage = dynamic(() => import("./landing-img"), {
+  const LandingIllus = dynamic(() => import("./landing-illus"), {
     loading: () => (
       <div className="w-16 h-16 border-primaryBlue border-8 border-t-transparent animate-spin rounded-full"></div>
     ),
   });
 
   return (
-    <div className="w-full flex flex-col lg:flex-row items-center py-10 p-0 lg:pt-24">
-      <div className="w-full lg:w-7/12">
-        <div className="overflow-hidden">
-          <h1 className="lg:text-start jumbo_text lg:text-5xl md:text-4xl text-3xl font-extrabold text-center md:text-start p-4 lg:pe-32 md:leading-[50px] leading-[40px]">
-            <span>Unlocking Sustainable Energy Solutions, Discover the Power of</span>
-            <span className="main-text ms-3 jumbo_gtext">GetEnergy</span>
-          </h1>
+    <div className="w-full flex flex-col md:grid grid-cols-5 mt-[6rem] gap-2 items-center">
+      <div className="w-full col-span-3 space-y-10">
+        <div className="space-y-5 max-w-[50rem]">
+          <div className="overflow-hidden pb-2">
+            <h1
+              className={`${montserrat} lg:text-start jumbo_text lg:text-5xl md:text-4xl text-3xl font-black text-center md:text-start md:leading-[52px] leading-[40px]`}
+            >
+              <span>Unlocking Sustainable Energy Solutions, Discover the Power of</span>
+              <span className="main-text ms-3 jumbo_gtext">GetEnergy</span>
+            </h1>
+          </div>
+          <div className="overflow-hidden pb-2">
+            <p className="w-full md:text-start text-center lg:text-start jumbo_text text-black/80 text-sm md:text-lg lg:pe-72 mb-2">
+              We are a leading provider of energy trading solutions, offering a comprehensive range of services to
+              clients in the energy sector.
+            </p>
+          </div>
         </div>
-        <div className="overflow-hidden">
-          <p className="w-full md:text-start text-center lg:text-start jumbo_text text-black/80 text-sm md:text-lg p-4 lg:pe-72 mb-2">
-            We are a leading provider of energy trading solutions, offering a comprehensive range of services to clients
-            in the energy sector
-          </p>
-        </div>
-        {/* 
         <div className="flex justify-center lg:justify-start">
-          <Link className="main-button p-3 px-10 text-sm rounded-full" href={variables.GET_STARTED_ADDRESS}>
+          <Link
+            className="bg-primaryBlue text-white px-10 font-semibold transition-colors py-4 p-3 rounded-2xl"
+            href={variables.GET_STARTED_ADDRESS}
+          >
             Get Started
           </Link>
-        </div> */}
-        <div className="flex justify-center lg:justify-start my-10">
+        </div>
+        {/* <div className="flex justify-center lg:justify-start my-10">
           <div className="flex items-center justify-center">
             <div className="jumbo_action">
               <Link className="main-button p-2 px-6 rounded-full" href={variables.WAITLIST_ADDRESS}>
@@ -77,16 +85,13 @@ export default function Landing() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
-      <div className="w-2/3 lg:w-5/12 mt-20 lg:mt-0 flex justify-center">
-        <LandingImage />
-        <div
-          className="hidden lg:block lg:w-[500px] lg:h-[800px] absolute top-0 right-0"
-          style={{ background: "rgba(102, 153, 204, 0.6)" }}
-        />
-      </div>
+      <LandingIllus />
     </div>
   );
 }
+
+// animate-spin [animation-duration:10s] direction-reverse
+// animate-spin [animation-duration:10s]

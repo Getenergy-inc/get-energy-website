@@ -15,15 +15,24 @@ export const service_data = [
   {
     _id: "service-2",
     title: "Electricity Trading Services",
-    body: `Our electricity
-    payment feature allows you to buy electricity on credit and make
-    payments via different payment methods, such as USSD, internet
-    banking, or point of sale. With our user-friendly interface, you can easily
-    purchase electricity and view your transaction history.
+    body: `We provide access to a curated selection of energy stocks, including renewable energy companies, energy technology firms, and utilities.
     `,
     icon: assets.icon2,
     link: {
       title: "GetEnergy",
+      url: "/",
+    },
+  },
+  {
+    _id: "service-5",
+    title: "Finance",
+    body: `Our team of experienced traders can assist you in developing and
+    executing trading strategies customized to your specific goals, whether
+    it's maximizing profits or maintaining a balanced portfolio.
+    `,
+    icon: assets.icon4,
+    link: {
+      title: "GetFinance",
       url: "/",
     },
   },
@@ -44,19 +53,6 @@ export const service_data = [
     icon: assets.icon3,
     link: {
       title: "GetEnergy",
-      url: "/",
-    },
-  },
-  {
-    _id: "service-5",
-    title: "Trading Strategies",
-    body: `Our team of experienced traders can assist you in developing and
-    executing trading strategies customized to your specific goals, whether
-    it's maximizing profits or maintaining a balanced portfolio.
-    `,
-    icon: assets.icon4,
-    link: {
-      title: "GetFinance",
       url: "/",
     },
   },

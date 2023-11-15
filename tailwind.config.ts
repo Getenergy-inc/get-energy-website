@@ -15,7 +15,7 @@ const config: Config = {
       center: true,
       padding: "1rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1360px",
       },
     },
     extend: {
@@ -25,6 +25,7 @@ const config: Config = {
       },
       colors: {
         primaryBlue: "#003b6d",
+        primaryBlueHover: "#00447f",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

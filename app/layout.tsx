@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "@/lib/utils/providers";
 import Header from "@/components/layout/header";
-import { satoshi } from "@/lib/utils/fonts";
+import { montserrat, satoshi } from "@/lib/utils/fonts";
 import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
       "Discover sustainable energy solutions and products at your convenience which includes energy equipments, commodities and services",
     url: "https://getenergy.ng",
     type: "website",
-    images: ["opengraph-image.jpeg"],
+    images: ["https://res.cloudinary.com/dhol1zstd/image/upload/v1700052287/opengraph-image_qrkp80.jpg "],
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={satoshi.className}>
+      <body className={montserrat.className}>
         <Providers>
           <Header />
           {children}
