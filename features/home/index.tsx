@@ -1,18 +1,18 @@
 "use client";
-import AmazingDiscount from "./amazing-discount";
 import GetElectricitySection from "./get-elect";
-import GlobalBrands from "./global-brands";
+import UpdateMarquee from "./update-marquee";
 import Landing from "./landing";
-import OurService from "./our-services";
 import Services from "./services";
-import Download from "./download";
 import HowItWorks from "../our-service/how-it-works";
-import Process from "../our-service/process";
-import "react-tooltip/dist/react-tooltip.css";
 import { RefObject } from "react";
 import { create } from "zustand";
 import Features from "./feature";
 import KnowUsMore from "./know-us-more";
+import "react-tooltip/dist/react-tooltip.css";
+import PayBills from "./pay-bills";
+import EnergyEcommerce from "./energy-ecommerce";
+import InvestIn from "./invest-in";
+import CommunityElectricityVending from "./community-electricity";
 
 interface HomeStore {
   homeRef: RefObject<HTMLDivElement>;
@@ -30,9 +30,13 @@ export default function Home() {
   return (
     <div className="w-full bg-[#fdfdfd]" ref={homeRef}>
       <Landing />
-      <GlobalBrands />
-      <div className="container mx-auto ">
+      <UpdateMarquee />
+      <div className="container mx-auto space-y-64 mt-40">
         <GetElectricitySection />
+        <PayBills />
+        <EnergyEcommerce />
+        <InvestIn />
+        <CommunityElectricityVending />
       </div>
       <Services />
       <Features />

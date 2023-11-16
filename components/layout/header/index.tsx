@@ -37,8 +37,8 @@ export default function Header() {
     <Link
       key={link._id}
       href={link.url}
-      className={`px-2 py-1 border-b-2 transition-colors duration-200 mb-4 nav_link md:mb-0 ${
-        location === link.url ? "border-[#003b6d]" : "hover:border-[#003b6d] border-transparent"
+      className={`px-2 py-1 transition-colors duration-200 mb-4 nav_link font-semibold text-sm md:mb-0 ${
+        location === link.url && "text-[#003b6d]"
       }`}
     >
       {link.title}
@@ -68,31 +68,11 @@ export default function Header() {
           <Logo size={100} />
 
           <div className="flex items-center gap-3 overflow-hidden">{output}</div>
-          <div className="flex items-center">
-            {/* <Link className="sub-button p-2 px-6 me-3 rounded-full" href={variables.SHOP_NOW_ADDRESS}>
-            Shop Now
-          </Link>
-          <Link className="main-button p-2 px-6 rounded-full" href={variables.GET_STARTED_ADDRESS}>
-            Get Started
-          </Link> */}
-            <div className="nav_link_op">
-              <Link className="main-button p-2 px-6 rounded-full" href={variables.WAITLIST_ADDRESS}>
-                Join Wait List
-              </Link>
-            </div>
 
-            <div className="nav_link_op">
-              <div className="main-button p-2 px-6 mx-3 rounded-full">
-                <Dropdown className="absolute z-50 font-medium text-xl" inline={true} label="Join Us">
-                  <Dropdown.Item className="z-50">
-                    <Link href={variables.INTERN_FORM_URL}>As an Intern</Link>
-                  </Dropdown.Item>
-                  <Dropdown.Item>
-                    <Link href={variables.VOLUNTEER_FORM_URL}>As a Volunteer</Link>
-                  </Dropdown.Item>
-                </Dropdown>
-              </div>
-            </div>
+          <div>
+            <button className="text-white font-semibold px-6 py-3 text-sm bg-primaryBlue rounded-xl">
+              Get Started
+            </button>
           </div>
         </div>
       </div>

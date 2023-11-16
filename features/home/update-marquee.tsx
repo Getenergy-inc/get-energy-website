@@ -1,7 +1,6 @@
 import { assets } from "@/constants";
 
-export default function GlobalBrands() {
-  const brands_data = [assets.brand1, assets.brand2, assets.brand3, assets.brand4, assets.brand5, assets.brand6];
+export default function UpdateMarquee() {
   const brandData = [
     <svg xmlns="http://www.w3.org/2000/svg" width="174" height="27" viewBox="0 0 174 27" fill="none" key={"sd"}>
       <path
@@ -100,12 +99,14 @@ export default function GlobalBrands() {
     </svg>,
   ];
 
+  const updateText = ["Energy Updates Coming Soon!!!"];
+
   return (
     <section className="bg-zinc-100 w-full">
-      <div className="my-10 px-0 items-center overflow-hidden">
-        <div className="mt-5 w-full flex overflow-hidden relative h-[200px]">
+      <div className="px-0 items-center overflow-hidden select-none">
+        <div className="w-full flex overflow-hidden relative h-[50px]">
           <div className="m-scroll w-full flex items-center absolute">
-            {brandData.map((brand, idx) => (
+            {/* {brandData.map((brand, idx) => (
               <div
                 className="mx-28 cursor-pointer hover:scale-[1.01]"
                 style={{ transition: "0.4s ease-in-out all" }}
@@ -113,17 +114,27 @@ export default function GlobalBrands() {
               >
                 {brand}
               </div>
+            ))} */}
+            {Array.from({ length: 5 }).map((_, i) => (
+              <div key={i} className="mx-28">
+                <p>Energy Updates Coming Soon...</p>
+              </div>
             ))}
           </div>
 
           <div className="n-scroll w-full flex items-center absolute">
-            {brandData.map((brand, idx) => (
+            {/* {brandData.map((brand, idx) => (
               <div
                 className="mx-28 cursor-pointer hover:scale-[1.01]"
                 style={{ transition: "0.4s ease-in-out all" }}
                 key={idx + 20}
               >
                 {brand}
+              </div>
+            ))} */}
+            {Array.from({ length: 5 }).map((_, i) => (
+              <div key={i} className="mx-28">
+                <p>Energy Updates Coming Soon...</p>
               </div>
             ))}
           </div>

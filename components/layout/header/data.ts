@@ -1,27 +1,37 @@
 export const links = [
   {
-    _id: 'link-1',
-    title: 'Home',
-    url: '/',
+    _id: "link-1",
+    title: "Home",
+    url: "/",
   },
   {
-    _id: 'link-2',
-    title: 'About Us',
-    url: '/about-us',
+    _id: "link-2",
+    title: "Get Electricity",
+    url: "/#get-electricity",
   },
   {
-    _id: 'link-3',
-    title: 'Our Service',
-    url: '/our-services',
+    _id: "link-3",
+    title: "Pay Bills",
+    url: "/#pay-bills",
   },
   {
-    _id: 'link-4',
-    title: 'FAQ',
-    url: '/faq',
+    _id: "link-4",
+    title: "Energy E-Commerce",
+    url: "/#energy-ecommerce",
+  },
+  // {
+  //   _id: "link-6",
+  //   title: "Contact Us",
+  //   url: "/contact-us",
+  // },
+  {
+    _id: "link-7",
+    title: "Invest in Energy",
+    url: "/#invest-in-energy",
   },
   {
-    _id: 'link-5',
-    title: 'Contact Us',
-    url: '/contact-us',
-  }
-]
+    _id: "link-8",
+    title: "Careers",
+    url: "/careers",
+  },
+];

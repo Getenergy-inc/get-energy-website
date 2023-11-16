@@ -1,13 +1,11 @@
 "use client";
-import { assets, variables } from "@/constants";
+import { variables } from "@/constants";
 import Link from "next/link";
-import { Dropdown } from "flowbite-react";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { useHomeStore } from ".";
 import dynamic from "next/dynamic";
-import { montserrat } from "@/lib/utils/fonts";
-import Image from "next/image";
+import { MouseIcon } from "lucide-react";
 
 export default function Landing() {
   const { homeRef } = useHomeStore();
@@ -38,19 +36,27 @@ export default function Landing() {
 
   return (
     <header id="landing-header" className="relative overflow-hidden pb-20">
+      <div className="absolute top-10 left-0 w-full flex items-center justify-center">
+        <span>
+          We are hiring!!{" "}
+          <Link href={"/careers"} className="font-semibold text-primaryBlue border-b">
+            Check Now
+          </Link>
+        </span>
+      </div>
       <div className="w-full flex flex-col md:grid z-[50] container mx-auto grid-cols-5 mt-[6rem] gap-6 items-center">
         <div className="w-full col-span-3 space-y-10">
-          <div className="space-y-5 max-w-[50rem]">
+          <div className="space-y-5">
             <div className="overflow-hidden pb-2">
               <h1
-                className={`lg:text-start jumbo_text lg:text-5xl md:text-4xl text-3xl font-black text-center md:text-start md:leading-[52px] leading-[40px]`}
+                className={`lg:text-start jumbo_text max-w-[40rem] lg:text-5xl md:text-4xl text-3xl font-black text-center md:text-start md:leading-[65px] leading-[40px]`}
               >
                 <span>Unlocking Sustainable Energy Solutions, Discover the Power of</span>
                 <span className="main-text ms-3 jumbo_gtext">GetEnergy</span>
               </h1>
             </div>
             <div className="overflow-hidden pb-2">
-              <p className="w-full md:text-start text-center lg:text-start jumbo_text text-black/80 text-sm md:text-lg lg:pe-72 mb-2">
+              <p className="w-full md:text-start text-center lg:text-start jumbo_text max-w-[45rem] text-sm md:text-lg font-semibold mb-2">
                 We are a leading provider of energy trading solutions, offering a comprehensive range of services to
                 clients in the energy sector.
               </p>
@@ -67,6 +73,10 @@ export default function Landing() {
         </div>
 
         <LandingIllus />
+      </div>
+
+      <div className="w-full md:grid hidden place-content-center animate-bounce [animation-duration:1s] text-primaryBlue">
+        <MouseIcon />
       </div>
     </header>
   );
