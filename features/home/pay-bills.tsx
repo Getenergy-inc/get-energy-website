@@ -56,7 +56,7 @@ const PayBills = () => {
 
       <div className="pt-8">
         <div className="relative w-full h-full">
-          {/* Logos */}
+          {/* Logos and shapes */}
           <div className="absolute -top-16 left-10 w-16 h-16 rounded-xl border bill-action grid place-content-center bg-white/50 p-2 backdrop-blur-md -rotate-12">
             <div className="w-full h-full rounded-xl overflow-hidden">
               <Image
@@ -81,8 +81,13 @@ const PayBills = () => {
               />
             </div>
           </div>
+          <div className="absolute -top-5 left-40 w-32 h-32 rounded-full bg-primaryBlue"></div>
+          <div className="absolute -top-10 right-60 w-5 h-5 rounded-full bg-primaryBlue/60"></div>
+          <div className="absolute bottom-20 right-10 w-2 h-2 rounded-full bg-primaryBlue/30"></div>
+          <div className="absolute bottom-10 right-8 w-2 h-2 rounded-full bg-primaryBlue/30"></div>
+
+          {/* Content */}
           <div className="w-11/12 h-full bg-white z-50 border shad-lg rounded-md px-12 py-8 relative">
-            {/* Content */}
             <p className="font-bold text-xl">Buy Bills Swiftly</p>
 
             <div className="grid grid-cols-4 gap-x-10 gap-y-8 py-6">

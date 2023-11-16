@@ -44,7 +44,7 @@ export default function Landing() {
           </Link>
         </span>
       </div>
-      <div className="w-full flex flex-col md:grid z-[50] container mx-auto grid-cols-5 mt-[6rem] gap-6 items-center">
+      <div className="w-full flex flex-col md:grid z-[50] container mx-auto grid-cols-5 mt-[3rem] gap-6 items-center">
         <div className="w-full col-span-3 space-y-10">
           <div className="space-y-5">
             <div className="overflow-hidden pb-2">
