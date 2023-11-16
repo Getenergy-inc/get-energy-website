@@ -37,7 +37,7 @@ export default function Header() {
     <Link
       key={link._id}
       href={link.url}
-      className={`px-2 py-1 border-b-2 transition-colors duration-200 mb-4 nav_link font-medium\ md:mb-0 ${
+      className={`px-2 py-1 border-b-2 transition-colors duration-200 mb-4 nav_link md:mb-0 ${
         location === link.url ? "border-[#003b6d]" : "hover:border-[#003b6d] border-transparent"
       }`}
     >
@@ -46,7 +46,7 @@ export default function Header() {
   ));
 
   return (
-    <nav ref={navRef} className="bg-white w-full flex items-center justify-center mb-10">
+    <nav ref={navRef} className="bg-white w-full flex items-center justify-center">
       <div className="container lg:hidden">
         <div className="w-full flex items-center justify-between">
           <Logo size={100} id="logo" />

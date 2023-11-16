@@ -29,9 +29,7 @@ export default function Home() {
 
   return (
     <div className="w-full bg-[#fdfdfd]" ref={homeRef}>
-      <div className="container mx-auto ">
-        <Landing />
-      </div>
+      <Landing />
       <GlobalBrands />
       <div className="container mx-auto ">
         <GetElectricitySection />
