@@ -13,8 +13,10 @@ import {
   transStartVariant,
   fromRightVariant,
   defaultParentVariantInView,
-  fromLeftAloneVarianSlow,
-  defaultParentVariantInSlow,
+  fromLeftAloneVariantSlow,
+  defaultParentVariantInViewSlow,
+  fromRightAloneVariantSlow,
+  defaultParentVariantInViewFast,
 } from "./variants";
 import { DetailedHTMLProps, FC, HTMLAttributes, PropsWithChildren } from "react";
 
@@ -78,11 +80,27 @@ export const TransitionParentInView: React.FC<TransitionProps> = (props) => {
   );
 };
 
+export const TransitionParentInViewFast: React.FC<TransitionProps> = (props) => {
+  const { addClass, children, onClick } = props;
+  return (
+    <motion.div
+      variants={defaultParentVariantInViewFast}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      className={`${props.className} ${addClass && addClass}`}
+      onClick={onClick}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
 export const TransitionParentInViewSlow: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={defaultParentVariantInSlow}
+      variants={defaultParentVariantInViewSlow}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
@@ -223,7 +241,7 @@ export const TransitionFromLeftAloneSlow: React.FC<TransitionProps> = (props) =>
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={fromLeftAloneVarianSlow}
+      variants={fromLeftAloneVariantSlow}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
@@ -241,6 +259,23 @@ export const TransitionFromRightAlone: React.FC<TransitionProps> = (props) => {
   return (
     <motion.div
       variants={fromRightAloneVariant}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      exit="exit"
+      className={`${props.className} ${addClass && addClass}`}
+      onClick={onClick}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+export const TransitionFromRightAloneSlow: React.FC<TransitionProps> = (props) => {
+  const { addClass, children, onClick } = props;
+  return (
+    <motion.div
+      variants={fromRightAloneVariantSlow}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}

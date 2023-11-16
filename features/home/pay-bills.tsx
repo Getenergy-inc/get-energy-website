@@ -10,6 +10,15 @@ import BettingLotteryIcon from "@/components/common/icons/betting-lottery.icon";
 import { billsData } from "./data";
 import { useState } from "react";
 import { RightToLeftSVG } from "@/components/common/ltr";
+import {
+  TransitionFromBottom,
+  TransitionFromRightAloneSlow,
+  TransitionOpacity,
+  TransitionOpacityAlone,
+  TransitionParentInView,
+  TransitionParentInViewFast,
+  TransitionParentInViewSlow,
+} from "@/lib/utils/transitions";
 
 const PayBills = () => {
   const [selectedAction, setSelectedAction] = useState<number | null>(null);
@@ -37,10 +46,12 @@ const PayBills = () => {
     <section className="grid grid-cols-2 gap-20 relative" id="pay-bills">
       <div>
         <div className="space-y-8">
-          <h3 className="font-bold text-4xl">Pay Bills</h3>
-          <div className="space-y-6">
+          <TransitionOpacityAlone>
+            <h3 className="font-bold text-4xl">Pay Bills</h3>
+          </TransitionOpacityAlone>
+          <TransitionParentInView className="space-y-6">
             {billsData.map((data, i) => (
-              <div key={i} className="flex items-center gap-8">
+              <TransitionOpacity key={i} className="flex items-center gap-8">
                 <div className="flex-shrink-0 w-12 rounded-full h-12 shadow-xl bg-white flex items-center justify-center">
                   <span className="font-bold text-2xl">{i + 1}.</span>
                 </div>
@@ -48,51 +59,53 @@ const PayBills = () => {
                   <p className="text-xl font-semibold">{data.title}</p>
                   <p className="text-zinc-400 leading-loose text-lg">{data.description}</p>
                 </div>
-              </div>
+              </TransitionOpacity>
             ))}
-          </div>
+          </TransitionParentInView>
         </div>
       </div>
 
-      <div className="pt-8">
+      <TransitionFromRightAloneSlow className="pt-8 z-50">
         <div className="relative w-full h-full">
           {/* Logos and shapes */}
-          <div className="absolute -top-16 left-10 w-16 h-16 rounded-xl border bill-action grid place-content-center bg-white/50 p-2 backdrop-blur-md -rotate-12">
-            <div className="w-full h-full rounded-xl overflow-hidden">
-              <Image
-                src={"/images/logos/mtn.png"}
-                alt="mtn logo"
-                width={50}
-                height={50}
-                className="w-full h-full object-cover select-none"
-                draggable={false}
-              />
-            </div>
-          </div>
-          <div className="absolute top-1/2 -right-[48px] w-16 h-16 rounded-xl border shadow-2xl grid place-content-center p-2 backdrop-blur-md -rotate-12">
-            <div className="w-full border aspect-square rounded-xl overflow-hidden bill-action">
-              <Image
-                src={"/images/logos/dstv.png"}
-                alt="mtn logo"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover select-none"
-                draggable={false}
-              />
-            </div>
-          </div>
-          <div className="absolute -top-5 left-40 w-32 h-32 rounded-full bg-primaryBlue"></div>
-          <div className="absolute -top-10 right-60 w-5 h-5 rounded-full bg-primaryBlue/60"></div>
-          <div className="absolute bottom-20 right-10 w-2 h-2 rounded-full bg-primaryBlue/30"></div>
-          <div className="absolute bottom-10 right-8 w-2 h-2 rounded-full bg-primaryBlue/30"></div>
+          <TransitionParentInViewSlow>
+            <TransitionOpacity className="absolute -top-16 left-10 w-16 h-16 rounded-xl border bill-action grid place-content-center bg-white/50 p-2 backdrop-blur-md -rotate-12">
+              <div className="w-full h-full rounded-xl overflow-hidden">
+                <Image
+                  src={"/images/logos/mtn.png"}
+                  alt="mtn logo"
+                  width={50}
+                  height={50}
+                  className="w-full h-full object-cover select-none"
+                  draggable={false}
+                />
+              </div>
+            </TransitionOpacity>
+            <TransitionOpacity className="absolute top-1/2 -right-[48px] w-16 h-16 rounded-xl border shadow-2xl grid place-content-center p-2 backdrop-blur-md -rotate-12">
+              <div className="w-full border aspect-square rounded-xl overflow-hidden bill-action">
+                <Image
+                  src={"/images/logos/dstv.png"}
+                  alt="mtn logo"
+                  width={100}
+                  height={100}
+                  className="w-full h-full object-cover select-none"
+                  draggable={false}
+                />
+              </div>
+            </TransitionOpacity>
+            <TransitionOpacity className="absolute -top-5 left-40 w-32 h-32 rounded-full bg-primaryBlue"></TransitionOpacity>
+            <TransitionOpacity className="absolute -top-10 right-60 w-5 h-5 rounded-full bg-primaryBlue/60"></TransitionOpacity>
+            <TransitionOpacity className="absolute bottom-20 right-10 w-2 h-2 rounded-full bg-primaryBlue/30"></TransitionOpacity>
+            <TransitionOpacity className="absolute bottom-10 right-8 w-2 h-2 rounded-full bg-primaryBlue/30"></TransitionOpacity>
+          </TransitionParentInViewSlow>
 
           {/* Content */}
           <div className="w-11/12 h-full bg-white z-50 border shad-lg rounded-md px-12 py-8 relative">
             <p className="font-bold text-xl">Buy Bills Swiftly</p>
 
-            <div className="grid grid-cols-4 gap-x-10 gap-y-8 py-6">
+            <TransitionParentInViewFast className="grid grid-cols-4 gap-x-10 gap-y-8 py-6">
               {billsAction.map((action, i) => (
-                <div key={i}>
+                <TransitionFromBottom key={i}>
                   <div className="flex items-center select-none w-full h-auto aspect-square justify-center">
                     <div className="w-[70%] flex items-center justify-center h-auto aspect-square">
                       <div
@@ -109,9 +122,9 @@ const PayBills = () => {
                   </div>
 
                   <p className="text-center text-sm">{action.label}</p>
-                </div>
+                </TransitionFromBottom>
               ))}
-            </div>
+            </TransitionParentInViewFast>
             <div className="w-1/2 mx-auto mt-5">
               <button
                 className={`${
@@ -123,7 +136,7 @@ const PayBills = () => {
             </div>
           </div>
         </div>
-      </div>
+      </TransitionFromRightAloneSlow>
 
       <div className="absolute top-[30%] left-[4%] z-10">
         <RightToLeftSVG />

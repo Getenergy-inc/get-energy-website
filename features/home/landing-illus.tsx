@@ -10,16 +10,19 @@ export default function LandingImage() {
 
   useLayoutEffect(() => {
     const cxt = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".main",
-          start: "top top",
-          end: "bottom top",
-          scrub: 1,
-        },
-      });
+      // const tl = gsap.timeline({
+      //   scrollTrigger: {
+      //     trigger: ".main",
+      //     start: "top top",
+      //     end: "bottom top",
+      //     scrub: 1,
+      //   },
+      // });
 
-      gsap.timeline().from(".likkle", { opacity: 0, stagger: { amount: 0.5 } });
+      gsap
+        .timeline()
+        .from(".bulb", { opacity: 0, xPercent: 10 })
+        .from(".likkle", { opacity: 0, stagger: { amount: 0.5 } });
 
       // tl.to(".likkle", { opacity: 0, stagger: { amount: 0.5 } });
     }, homeRef);
@@ -29,14 +32,14 @@ export default function LandingImage() {
 
   return (
     <>
-      <div className="w-full bg-zinc-100 select-none main h-auto aspect-square col-span-2 animate-spin [animation-duration:40s] rounded-full relative">
+      <div className="w-full bg-transparent select-none main h-auto aspect-square col-span-2 animate-spin [animation-duration:40s] rounded-full relative">
         <div className="w-full h-full top-0 left-0 [animation-duration:40s] direction-reverse absolute animate-spin rounded-full">
           <Image
             src={"/images/bg/bulb_cut.png"}
             alt="a bulb"
             width={585}
             height={585}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover bulb"
             draggable={false}
           />
         </div>

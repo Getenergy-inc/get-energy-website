@@ -2,18 +2,25 @@ import Image from "next/image";
 import { service_data } from "../our-service/data";
 import Link from "next/link";
 import { assets } from "@/constants";
+import { TransitionOpacity, TransitionParentInView, TransitionParentInViewFast } from "@/lib/utils/transitions";
 
 export default function Services() {
   return (
     <>
       <section className="bg-primaryBlue text-white py-[4rem] w-full mt-40">
-        <div className="max-w-3xl text-center mx-auto space-y-3">
-          <p className="text-primaryBlue font-bold px-7 py-4 w-fit mx-auto rounded-full bg-white/90">Services</p>
-          <h3 className="font-extrabold text-white/70 text-4xl leading-relaxed">
-            Ignite Your World with <span className="text-white">GetEnergy</span> Transformative Powering Solutions
-          </h3>
-          <p className="text-center text-white/70">We offer amazing services to suit our customer needs</p>
-        </div>
+        <TransitionParentInView className="max-w-3xl text-center mx-auto space-y-3">
+          <TransitionOpacity>
+            <p className="text-primaryBlue font-bold px-7 py-4 w-fit mx-auto rounded-full bg-white/90">Services</p>
+          </TransitionOpacity>
+          <TransitionOpacity>
+            <h3 className="font-extrabold text-white/70 text-4xl leading-relaxed">
+              Ignite Your World with <span className="text-white">GetEnergy</span> Transformative Powering Solutions
+            </h3>
+          </TransitionOpacity>
+          <TransitionOpacity>
+            <p className="text-center text-white/70">We offer amazing services to suit our customer needs</p>
+          </TransitionOpacity>
+        </TransitionParentInView>
 
         <div className="container mx-auto mt-16 flex items-center justify-between gap-6">
           <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
@@ -24,12 +31,12 @@ export default function Services() {
             />
           </svg>
 
-          <div className="w-full grid grid-cols-3 gap-4 md:gap-10">
+          <TransitionParentInViewFast className="w-full grid grid-cols-3 gap-4 md:gap-10">
             {service_data
               .slice(0, 4)
               .filter((item) => item._id !== "service-3")
               .map((item) => (
-                <div className="w-full rounded-xl p-4 md:p-8 text-black py-12 bg-white" key={item._id}>
+                <TransitionOpacity className="w-full rounded-xl p-4 md:p-8 text-black py-12 bg-white" key={item._id}>
                   <Image alt="our-service-img" src={item.icon} className="mb-4" />
                   <h4 className="w-full font-bold text-xl">{item.title}</h4>
                   <p className="w-full text-gray-600 text-sm mt-2">{item.body}</p>
@@ -37,9 +44,9 @@ export default function Services() {
                     <Image src={assets.arrow_right} alt="arrow-right" className="me-2" />
                     <p>{item.link.title}</p>
                   </Link>
-                </div>
+                </TransitionOpacity>
               ))}
-          </div>
+          </TransitionParentInViewFast>
 
           <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
             <circle cx="20.5" cy="20.1328" r="20" fill="white" />

@@ -1,3 +1,4 @@
+import { TransitionOpacity, TransitionParentInView, TransitionParentInViewFast } from "@/lib/utils/transitions";
 import { User2Icon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -13,16 +14,20 @@ export default function HowItWorks() {
   return (
     <section className="bg-primaryBlue py-[4rem] text-white mt-40">
       <div className="w-full container mx-auto">
-        <div className="max-w-3xl text-center mx-auto space-y-3 text-white">
-          <p className="text-primaryBlue font-bold px-7 py-4 w-fit mx-auto rounded-full bg-white/90">How it Works</p>
-          <h3 className="font-bold text-white text-4xl">
-            Our Working Process helps you to get the best from our platform
-          </h3>
-        </div>
+        <TransitionParentInViewFast className="max-w-3xl text-center mx-auto space-y-3 text-white">
+          <TransitionOpacity>
+            <p className="text-primaryBlue font-bold px-7 py-4 w-fit mx-auto rounded-full bg-white/90">How it Works</p>
+          </TransitionOpacity>
+          <TransitionOpacity>
+            <h3 className="font-bold text-white text-4xl">
+              Our Working Process helps you to get the best from our platform
+            </h3>
+          </TransitionOpacity>
+        </TransitionParentInViewFast>
 
-        <div className="grid grid-cols-3 gap-12 mt-10">
+        <TransitionParentInViewFast className="grid grid-cols-3 gap-12 mt-10">
           {stepsData.map((data) => (
-            <div key={data.id}>
+            <TransitionOpacity key={data.id}>
               <button
                 className={`${
                   selectedStep === data.id ? "bg-white text-primaryBlue" : "hover:bg-white hover:text-primaryBlue"
@@ -31,12 +36,12 @@ export default function HowItWorks() {
               >
                 0{data.id}. {data.label}
               </button>
-            </div>
+            </TransitionOpacity>
           ))}
-        </div>
+        </TransitionParentInViewFast>
 
-        <div className="mt-16 grid grid-cols-2 gap-10 px-16">
-          <div className="space-y-10">
+        <TransitionParentInView className="mt-16 grid grid-cols-2 gap-10 px-16">
+          <TransitionOpacity className="space-y-10">
             <div className="flex gap-6">
               <div className="w-24 h-24 flex-shrink-0 bg-white/60 p-4 rounded-2xl">
                 <div className="w-full h-full bg-primaryBlue rounded-full grid place-content-center">
@@ -54,8 +59,9 @@ export default function HowItWorks() {
             <button className="px-6 py-3 rounded-full border-2 border-white/50 hover:bg-white hover:text-primaryBlue transition-colors duration-300">
               Get Started
             </button>
-          </div>
-          <div>
+          </TransitionOpacity>
+
+          <TransitionOpacity>
             <div className="w-full bg-white rounded-[2rem] h-full">
               <div className="w-11/12 h-auto rounded-lg mx-auto overflow-hidden relative -bottom-10 shadow-xl">
                 <Image
@@ -68,8 +74,8 @@ export default function HowItWorks() {
                 />
               </div>
             </div>
-          </div>
-        </div>
+          </TransitionOpacity>
+        </TransitionParentInView>
       </div>
     </section>
   );

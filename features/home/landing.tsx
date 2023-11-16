@@ -64,7 +64,7 @@ export default function Landing() {
           </div>
           <div className="flex justify-center lg:justify-start">
             <Link
-              className="bg-primaryBlue text-white px-10 font-semibold transition-colors py-4 p-3 rounded-2xl"
+              className="bg-primaryBlue text-white px-10 jumbo_action font-semibold transition-colors py-4 p-3 rounded-2xl"
               href={variables.GET_STARTED_ADDRESS}
             >
               Get Started

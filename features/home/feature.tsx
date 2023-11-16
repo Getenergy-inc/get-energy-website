@@ -1,17 +1,32 @@
+import {
+  TransitionFromBottom,
+  TransitionOpacity,
+  TransitionParentInView,
+  TransitionParentInViewFast,
+} from "@/lib/utils/transitions";
+
 const Features = () => {
   return (
     <section id="feature-section">
       <div className="mt-40">
-        <div className="max-w-3xl text-center mx-auto space-y-8">
-          <p className="text-primaryBlue font-bold px-7 py-4 w-fit mx-auto rounded-full bg-primaryBlue/20">Features</p>
-          <h3 className="font-bold text-black text-4xl">
-            Why it is <br /> Worth Choosing <span className="text-primaryBlue">GetEnergy</span>
-          </h3>
-          <p className="text-center text-white/70">We offer amazing services to suit our customer needs</p>
-        </div>
+        <TransitionParentInView className="max-w-3xl text-center mx-auto space-y-8">
+          <TransitionOpacity>
+            <p className="text-primaryBlue font-bold px-7 py-4 w-fit mx-auto rounded-full bg-primaryBlue/20">
+              Features
+            </p>
+          </TransitionOpacity>
+          <TransitionOpacity>
+            <h3 className="font-bold text-black text-4xl">
+              Why it is <br /> Worth Choosing <span className="text-primaryBlue">GetEnergy</span>
+            </h3>
+          </TransitionOpacity>
+          <TransitionOpacity>
+            <p className="text-center text-white/70">We offer amazing services to suit our customer needs</p>
+          </TransitionOpacity>
+        </TransitionParentInView>
 
-        <div className="container mx-auto gap-12 grid-cols-3 grid">
-          <div className="col-span-2 grid grid-cols-3 items-center gap-2 rounded-2xl p-12 bg-[#F5F8FE]">
+        <TransitionParentInViewFast className="container mx-auto gap-12 grid-cols-3 grid">
+          <TransitionFromBottom className="col-span-2 grid grid-cols-3 items-center gap-2 rounded-2xl p-12 bg-[#F5F8FE]">
             <div className="col-span-2 space-y-1">
               <h4 className="text-4xl font-semibold">All-in-One Convenience</h4>
               <p className="text-lg max-w-md">
@@ -75,8 +90,8 @@ const Features = () => {
                 </svg>
               </div>
             </div>
-          </div>
-          <div className="rounded-2xl min-h-48 bg-[#F5F8FE] p-10">
+          </TransitionFromBottom>
+          <TransitionFromBottom className="rounded-2xl min-h-48 bg-[#F5F8FE] p-10">
             <div className="space-y-4">
               <div className="w-full flex justify-between relative h-32 overflow-hidden bg-[#32ACED] rounded-xl">
                 <div className="h-full w-1/3 grid place-content-center">
@@ -93,8 +108,8 @@ const Features = () => {
                 right at your fingertips.
               </p>
             </div>
-          </div>
-          <div className="rounded-2xl min-h-48 bg-[#F5F8FE] p-10">
+          </TransitionFromBottom>
+          <TransitionFromBottom className="rounded-2xl min-h-48 bg-[#F5F8FE] p-10">
             <div className="space-y-4">
               <div className="w-full relative h-32 overflow-hidden bg-[#FFC173] rounded-xl">
                 <div className="h-full w-1/3 grid place-content-center">
@@ -111,8 +126,8 @@ const Features = () => {
                 right at your fingertips.
               </p>
             </div>
-          </div>
-          <div className="rounded-2xl min-h-48 bg-[#F5F8FE] p-10">
+          </TransitionFromBottom>
+          <TransitionFromBottom className="rounded-2xl min-h-48 bg-[#F5F8FE] p-10">
             <div className="space-y-4">
               <div className="w-full relative h-32 overflow-hidden bg-[#7D7AFF] rounded-xl">
                 <div className="h-full w-1/3 grid place-content-center">
@@ -129,8 +144,8 @@ const Features = () => {
                 right at your fingertips.
               </p>
             </div>
-          </div>
-          <div className="rounded-2xl min-h-48 bg-[#F5F8FE] p-10">
+          </TransitionFromBottom>
+          <TransitionFromBottom className="rounded-2xl min-h-48 bg-[#F5F8FE] p-10">
             <div className="space-y-4">
               <div className="w-full relative h-32 overflow-hidden bg-[#F54BC3] rounded-xl">
                 <div className="h-full w-1/3 grid place-content-center">
@@ -147,8 +162,8 @@ const Features = () => {
                 right at your fingertips.
               </p>
             </div>
-          </div>
-        </div>
+          </TransitionFromBottom>
+        </TransitionParentInViewFast>
       </div>
     </section>
   );

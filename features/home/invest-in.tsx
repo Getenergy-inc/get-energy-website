@@ -2,6 +2,14 @@ import Image from "next/image";
 import { investInEnergyData } from "./data";
 import { ArrowUpIcon } from "lucide-react";
 import { RightToLeftSVG } from "@/components/common/ltr";
+import {
+  TransitionFromBottom,
+  TransitionFromBottomAlone,
+  TransitionFromLeft,
+  TransitionFromRight,
+  TransitionOpacityAlone,
+  TransitionParentInView,
+} from "@/lib/utils/transitions";
 
 const InvestIn = () => {
   return (
@@ -13,10 +21,12 @@ const InvestIn = () => {
         <div className="w-3 h-3 bg-primaryBlue rounded absolute top-1/2 right-10"></div>
 
         <div className="space-y-8">
-          <h3 className="font-bold text-4xl">Invest in:</h3>
-          <div className="space-y-6">
+          <TransitionOpacityAlone>
+            <h3 className="font-bold text-4xl">Invest in:</h3>
+          </TransitionOpacityAlone>
+          <TransitionParentInView className="space-y-6">
             {investInEnergyData.map((data, i) => (
-              <div key={i} className="flex items-center gap-8">
+              <TransitionFromRight key={i} className="flex items-center gap-8">
                 <div className="flex-shrink-0 w-12 rounded-full h-12 shadow-xl bg-white flex items-center justify-center">
                   <span className="font-bold text-2xl">{i + 1}.</span>
                 </div>
@@ -24,20 +34,20 @@ const InvestIn = () => {
                   <p className="text-xl font-semibold">{data.title}</p>
                   <p className="text-zinc-400 leading-loose text-lg">{data.description}</p>
                 </div>
-              </div>
+              </TransitionFromRight>
             ))}
-          </div>
+          </TransitionParentInView>
 
-          <div className="grid place-content-center">
+          <TransitionFromBottomAlone className="grid place-content-center">
             <button className="font-bold text-primaryBlue px-6 py-3 rounded-xl bg-primaryBlue/20">
               Join Wait List
             </button>
-          </div>
+          </TransitionFromBottomAlone>
         </div>
       </div>
 
-      <div className="relative flex justify-center -mt-10 z-50">
-        <div className="absolute bottom-20 py-4 px-8 text-sm bg-white shadow-xl -left-10 rounded-xl z-50">
+      <TransitionParentInView className="relative flex justify-center -mt-10 z-50">
+        <TransitionFromLeft className="absolute z-[100] bottom-20 py-4 px-8 text-sm bg-white shadow-xl -left-10 rounded-xl">
           <div className="flex items-center gap-16 justify-between">
             <p className="font-medium">Investment</p>
             <p className="flex items-center gap-2 text-green-500">
@@ -53,17 +63,19 @@ const InvestIn = () => {
               </div>
             ))}
           </div>
-        </div>
+        </TransitionFromLeft>
 
-        <Image
-          src={"/images/bg/man-holding-piggy-bank.png"}
-          alt="a guy holding a piggy bank"
-          width={400}
-          height={600}
-          draggable={false}
-          className="z-50"
-        />
-      </div>
+        <TransitionFromBottom className="z-50">
+          <Image
+            src={"/images/bg/man-holding-piggy-bank.png"}
+            alt="a guy holding a piggy bank"
+            width={400}
+            height={600}
+            draggable={false}
+            className="z-50"
+          />
+        </TransitionFromBottom>
+      </TransitionParentInView>
 
       <div className="absolute top-[30%] left-[4%] z-0">
         <RightToLeftSVG />

@@ -1,18 +1,27 @@
+import { TransitionOpacity, TransitionOpacityAlone, TransitionParentInViewFast } from "@/lib/utils/transitions";
 import Image from "next/image";
 
 const KnowUsMore = () => {
   return (
     <section className="container mx-auto">
       <div className="mt-40">
-        <div className="max-w-3xl text-center mx-auto space-y-8">
-          <p className="text-primaryBlue font-bold px-7 py-4 w-fit mx-auto rounded-full bg-primaryBlue/20">Features</p>
-          <h3 className="font-bold text-black text-4xl">Begin by using GetEnergy</h3>
-          <p className="text-center text-zinc-500 leading-relaxed text-lg">
-            Watch the video below to see how GetEnergy can deliver energy and other services right to your door.
-          </p>
-        </div>
+        <TransitionParentInViewFast className="max-w-3xl text-center mx-auto space-y-8">
+          <TransitionOpacity>
+            <p className="text-primaryBlue font-bold px-7 py-4 w-fit mx-auto rounded-full bg-primaryBlue/20">
+              Know Us More
+            </p>
+          </TransitionOpacity>
+          <TransitionOpacity>
+            <h3 className="font-bold text-black text-4xl">Begin by using GetEnergy</h3>
+          </TransitionOpacity>
+          <TransitionOpacity>
+            <p className="text-center text-zinc-500 leading-relaxed text-lg">
+              Watch the video below to see how GetEnergy can deliver energy and other services right to your door.
+            </p>
+          </TransitionOpacity>
+        </TransitionParentInViewFast>
 
-        <div className="px-4">
+        <TransitionOpacityAlone className="px-4">
           <div className="mt-16 bottom-8 border-primaryBlue/40 h-[25rem] overflow-hidden rounded-xl relative">
             <Image
               src={"/images/bg/get-energy-video.png"}
@@ -23,7 +32,14 @@ const KnowUsMore = () => {
             />
 
             <div className="absolute top-0 left-0 w-full h-full grid place-content-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="191" height="192" viewBox="0 0 191 192" fill="none" className="cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="191"
+                height="192"
+                viewBox="0 0 191 192"
+                fill="none"
+                className="cursor-pointer"
+              >
                 <g filter="url(#filter0_d_5419_36761)">
                   <g filter="url(#filter1_d_5419_36761)">
                     <ellipse
@@ -133,7 +149,7 @@ const KnowUsMore = () => {
               </svg>
             </div>
           </div>
-        </div>
+        </TransitionOpacityAlone>
       </div>
     </section>
   );

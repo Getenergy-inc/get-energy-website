@@ -1,3 +1,4 @@
+import { TransitionFromRight, TransitionOpacityAlone, TransitionParentInView } from "@/lib/utils/transitions";
 import { vendingData } from "./data";
 
 const CommunityElectricityVending = () => {
@@ -11,8 +12,10 @@ const CommunityElectricityVending = () => {
           <StarSVG />
         </div>
 
-        <div className="w-full space-y-4 h-full border rounded-xl p-6 bg-white z-20">
-          <p className="font-bold text-xl">Community Electricity Vending</p>
+        <TransitionOpacityAlone className="w-full space-y-4 h-full border rounded-xl p-6 bg-white z-20">
+          <TransitionOpacityAlone>
+            <p className="font-bold text-xl">Community Electricity Vending</p>
+          </TransitionOpacityAlone>
           <form onClick={(e) => e.preventDefault()}>
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
@@ -74,15 +77,17 @@ const CommunityElectricityVending = () => {
               </button>
             </div>
           </form>
-        </div>
+        </TransitionOpacityAlone>
       </div>
 
       <div className="relative">
         <div className="space-y-8">
-          <h3 className="font-bold text-4xl">Community Electricity Vending</h3>
-          <div className="space-y-6">
+          <TransitionOpacityAlone>
+            <h3 className="font-bold text-4xl">Community Electricity Vending</h3>
+          </TransitionOpacityAlone>
+          <TransitionParentInView className="space-y-6">
             {vendingData.map((data, i) => (
-              <div key={i} className="flex items-center gap-8">
+              <TransitionFromRight key={i} className="flex items-center gap-8">
                 <div className="flex-shrink-0 w-12 rounded-full h-12 shadow-xl bg-white flex items-center justify-center">
                   <span className="font-bold text-2xl">{i + 1}.</span>
                 </div>
@@ -90,15 +95,15 @@ const CommunityElectricityVending = () => {
                   <p className="text-xl font-semibold">{data.title}</p>
                   <p className="text-zinc-400 leading-loose text-lg">{data.description}</p>
                 </div>
-              </div>
+              </TransitionFromRight>
             ))}
-          </div>
+          </TransitionParentInView>
 
-          <div className="grid place-content-center">
+          <TransitionOpacityAlone className="grid place-content-center">
             <button className="font-bold text-primaryBlue px-6 py-3 rounded-xl bg-primaryBlue/20">
               Join Wait List
             </button>
-          </div>
+          </TransitionOpacityAlone>
         </div>
       </div>
     </section>
