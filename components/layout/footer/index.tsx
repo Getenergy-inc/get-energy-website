@@ -90,12 +90,12 @@ export default function Footer() {
         <div className="w-full mt-10 -ml-10 lg:mt-0 grid grid-cols-3 gap-3">
           <div className="w-full">
             <h5 className="font-bold text-3xl">Products</h5>
-            <div className="flex flex-col mt-3 gap-3">
+            <div className="flex flex-col mt-3 gap-2">
               {products_data.map((link) => (
                 <Link
                   key={link._id}
                   href="#"
-                  className="hover:border-white/50 border-transparent border-b duration-300 w-fit"
+                  className="hover:border-white/50 border-transparent font-light border-b duration-300 w-fit"
                 >
                   {link.title}
                 </Link>
@@ -105,12 +105,12 @@ export default function Footer() {
 
           <div className="w-full">
             <h5 className="font-bold text-3xl">Company</h5>
-            <div className="flex flex-col mt-3 gap-3">
+            <div className="flex flex-col mt-3 gap-2">
               {company_links.map((link) => (
                 <Link
                   key={link._id}
                   href={link.url}
-                  className="hover:border-white/50 border-transparent border-b duration-300 w-fit"
+                  className="hover:border-white/50 border-transparent font-light border-b duration-300 w-fit"
                 >
                   {link.title}
                 </Link>

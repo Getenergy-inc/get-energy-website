@@ -35,11 +35,11 @@ export default function LandingImage() {
       <div className="w-full bg-transparent select-none main h-auto aspect-square col-span-2 animate-spin [animation-duration:40s] rounded-full relative">
         <div className="w-full h-full top-0 left-0 [animation-duration:40s] direction-reverse absolute animate-spin rounded-full">
           <Image
-            src={"/images/bg/bulb_cut.png"}
+            src={"/images/bg/bulb_png.png"}
             alt="a bulb"
             width={585}
             height={585}
-            className="w-full h-full object-cover bulb"
+            className="w-full h-full object-cover"
             draggable={false}
           />
         </div>

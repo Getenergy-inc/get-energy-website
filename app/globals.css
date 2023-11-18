@@ -255,9 +255,8 @@ html.lenis {
 }
 
 #landing-header {
-  background: url("/images/bg/stripes-land.png") no-repeat;
-  background-size: 1000px;
-  background-position: -150px -100px;
+  background: url("/images/bg/t_stripe.png") no-repeat;
+  background-size: 800px;
 }
 
 #feature-section {
