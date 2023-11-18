@@ -16,12 +16,10 @@ import CommunityElectricityVending from "./community-electricity";
 
 interface HomeStore {
   homeRef: RefObject<HTMLDivElement>;
-  updateRef: (ref: RefObject<HTMLDivElement>) => void;
 }
 
 export const useHomeStore = create<HomeStore>((set) => ({
   homeRef: null as unknown as RefObject<HTMLDivElement>,
-  updateRef: (ref: RefObject<HTMLDivElement>) => set(() => ({ homeRef: ref })),
 }));
 
 export default function Home() {

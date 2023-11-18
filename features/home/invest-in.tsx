@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { investInEnergyData } from "./data";
 import { ArrowUpIcon } from "lucide-react";
@@ -10,8 +11,30 @@ import {
   TransitionOpacityAlone,
   TransitionParentInView,
 } from "@/lib/utils/transitions";
+import { useLayoutEffect } from "react";
+import { useHomeStore } from ".";
+import { gsap } from "gsap";
 
 const InvestIn = () => {
+  const { homeRef } = useHomeStore();
+
+  useLayoutEffect(() => {
+    const cxt = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#invest-in-energy",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+
+      tl.to("#investCard", { yPercent: -100 });
+
+      return () => cxt.revert();
+    }, homeRef);
+  }, []);
+
   return (
     <div className="grid grid-cols-2 gap-20 relative" id="invest-in-energy">
       <div className="relative">
@@ -47,21 +70,22 @@ const InvestIn = () => {
       </div>
 
       <TransitionParentInView className="relative flex justify-center -mt-10 z-50">
-        <TransitionFromLeft className="absolute z-[100] bottom-20 py-4 px-8 text-sm bg-white shadow-xl -left-10 rounded-xl">
-          <div className="flex items-center gap-16 justify-between">
-            <p className="font-medium">Investment</p>
-            <p className="flex items-center gap-2 text-green-500">
-              <ArrowUpIcon /> <span>12%</span>
-            </p>
-          </div>
-
-          <div className="mt-2">
-            {Array.from({ length: 2 }).map((_, i) => (
-              <div key={i} className="flex items-center justify-between text-zinc-400">
-                <p>N200,000</p>
-                <p>May 29, 2023</p>
-              </div>
-            ))}
+        <TransitionFromLeft className="z-[100] absolute bottom-20 -left-10">
+          <div className="py-4 px-8 text-sm bg-white shadow-xl rounded-xl" id="investCard">
+            <div className="flex items-center gap-16 justify-between">
+              <p className="font-medium">Investment</p>
+              <p className="flex items-center gap-2 text-green-500">
+                <ArrowUpIcon /> <span>12%</span>
+              </p>
+            </div>
+            <div className="mt-2">
+              {Array.from({ length: 2 }).map((_, i) => (
+                <div key={i} className="flex items-center justify-between text-zinc-400">
+                  <p>N200,000</p>
+                  <p>May 29, 2023</p>
+                </div>
+              ))}
+            </div>
           </div>
         </TransitionFromLeft>
 

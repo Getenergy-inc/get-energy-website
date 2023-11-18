@@ -71,6 +71,7 @@ export const fromTopVariant: Variants = {
 export const opacityAloneVariant: Variants = {
   initial: { opacity: 0 },
   animate: { opacity: 1, transition: { duration: DEFAULT_DURATION } },
+  // exit: { opacity: 0 },
 };
 
 export const fromTopAloneVariant: Variants = {

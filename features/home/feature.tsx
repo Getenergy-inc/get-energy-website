@@ -122,8 +122,8 @@ const Features = () => {
               </div>
               <h4 className="text-3xl font-semibold">Diversify Your Portfolio</h4>
               <p>
-                Top up your accounts with ease, enjoying the convenience of instant and hassle-free recharge services
-                right at your fingertips.
+                Explore diverse investment opportunities with our stock options, empowering you to shape a robust and
+                dynamic financial portfolio
               </p>
             </div>
           </TransitionFromBottom>
@@ -140,8 +140,8 @@ const Features = () => {
               </div>
               <h4 className="text-3xl font-semibold">Comprehensive Energy Solutions:</h4>
               <p>
-                Top up your accounts with ease, enjoying the convenience of instant and hassle-free recharge services
-                right at your fingertips.
+                From electricity to broader energy needs, we provide a comprehensive suite of solutions to cater to the
+                diverse requirements of our users.
               </p>
             </div>
           </TransitionFromBottom>
@@ -158,8 +158,8 @@ const Features = () => {
               </div>
               <h4 className="text-3xl font-semibold">Energy Solutions for Today and Tomorrow</h4>
               <p>
-                Top up your accounts with ease, enjoying the convenience of instant and hassle-free recharge services
-                right at your fingertips.
+                Embrace a future-ready approach with our cutting-edge energy solutions, designed to meet the challenges
+                of today and the opportunities of tomorrow.
               </p>
             </div>
           </TransitionFromBottom>

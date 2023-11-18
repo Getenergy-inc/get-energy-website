@@ -39,7 +39,7 @@ export default function LandingImage() {
             alt="a bulb"
             width={585}
             height={585}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover bulb"
             draggable={false}
           />
         </div>
