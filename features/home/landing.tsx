@@ -36,7 +36,7 @@ export default function Landing() {
 
   return (
     <header id="landing-header" className="relative overflow-hidden pb-20">
-      <div className="absolute top-10 left-0 w-full flex items-center justify-center">
+      <div className="absolute lg:top-10 md:top-8 text-xs md:text-base top-5 left-0 w-full flex items-center justify-center">
         <span>
           We are hiring!!{" "}
           <Link href={"/careers"} className="font-semibold text-primaryBlue border-b">
@@ -49,14 +49,14 @@ export default function Landing() {
           <div className="space-y-5">
             <div className="overflow-hidden pb-2">
               <h1
-                className={`lg:text-start jumbo_text max-w-[40rem] lg:text-5xl md:text-4xl text-3xl font-black text-center md:text-start md:leading-[65px] leading-[40px]`}
+                className={`lg:text-start jumbo_text max-w-[40rem] lg:text-5xl md:text-4xl text-2xl md:font-black font-bold text-center md:text-start lg:leading-[65px] md:leading-[50px] leading-[30px]`}
               >
                 <span>Unlocking Sustainable Energy Solutions, Discover the Power of</span>
                 <span className="main-text ms-3 jumbo_gtext">GetEnergy</span>
               </h1>
             </div>
             <div className="overflow-hidden pb-2">
-              <p className="w-full md:text-start text-center lg:text-start jumbo_text max-w-[45rem] text-sm md:text-lg font-semibold mb-2">
+              <p className="w-full md:text-start text-center lg:text-start jumbo_text max-w-[45rem] text-sm md:text-lg md:font-semibold mb-2">
                 We are a leading provider of energy trading solutions, offering a comprehensive range of services to
                 clients in the energy sector.
               </p>

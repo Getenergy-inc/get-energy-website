@@ -16,15 +16,15 @@ export default function GetElectricitySection() {
 
   return (
     <section id="get-electricity" className="relative">
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
         <div className="w-full h-full relative">
           <TransitionParentInView className="w-full h-full absolute top-0 left-0">
             {/* Balls */}
             <TransitionOpacity className="w-20 h-20 bg-primaryBlue rounded-full left-[7rem] top-10 absolute elect-ball"></TransitionOpacity>
             <TransitionOpacity className="w-6 h-6 bg-primaryBlue/60 rounded-full left-[15rem] -top-[.5rem] absolute elect-ball"></TransitionOpacity>
           </TransitionParentInView>
-          <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center">
-            <TransitionFromBottomAlone className="shadow-xl rounded-xl my-auto p-8 ml-auto bg-white z-50 w-3/5 min-h-3/5 m-auto">
+          <div className="w-full h-full md:absolute top-0 left-0 flex items-center justify-center">
+            <TransitionFromBottomAlone className="md:shadow-xl shadow-lg rounded-xl my-auto p-8 ml-auto bg-white z-50 md:w-3/5 w-11/12 min-h-3/5 m-auto">
               <div className="space-y-16">
                 <div className="space-y-6">
                   <h3 className="font-bold text-xl">Buy Electricity Swiftly</h3>
@@ -46,6 +46,7 @@ export default function GetElectricitySection() {
             </TransitionFromBottomAlone>
           </div>
         </div>
+
         <div>
           <div className="space-y-8">
             <TransitionOpacityAlone>

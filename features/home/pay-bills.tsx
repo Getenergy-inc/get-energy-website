@@ -43,7 +43,7 @@ const PayBills = () => {
   ];
 
   return (
-    <section className="grid grid-cols-2 gap-20 relative" id="pay-bills">
+    <section className="grid md:grid-cols-2 gap-20 relative" id="pay-bills">
       <div>
         <div className="space-y-8">
           <TransitionOpacityAlone>
@@ -52,7 +52,7 @@ const PayBills = () => {
           <TransitionParentInView className="space-y-6">
             {billsData.map((data, i) => (
               <TransitionOpacity key={i} className="flex items-center gap-8">
-                <div className="flex-shrink-0 w-12 rounded-full h-12 shadow-xl bg-white flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 rounded-full h-12 md:shadow-xl shadow-lg bg-white flex items-center justify-center">
                   <span className="font-bold text-2xl">{i + 1}.</span>
                 </div>
                 <div className="space-y-3 max-w-lg">
@@ -100,10 +100,10 @@ const PayBills = () => {
           </TransitionParentInViewSlow>
 
           {/* Content */}
-          <div className="w-11/12 h-full bg-white z-50 border shad-lg rounded-md px-12 py-8 relative">
+          <div className="w-11/12 h-full bg-white z-50 border shad-lg rounded-md md:px-12 px-6 md:py-8 py-4 relative">
             <p className="font-bold text-xl">Buy Bills Swiftly</p>
 
-            <TransitionParentInViewFast className="grid grid-cols-4 gap-x-10 gap-y-8 py-6">
+            <TransitionParentInViewFast className="grid grid-cols-4 md:gap-x-10 gap-x-5 md:gap-y-8 gap-y-4 py-6">
               {billsAction.map((action, i) => (
                 <TransitionFromBottom key={i}>
                   <div className="flex items-center select-none w-full h-auto aspect-square justify-center">
@@ -121,15 +121,15 @@ const PayBills = () => {
                     </div>
                   </div>
 
-                  <p className="text-center text-sm">{action.label}</p>
+                  <p className="text-center md:text-sm text-xs">{action.label}</p>
                 </TransitionFromBottom>
               ))}
             </TransitionParentInViewFast>
-            <div className="w-1/2 mx-auto mt-5">
+            <div className="w-1/2 mx-auto md:mt-5 mt-3">
               <button
                 className={`${
                   selectedAction && "animate-bounce [animation-duration:1s]"
-                } rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3 text-sm w-full`}
+                } rounded-full text-white bg-primaryBlue text-xs transition-colors duration-200 hover:bg-primaryBlueHover py-3 md:text-sm w-full`}
               >
                 Proceed
               </button>
