@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Providers: FC<PropsWithChildren> = ({ children }) => {
   return (
     <AnimatePresence mode="wait">
-      <SmoothScroll />
+      {/* <SmoothScroll /> */}
       {children}
     </AnimatePresence>
   );
