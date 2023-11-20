@@ -1,7 +1,3 @@
-import Image from "next/image";
-import { service_data } from "../our-service/data";
-import Link from "next/link";
-import { assets } from "@/constants";
 import { TransitionOpacity, TransitionParentInView, TransitionParentInViewFast } from "@/lib/utils/transitions";
 
 export default function Services() {

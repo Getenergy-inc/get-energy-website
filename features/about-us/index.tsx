@@ -4,6 +4,8 @@ import TitleHeader from "@/components/title-header";
 import OurFunctions from "./our-functions";
 import IlluminatingTomorrow from "./illuminating-tomorrow";
 import Info from "@/components/info";
+import OurValues from "./our-values";
+import OurTeamSection from "./our-team-sect";
 
 const WhoWeAreVideo = dynamic(() => import("./who-we-are-video"), { ssr: false });
 
@@ -47,13 +49,8 @@ export const whoWeAreContent = [
 
 export default function AboutUs() {
   const body = `
-        Getenergy your comprehensive
-        hub for all your energy needs!
-        As a leading energy service
-        provider in Nigeria, we are
-        dedicated to delivering innovative
-        and efficient energy solutions
-        to businesses and individuals.
+  Getenergy your comprehensive hub for all your energy needs! 
+  As a leading energy service provider in Nigeria, we are dedicated to delivering innovative and efficient energy solutions to businesses and individuals.
     `;
 
   return (
@@ -61,9 +58,8 @@ export default function AboutUs() {
       <TitleHeader title="Who we are" type="1" location="About Us" />
       <Info body={body} />
       <IlluminatingTomorrow />
-      <OurFunctions />
-      <WhoWeAreVideo />
-      {/* <OurTeam /> */}
+      <OurValues />
+      <OurTeamSection />
     </div>
   );
 }

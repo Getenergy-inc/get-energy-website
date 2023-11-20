@@ -278,6 +278,10 @@ html.lenis {
   box-shadow: 0px 24px 76px 0px rgba(86, 91, 221, 0.2);
 }
 
+.logo_shine {
+  box-shadow: 0 0 60px white;
+}
+
 /* Lading Rotate */
 /* .landing-el {
   animation: GFG 5s infinite linear;

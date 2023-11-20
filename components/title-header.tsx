@@ -11,17 +11,21 @@ type TitleHeaderProps = {
 export default function TitleHeader(props: TitleHeaderProps) {
   return (
     <TransitionParentInViewSlow className="w-full relative flex items-center justify-center">
-      <Image
-        src={props.type === "1" ? "/images/bg/container-img-1.png" : "/images/bg/quick-buy-img-1.png"}
-        alt="container-img"
-        width={1024}
-        height={304}
-        className="w-full h-[400px] md:h-auto object-cover"
-      />
+      <div className="w-full relative -top-10">
+        <Image
+          src={props.type === "1" ? "/images/bg/about-us-cover.png" : "/images/bg/quick-buy-img-1.png"}
+          alt="container-img"
+          width={1024}
+          height={304}
+          className="w-full h-[400px] md:h-auto object-cover"
+        />
+      </div>
 
       <TransitionOpacity className="w-full hidden md:flex h-full absolute top-0 items-center justify-between container">
         <div></div>
-        <Logo classnames="bg-white shadow-2xl p-3 px-10 rounded-2xl title_header_con" size={250} />
+        <div className="logo_shine">
+          <Logo classnames="bg-white shadow-2xl p-3 px-10 rounded-2xl title_header_con" size={250} />
+        </div>
       </TransitionOpacity>
 
       <TransitionOpacity className="absolute -bottom-14 container">
