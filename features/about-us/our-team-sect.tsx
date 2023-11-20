@@ -1,4 +1,5 @@
 import { assets } from "@/constants";
+import { TransitionOpacity, TransitionParentInView } from "@/lib/utils/transitions";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 import Image from "next/image";
 
@@ -25,13 +26,17 @@ const teamData = [
 
 const OurTeamSection = () => {
   return (
-    <div className="space-y-10 container mx-auto mt-40">
-      <p className="text-primaryBlue text-center font-bold px-7 py-4 w-fit mx-auto rounded-full bg-primaryBlue/20">
-        Our Team
-      </p>
-      <p className="font-extrabold text-4xl max-w-xl mx-auto text-center">Meet people behind our company</p>
+    <TransitionParentInView className="space-y-10 container mx-auto mt-40">
+      <TransitionOpacity>
+        <p className="text-primaryBlue text-center font-bold px-7 py-4 w-fit mx-auto rounded-full bg-primaryBlue/20">
+          Our Team
+        </p>
+      </TransitionOpacity>
+      <TransitionOpacity>
+        <p className="font-extrabold text-4xl max-w-xl mx-auto text-center">Meet people behind our company</p>
+      </TransitionOpacity>
 
-      <div className="flex items-center justify-between gap-2">
+      <TransitionOpacity className="flex items-center justify-between gap-2">
         <div>
           <ArrowLeftCircle className="text-primaryBlue cursor-pointer" size={34} />
         </div>
@@ -51,8 +56,8 @@ const OurTeamSection = () => {
         <div>
           <ArrowRightCircle className="text-primaryBlue cursor-pointer" size={34} />
         </div>
-      </div>
-    </div>
+      </TransitionOpacity>
+    </TransitionParentInView>
   );
 };
 

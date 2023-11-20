@@ -1,3 +1,5 @@
+import { TransitionOpacity, TransitionParentInView } from "@/lib/utils/transitions";
+
 const OurValues = () => {
   const values = [
     {
@@ -238,17 +240,17 @@ const OurValues = () => {
       </p>
       <p className="font-extrabold text-4xl max-w-xl mx-auto text-center">The story and values behind our company</p>
 
-      <div className="grid grid-cols-2 gap-10">
+      <TransitionParentInView className="grid grid-cols-2 gap-10">
         {values.map((value, index) => (
-          <div key={index} className="p-6 flex gap-8 bg-[#F9F9F9] rounded-xl">
+          <TransitionOpacity key={index} className="p-6 flex gap-8 bg-[#F9F9F9] rounded-xl">
             <span className="flex-shrink-0">{value.icon}</span>
             <div className="space-y-2">
               <p className="text-xl font-bold">{value.title}</p>
               <p className="text-[#797979] text-lg">{value.body}</p>
             </div>
-          </div>
+          </TransitionOpacity>
         ))}
-      </div>
+      </TransitionParentInView>
     </div>
   );
 };

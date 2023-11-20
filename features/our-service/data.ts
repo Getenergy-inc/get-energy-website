@@ -4,8 +4,7 @@ export const service_data = [
   {
     _id: "service-1",
     title: "Energy Commodities Trading",
-    body: `Our platform provides real-time market data, advanced trading tools,
-    and a secure environment for buying and selling energy commodities.`,
+    body: `We Provide a comprehensive suite of energy solutions, including renewables like solar and wind, non-renewables such as oil and gas, and specialized services like B2B, B2I, electricity token sales, and vending services for various entities.`,
     icon: assets.icon1,
     link: {
       title: "GetEnergy",

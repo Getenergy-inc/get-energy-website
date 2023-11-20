@@ -3,7 +3,7 @@ import GetElectricitySection from "./get-elect";
 import UpdateMarquee from "./update-marquee";
 import Landing from "./landing";
 import Services from "./services";
-import HowItWorks from "../our-service/how-it-works";
+import HowItWorks from "./how-it-works";
 import { RefObject } from "react";
 import { create } from "zustand";
 import Features from "./feature";

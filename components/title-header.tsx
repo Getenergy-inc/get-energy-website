@@ -3,17 +3,28 @@ import Logo from "./logo";
 import { TransitionOpacity, TransitionParentInViewSlow } from "@/lib/utils/transitions";
 
 type TitleHeaderProps = {
-  type: "1" | "2";
+  type: string;
   location: string;
   title: string;
 };
 
 export default function TitleHeader(props: TitleHeaderProps) {
+  const pickImage = () => {
+    switch (props.type) {
+      case "1":
+        return "/images/bg/about-us-cover.png";
+      case "2":
+        return "/images/bg/our-service.png";
+      default:
+        return "";
+    }
+  };
+
   return (
     <TransitionParentInViewSlow className="w-full relative flex items-center justify-center">
       <div className="w-full relative -top-10">
         <Image
-          src={props.type === "1" ? "/images/bg/about-us-cover.png" : "/images/bg/quick-buy-img-1.png"}
+          src={pickImage()}
           alt="container-img"
           width={1024}
           height={304}
