@@ -7,7 +7,7 @@ export const links = [
   {
     _id: "link-2",
     title: "Get Electricity",
-    url: "/#get-electricity",
+    url: "/get-electricity",
   },
   {
     _id: "link-3",

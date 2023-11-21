@@ -26,7 +26,7 @@ export default function Home() {
   const { homeRef } = useHomeStore();
 
   return (
-    <div className="w-full bg-[#fdfdfd]" ref={homeRef}>
+    <main className="w-full bg-[#fdfdfd]" ref={homeRef}>
       <Landing />
       <UpdateMarquee />
       <div className="container mx-auto space-y-64 mt-40">
@@ -40,6 +40,6 @@ export default function Home() {
       <Features />
       <HowItWorks />
       <KnowUsMore />
-    </div>
+    </main>
   );
 }

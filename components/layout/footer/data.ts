@@ -34,7 +34,7 @@ export const company_links = [
   },
   {
     _id: "companyse-1",
-    title: "ContactUs",
+    title: "Contact Us",
     url: "/contact-us",
   },
   {
