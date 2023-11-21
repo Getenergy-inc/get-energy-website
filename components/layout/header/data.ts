@@ -12,7 +12,7 @@ export const links = [
   {
     _id: "link-3",
     title: "Pay Bills",
-    url: "/#pay-bills",
+    url: "/pay-bills",
   },
   {
     _id: "link-4",
