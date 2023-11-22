@@ -1,4 +1,5 @@
 "use client";
+import BeforeFooterAction from "@/components/common/before-footer";
 import Logo from "@/components/logo";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -102,14 +103,9 @@ const GetElectricity = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 container mx-auto items-center">
+          <div className="grid grid-cols-2 gap-10 container mx-auto items-center">
             <div className="grid place-content-center">
-              {/* <Image
-                src={"/images/bg/our-s-round.svg"}
-                alt="spiral showing get energy's motive"
-                width={500}
-                height={500}
-              /> */}
+              <Image src={"/images/bg/get-com.png"} alt="spiral showing get energy's motive" width={700} height={700} />
             </div>
             <div className="space-y-4">
               <h2 className="text-5xl font-bold">Community Energy Management </h2>
@@ -248,12 +244,7 @@ const GetElectricity = () => {
 
           <div className="grid grid-cols-2 gap-4 container mx-auto items-center">
             <div className="grid place-content-center">
-              {/* <Image
-                src={"/images/bg/our-s-round.svg"}
-                alt="spiral showing get energy's motive"
-                width={500}
-                height={500}
-              /> */}
+              <Image src={"/images/bg/why-get.png"} alt="why choose get energy" width={500} height={500} />
             </div>
             <div className="space-y-6">
               <h3 className="text-4xl font-bold">Why Choose GetEnergy?</h3>
@@ -277,19 +268,7 @@ const GetElectricity = () => {
             </div>
           </div>
 
-          <div className="container mx-auto py-16 rounded-xl bg-[#003B6D33] text-center justify-center items-center flex">
-            <div className="space-y-10">
-              <p className="font-bold text-4xl max-w-[80%] mx-auto text-center">
-                Ready to experience the future of power? Let’s get started with GetEnergy!
-              </p>
-
-              <div>
-                <button className="flex mx-auto w-fit items-center gap-2 bg-primaryBlue rounded-lg px-6 py-3 text-white">
-                  <span>Get Started</span>
-                </button>
-              </div>
-            </div>
-          </div>
+          <BeforeFooterAction text="Ready to experience the future of power? Let’s get started with GetEnergy!" />
         </div>
       </main>
     </>

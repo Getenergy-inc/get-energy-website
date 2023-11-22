@@ -15,6 +15,8 @@ export default function TitleHeader(props: TitleHeaderProps) {
         return "/images/bg/about-us-cover.png";
       case "2":
         return "/images/bg/our-service.png";
+      case "3":
+        return "/images/bg/contact-us.png";
       default:
         return "";
     }

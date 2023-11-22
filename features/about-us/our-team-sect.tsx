@@ -1,6 +1,7 @@
 import { assets } from "@/constants";
 import { TransitionOpacity, TransitionParentInView } from "@/lib/utils/transitions";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
+import Slider from "react-slick";
 import Image from "next/image";
 
 const teamData = [
@@ -25,6 +26,14 @@ const teamData = [
 ];
 
 const OurTeamSection = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 3,
+  };
+
   return (
     <TransitionParentInView className="space-y-10 container mx-auto mt-40">
       <TransitionOpacity>
@@ -40,6 +49,7 @@ const OurTeamSection = () => {
         <div>
           <ArrowLeftCircle className="text-primaryBlue cursor-pointer" size={34} />
         </div>
+        {/* <div className="w-full block md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-10"> */}
         <div className="w-full block md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
           {teamData.map((item, id) => (
             <div className="w-full mb-5 mb:mb-0 bg-white rounded-md drop-shadow-md overflow-hidden" key={id}>
@@ -53,6 +63,7 @@ const OurTeamSection = () => {
             </div>
           ))}
         </div>
+        {/* </div> */}
         <div>
           <ArrowRightCircle className="text-primaryBlue cursor-pointer" size={34} />
         </div>

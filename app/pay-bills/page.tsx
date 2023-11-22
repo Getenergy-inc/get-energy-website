@@ -1,5 +1,6 @@
 "use client";
 
+import BeforeFooterAction from "@/components/common/before-footer";
 import Bills from "@/features/pay-bills/bills";
 import BillsProcess from "@/features/pay-bills/process";
 import Image from "next/image";
@@ -62,12 +63,7 @@ const PayBills = () => {
               </div>
             </div>
             <div className="grid place-content-center">
-              {/* <Image
-                src={"/images/bg/our-s-round.svg"}
-                alt="spiral showing get energy's motive"
-                width={500}
-                height={500}
-              /> */}
+              <Image src={"/images/bg/get-energy-bill.png"} alt="a man looking at his phone" width={500} height={500} />
             </div>
           </div>
 
@@ -95,19 +91,7 @@ const PayBills = () => {
 
           <BillsProcess />
 
-          <div className="container mx-auto py-16 rounded-xl bg-[#003B6D33] text-center justify-center items-center flex">
-            <div className="space-y-10">
-              <p className="font-bold text-4xl max-w-[80%] mx-auto text-center">
-                Ready to Unleash the Power of Effortless Payments? Join the GetEnergy revolution.
-              </p>
-
-              <div>
-                <button className="flex mx-auto w-fit items-center gap-2 bg-primaryBlue rounded-lg px-6 py-3 text-white">
-                  <span>Get Started</span>
-                </button>
-              </div>
-            </div>
-          </div>
+          <BeforeFooterAction text="Ready to Unleash the Power of Effortless Payments? Join the GetEnergy revolution." />
         </div>
       </main>
     </>

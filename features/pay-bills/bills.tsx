@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const billsData = [
   {
     title: "Water Bills",
@@ -11,6 +13,7 @@ const billsData = [
     ),
     description: "Hydration without the hassle.",
   },
+  { title: "", icon: <></>, description: "", notContent: true },
   {
     title: "Airtime & Data",
     icon: (
@@ -84,11 +87,27 @@ const Bills = () => {
   return (
     <div className="grid grid-cols-4 gap-10 container mx-auto">
       {billsData.map((bill, id) => (
-        <div key={id} className="bg-primaryBlue text-white rounded-2xl py-10 px-5 space-y-4">
-          <div className="w-16 rounded-xl grid place-content-center h-16 bg-white">{bill.icon}</div>
-          <p className="font-bold">{bill.title}</p>
-          <p>{bill.description}</p>
-        </div>
+        <>
+          {!bill.notContent ? (
+            <div key={id} className="bg-primaryBlue self-start text-white rounded-2xl py-10 px-5 space-y-4">
+              <div className="w-16 rounded-xl grid place-content-center h-16 bg-white">{bill.icon}</div>
+              <p className="font-bold">{bill.title}</p>
+              <p>{bill.description}</p>
+            </div>
+          ) : (
+            <div key={id} className="col-span-2 row-span-3 px-8">
+              <div className="rounded-xl w-full h-full">
+                <Image
+                  src={"/images/bg/ios.svg"}
+                  alt="ios phone with get energy logo"
+                  className="w-full h-full object-cover"
+                  width={300}
+                  height={1000}
+                />
+              </div>
+            </div>
+          )}
+        </>
       ))}
     </div>
   );
