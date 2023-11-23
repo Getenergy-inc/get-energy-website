@@ -1,8 +1,11 @@
 "use client";
 import BeforeFooterAction from "@/components/common/before-footer";
 import Logo from "@/components/logo";
+import { DASHBOARD_URL } from "@/constants/variables";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 const GetElectricity = () => {
   const vendingTypes = [
@@ -27,6 +30,8 @@ const GetElectricity = () => {
     "Smart Metering: Take control of your energy consumption with our advanced meters.",
     "Green Power Options: Embrace a sustainable future with our green energy solutions.",
   ];
+
+  const [meterNumber, setMeterNumber] = useState("");
 
   return (
     <>
@@ -54,13 +59,25 @@ const GetElectricity = () => {
                         type="text"
                         className="w-full border bg-transparent text-sm p-3 outline-none focus:border-zinc-500 transition-colors duration-300 rounded-lg border-zinc-200"
                         placeholder="Enter Meter Number"
+                        value={meterNumber}
+                        onChange={(e) => setMeterNumber(e.target.value)}
                       />
                     </div>
                   </div>
 
-                  <button className="w-full rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3">
-                    Proceed
-                  </button>
+                  <div>
+                    {meterNumber.length > 5 ? (
+                      <Link href={`${DASHBOARD_URL}/dashboard/get-energy`} target="_blank">
+                        <button className="w-full rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3">
+                          Proceed
+                        </button>
+                      </Link>
+                    ) : (
+                      <button className="w-full rounded-full text-white bg-primaryBlue/50 transition-colors duration-200 hover:bg-primaryBlueHover/50 py-3">
+                        Proceed
+                      </button>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -242,11 +259,13 @@ const GetElectricity = () => {
                   </div>
                 </div>
 
-                <div className="flex item-center mt-5 justify-center">
-                  <button className="w-1/2 rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3">
-                    Proceed
-                  </button>
-                </div>
+                <Link href={`${DASHBOARD_URL}/dashboard/get-energy`} target="_blank">
+                  <div className="flex item-center mt-5 justify-center">
+                    <button className="w-full rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3">
+                      Proceed
+                    </button>
+                  </div>
+                </Link>
               </form>
             </div>
           </div>

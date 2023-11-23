@@ -1,7 +1,7 @@
 "use client";
 import { LeftToRightSVG } from "@/components/common/ltr";
 import { electricityData } from "./data";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 import {
   TransitionFromBottomAlone,
@@ -14,7 +14,7 @@ import Link from "next/link";
 import { DASHBOARD_URL } from "@/constants/variables";
 
 export default function GetElectricitySection() {
-  // useLayoutEffect(() => {}, []);
+  const [meterNumber, setMeterNumber] = useState("");
 
   return (
     <section id="get-electricity" className="relative">
@@ -36,17 +36,25 @@ export default function GetElectricitySection() {
                       type="text"
                       className="w-full border bg-transparent text-sm p-3 outline-none focus:border-zinc-500 transition-colors duration-300 rounded-lg border-zinc-200"
                       placeholder="Enter Meter Number"
+                      value={meterNumber}
+                      onChange={(e) => setMeterNumber(e.target.value)}
                     />
                     <p className="text-zinc-400 text-sm">Must be between 7-11 digits</p>
                   </div>
                 </div>
 
                 <div>
-                  <Link href={`${DASHBOARD_URL}/dashboard/get-energy`} target="_blank">
-                    <button className="w-full rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3">
+                  {meterNumber.length > 5 ? (
+                    <Link href={`${DASHBOARD_URL}/dashboard/get-energy`} target="_blank">
+                      <button className="w-full rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3">
+                        Proceed
+                      </button>
+                    </Link>
+                  ) : (
+                    <button className="w-full rounded-full text-white bg-primaryBlue/50 transition-colors duration-200 hover:bg-primaryBlueHover/50 py-3">
                       Proceed
                     </button>
-                  </Link>
+                  )}
                 </div>
               </div>
             </TransitionFromBottomAlone>
