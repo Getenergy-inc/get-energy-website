@@ -286,3 +286,7 @@ html.lenis {
   background: url("/images/bg/invest-bg.png") no-repeat center;
   background-size: cover;
 }
+
+.text-shadow {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.514);
+}

@@ -23,8 +23,8 @@ export default function TitleHeader(props: TitleHeaderProps) {
   };
 
   return (
-    <TransitionParentInViewSlow className="w-full relative flex items-center justify-center">
-      <div className="w-full relative -top-10">
+    <TransitionParentInViewSlow className="w-full relative flex min-h-[20rem] items-center justify-center">
+      <div className="w-full absolute top-0 left-0 h-full">
         <Image
           src={pickImage()}
           alt="container-img"
@@ -34,18 +34,19 @@ export default function TitleHeader(props: TitleHeaderProps) {
         />
       </div>
 
-      <TransitionOpacity className="w-full hidden md:flex h-full absolute top-0 items-center justify-between container">
-        <div></div>
-        <div className="logo_shine">
-          <Logo classnames="bg-white shadow-2xl p-3 px-10 rounded-2xl title_header_con" size={250} />
-        </div>
-      </TransitionOpacity>
+      <div className="bg-black/30 w-full absolute top-0 left-0 h-full"></div>
 
-      <TransitionOpacity className="absolute -bottom-14 container">
-        <h1 className="p-4 md:p-0 text-6xl 2xl:text-7xl font-extrabold main-text title_header_con w-5/6 md:w-2/6 lg:w-1/6">
-          {props.title}
-        </h1>
-      </TransitionOpacity>
+      <div className="absolute top-0 w-full left-0 h-full">
+        <TransitionOpacity className="hidden w-full h-full md:flex items-center justify-between container mx-auto">
+          <h1 className="p-4 md:p-0 text-shadow text-6xl 2xl:text-7xl text-white font-extrabold title_header_con">
+            {props.title}
+          </h1>
+
+          <div className="logo_shine rounded-2xl">
+            <Logo classnames="bg-white shadow-2xl p-3 px-10 rounded-2xl title_header_con" size={250} />
+          </div>
+        </TransitionOpacity>
+      </div>
     </TransitionParentInViewSlow>
   );
 }

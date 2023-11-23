@@ -7,6 +7,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { MenuIcon, XIcon } from "lucide-react";
 import { TransitionOpacity, TransitionOpacityAlone, TransitionParentFast } from "@/lib/utils/transitions";
+import { DASHBOARD_URL } from "@/constants/variables";
 
 export default function Header() {
   const [show, setShow] = React.useState(false);
@@ -87,9 +88,11 @@ export default function Header() {
           <div className="flex items-center gap-3 overflow-hidden">{output}</div>
 
           <div>
-            <button className="text-white font-semibold px-6 py-3 text-sm bg-primaryBlue rounded-xl">
-              Get Started
-            </button>
+            <Link href={DASHBOARD_URL} target="_blank">
+              <button className="text-white font-semibold px-6 py-3 text-sm bg-primaryBlue rounded-xl">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </div>

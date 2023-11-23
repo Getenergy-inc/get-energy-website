@@ -135,8 +135,8 @@ const GetElectricity = () => {
           </div>
 
           <div className="bg-primaryBlue text-white">
-            <div className="grid-cols-2 grid container mx-auto">
-              <div className="flex items-center justify-center text-center py-8">
+            <div className="grid-cols-2 grid gap-20">
+              <div className="flex items-center pl-28 justify-center text-center py-8">
                 <div className="space-y-4">
                   <p className="text-2xl leading-relaxed font-semibold">
                     Revitalize your power routine with <span className="font-bold">GetEnergy</span>! Vend seamlessly and
@@ -148,7 +148,16 @@ const GetElectricity = () => {
                   </button>
                 </div>
               </div>
-              <div></div>
+              <div>
+                <Image
+                  src={"/images/bg/happy-family.png"}
+                  alt="happy family"
+                  width={500}
+                  height={500}
+                  draggable={false}
+                  className="z-50 w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
 

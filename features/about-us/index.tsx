@@ -59,7 +59,8 @@ export default function AboutUs() {
       <Info body={body} />
       <IlluminatingTomorrow />
       <OurValues />
-      <OurTeamSection />
+      <div className="h-[10rem]"></div>
+      {/* <OurTeamSection /> */}
     </div>
   );
 }
