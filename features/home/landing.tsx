@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { useHomeStore } from ".";
 import dynamic from "next/dynamic";
 import { MouseIcon } from "lucide-react";
+import { DASHBOARD_URL } from "@/constants/variables";
 
 export default function Landing() {
   const { homeRef } = useHomeStore();
@@ -65,7 +66,7 @@ export default function Landing() {
           <div className="flex justify-center lg:justify-start">
             <Link
               className="bg-primaryBlue text-white px-10 jumbo_action font-semibold transition-colors py-4 p-3 rounded-2xl"
-              href={variables.GET_STARTED_ADDRESS}
+              href={DASHBOARD_URL}
             >
               Get Started
             </Link>

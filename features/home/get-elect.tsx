@@ -37,20 +37,17 @@ export default function GetElectricitySection() {
                       className="w-full border bg-transparent text-sm p-3 outline-none focus:border-zinc-500 transition-colors duration-300 rounded-lg border-zinc-200"
                       placeholder="Enter Meter Number"
                     />
-                    <p className="text-zinc-400 text-sm">
-                      Must be between 7-11 digits
-                    </p>
+                    <p className="text-zinc-400 text-sm">Must be between 7-11 digits</p>
                   </div>
                 </div>
 
-                <Link
-                  href={`${DASHBOARD_URL}/dashboard/get-energy`}
-                  target="_blank"
-                >
-                  <button className="w-full rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3">
-                    Proceed
-                  </button>
-                </Link>
+                <div>
+                  <Link href={`${DASHBOARD_URL}/dashboard/get-energy`} target="_blank">
+                    <button className="w-full rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3">
+                      Proceed
+                    </button>
+                  </Link>
+                </div>
               </div>
             </TransitionFromBottomAlone>
           </div>
@@ -63,18 +60,13 @@ export default function GetElectricitySection() {
             </TransitionOpacityAlone>
             <TransitionParentInView className="space-y-6">
               {electricityData.map((data, i) => (
-                <TransitionFromRight
-                  key={i}
-                  className="flex items-center gap-8"
-                >
+                <TransitionFromRight key={i} className="flex items-center gap-8">
                   <div className="flex-shrink-0 w-12 rounded-full h-12 shadow-xl bg-white flex items-center justify-center">
                     <span className="font-bold text-2xl">{i + 1}.</span>
                   </div>
                   <div className="space-y-3 max-w-lg">
                     <p className="text-xl font-semibold">{data.title}</p>
-                    <p className="text-zinc-400 leading-loose text-lg">
-                      {data.description}
-                    </p>
+                    <p className="text-zinc-400 leading-loose text-lg">{data.description}</p>
                   </div>
                 </TransitionFromRight>
               ))}

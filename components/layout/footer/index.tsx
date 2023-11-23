@@ -7,37 +7,26 @@ import Image from "next/image";
 }
 export default function Footer() {
   const socialLinks = [
-    {
-      label: "Facebook",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="25"
-          viewBox="0 0 24 25"
-          fill="none"
-        >
-          <path
-            d="M0 12.5781C0 19.2055 5.37258 24.5781 12 24.5781C18.6274 24.5781 24 19.2055 24 12.5781C24 5.95071 18.6274 0.578125 12 0.578125C5.37258 0.578125 0 5.95071 0 12.5781Z"
-            fill="#003F7C"
-          />
-          <path
-            d="M18 12.5781C18 9.27812 15.3 6.57812 12 6.57812C8.7 6.57812 6 9.27812 6 12.5781C6 15.5781 8.175 18.0531 11.025 18.5031V14.3031H9.525V12.5781H11.025V11.2281C11.025 9.72812 11.925 8.90313 13.275 8.90313C13.95 8.90313 14.625 9.05313 14.625 9.05313V10.5531H13.875C13.125 10.5531 12.9 11.0031 12.9 11.4531V12.5781H14.55L14.25 14.3031H12.825V18.5781C15.825 18.1281 18 15.5781 18 12.5781Z"
-            fill="white"
-          />
-        </svg>
-      ),
-    },
+    // {
+    //   label: "Facebook",
+    //   icon: (
+    //     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+    //       <path
+    //         d="M0 12.5781C0 19.2055 5.37258 24.5781 12 24.5781C18.6274 24.5781 24 19.2055 24 12.5781C24 5.95071 18.6274 0.578125 12 0.578125C5.37258 0.578125 0 5.95071 0 12.5781Z"
+    //         fill="#003F7C"
+    //       />
+    //       <path
+    //         d="M18 12.5781C18 9.27812 15.3 6.57812 12 6.57812C8.7 6.57812 6 9.27812 6 12.5781C6 15.5781 8.175 18.0531 11.025 18.5031V14.3031H9.525V12.5781H11.025V11.2281C11.025 9.72812 11.925 8.90313 13.275 8.90313C13.95 8.90313 14.625 9.05313 14.625 9.05313V10.5531H13.875C13.125 10.5531 12.9 11.0031 12.9 11.4531V12.5781H14.55L14.25 14.3031H12.825V18.5781C15.825 18.1281 18 15.5781 18 12.5781Z"
+    //         fill="white"
+    //       />
+    //     </svg>
+    //   ),
+    //   link: "https://twitter.com/GetenergyHQ",
+    // },
     {
       label: "Twitter",
       icon: (
-        <svg
-          width="24"
-          height="25"
-          viewBox="0 0 24 25"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M0 13C0 19.6274 5.37258 25 12 25C18.6274 25 24 19.6274 24 13C24 6.37258 18.6274 1 12 1C5.37258 1 0 6.37258 0 13Z"
             fill="#003F7C"
@@ -48,17 +37,12 @@ export default function Footer() {
           />
         </svg>
       ),
+      link: "https://twitter.com/GetenergyHQ",
     },
     {
       label: "Instagram",
       icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="25"
-          viewBox="0 0 24 25"
-          fill="none"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
           <path
             d="M0 12.5781C0 19.2055 5.37258 24.5781 12 24.5781C18.6274 24.5781 24 19.2055 24 12.5781C24 5.95071 18.6274 0.578125 12 0.578125C5.37258 0.578125 0 5.95071 0 12.5781Z"
             fill="#003F7C"
@@ -77,17 +61,12 @@ export default function Footer() {
           />
         </svg>
       ),
+      link: "https://instagram.com/getenergyhq",
     },
     {
       label: "LinkedIn",
       icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="25"
-          viewBox="0 0 24 25"
-          fill="none"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
           <path
             d="M0 12.5781C0 19.2055 5.37258 24.5781 12 24.5781C18.6274 24.5781 24 19.2055 24 12.5781C24 5.95071 18.6274 0.578125 12 0.578125C5.37258 0.578125 0 5.95071 0 12.5781Z"
             fill="#003F7C"
@@ -98,6 +77,7 @@ export default function Footer() {
           />
         </svg>
       ),
+      link: "http://www.linkedin.com/in/getenergyng",
     },
   ];
 
@@ -105,12 +85,9 @@ export default function Footer() {
     <footer className="w-full py-20 bg-primaryBlue text-white">
       <div className="container mx-auto w-full rounded-2xl p-4 lg:p-10 flex flex-col lg:flex-row drop-shadow-md">
         <div className="w-full">
-          <h5 className="font-bold text-3xl max-w-lg">
-            Taking energy into a new dimension
-          </h5>
+          <h5 className="font-bold text-3xl max-w-lg">Taking energy into a new dimension</h5>
           <p className="me-10 lg:me-44 my-5 to-white/80">
-            Here At The GetEnergy, We Offer You The Most Affordable And Cheapest
-            Services.
+            Here At The GetEnergy, We Offer You The Most Affordable And Cheapest Services.
           </p>
         </div>
 
@@ -171,19 +148,14 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             {socialLinks.map((item, i) => (
               <div key={i} className="cursor-pointer" title={item.label}>
-                {item.icon}
+                <Link href={item.link} target="_blank">
+                  {item.icon}
+                </Link>
               </div>
             ))}
           </div>
-          <p className="text-black">
-            © 2023 GetEnergy Inc. All rights reserved.
-          </p>
-          <Image
-            src={"/images/logos/get-energy-logo.png"}
-            alt="get energy logo"
-            width={130}
-            height={20}
-          />
+          <p className="text-black">© 2023 GetEnergy Inc. All rights reserved.</p>
+          <Image src={"/images/logos/get-energy-logo.png"} alt="get energy logo" width={130} height={20} />
         </div>
       </div>
     </footer>
