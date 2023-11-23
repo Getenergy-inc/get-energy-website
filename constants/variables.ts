@@ -5,7 +5,7 @@ const SHOP_NOW_ADDRESS = (process.env.NEXT_PUBLIC_SHOW_NOW_ADDRESS as string) ??
 const GET_STARTED_ADDRESS = (process.env.NEXT_PUBLIC_GET_STARTED_ADDRESS as string) ?? "";
 const VOLUNTEER_FORM_URL = (process.env.NEXT_PUBLIC_VOLUNTEER_FORM_URL as string) ?? "";
 const INTERN_FORM_URL = (process.env.NEXT_PUBLIC_INTERN_FORM_URL as string) ?? "";
-const DASHBOARD_URL = "https://get-energy-dashboard.onrender.com";
+const DASHBOARD_URL = (process.env.NEXT_PUBLIC_DASHBOARD_URL as string) ?? "";
 
 export {
   LIVE_ADDRESS,
