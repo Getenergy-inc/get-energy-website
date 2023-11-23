@@ -69,7 +69,7 @@ const BeforeFooterAction: FC<Props> = ({ text, actionText, actionType }) => {
       </div>
 
       <div className="space-y-10">
-        <p className="font-bold text-4xl max-w-[80%] mx-auto text-center">{text}</p>
+        <p className="font-bold text-4xl max-w-[80%] mx-auto text-center ">{text}</p>
 
         <div>{renderActionButton()}</div>
       </div>

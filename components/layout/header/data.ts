@@ -27,7 +27,7 @@ export const links = [
   {
     _id: "link-7",
     title: "Invest in Energy",
-    url: "/#invest-in-energy",
+    url: "/invest",
   },
   {
     _id: "link-8",
