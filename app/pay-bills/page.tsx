@@ -1,6 +1,7 @@
 "use client";
 
 import BeforeFooterAction from "@/components/common/before-footer";
+import BeforeProcess from "@/components/common/before-process";
 import Bills from "@/features/pay-bills/bills";
 import BillsProcess from "@/features/pay-bills/process";
 import Image from "next/image";
@@ -68,25 +69,10 @@ const PayBills = () => {
           </div>
 
           <div className="w-full flex justify-center">
-            <div className="container my-10 w-full">
-              <div className="w-full grid grid-cols-2 gap-8 p-12">
-                <div className="overflow-hidden">
-                  <div>
-                    <h3 className="font-bold text-xl md:text-3xl lg:text-5xl">
-                      Our Working Process helps you to get the best from our platform
-                    </h3>
-                  </div>
-                </div>
-
-                <div className="overflow-hidden">
-                  <div>
-                    <p className="mt-5 md:text-xl leading-8">
-                      Simplify Your Life: The Seamless Way PayBills Works to Ease Your Financial Transactions
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <BeforeProcess
+              headline="Our Working Process helps you to get the best from our platform"
+              description="Simplify Your Life: The Seamless Way PayBills Works to Ease Your Financial Transactions"
+            />
           </div>
 
           <BillsProcess />

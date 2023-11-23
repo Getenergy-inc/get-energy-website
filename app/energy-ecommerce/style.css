@@ -1,0 +1,8 @@
+#energy-ecom {
+  background: url("/images/bg/energy-e-bg.png") no-repeat center;
+  background-size: cover;
+}
+
+#energy-expo {
+  background: radial-gradient(ellipse 1000px 500px at 20% 10%, #99b0c5, #003b6d, #003b6d, #003b6d);
+}

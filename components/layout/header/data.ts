@@ -17,7 +17,7 @@ export const links = [
   {
     _id: "link-4",
     title: "Energy E-Commerce",
-    url: "/#energy-ecommerce",
+    url: "/energy-ecommerce",
   },
   // {
   //   _id: "link-6",
