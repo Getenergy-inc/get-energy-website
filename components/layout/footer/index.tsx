@@ -10,7 +10,13 @@ export default function Footer() {
     {
       label: "Facebook",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="none"
+        >
           <path
             d="M0 12.5781C0 19.2055 5.37258 24.5781 12 24.5781C18.6274 24.5781 24 19.2055 24 12.5781C24 5.95071 18.6274 0.578125 12 0.578125C5.37258 0.578125 0 5.95071 0 12.5781Z"
             fill="#003F7C"
@@ -25,13 +31,19 @@ export default function Footer() {
     {
       label: "Twitter",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <svg
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
-            d="M0 12.5781C0 19.2055 5.37258 24.5781 12 24.5781C18.6274 24.5781 24 19.2055 24 12.5781C24 5.95071 18.6274 0.578125 12 0.578125C5.37258 0.578125 0 5.95071 0 12.5781Z"
+            d="M0 13C0 19.6274 5.37258 25 12 25C18.6274 25 24 19.6274 24 13C24 6.37258 18.6274 1 12 1C5.37258 1 0 6.37258 0 13Z"
             fill="#003F7C"
           />
           <path
-            d="M18 8.82812C17.55 9.05313 17.1 9.12812 16.575 9.20312C17.1 8.90313 17.475 8.45312 17.625 7.85312C17.175 8.15312 16.65 8.30313 16.05 8.45312C15.6 8.00312 14.925 7.70312 14.25 7.70312C12.675 7.70312 11.475 9.20312 11.85 10.7031C9.825 10.6281 8.025 9.65313 6.75 8.15313C6.075 9.27813 6.45 10.7031 7.5 11.4531C7.125 11.4531 6.75 11.3031 6.375 11.1531C6.375 12.2781 7.2 13.3281 8.325 13.6281C7.95 13.7031 7.575 13.7781 7.2 13.7031C7.5 14.6781 8.4 15.4281 9.525 15.4281C8.625 16.1031 7.275 16.4781 6 16.3281C7.125 17.0031 8.4 17.4531 9.75 17.4531C14.325 17.4531 16.875 13.6281 16.725 10.1031C17.25 9.80312 17.7 9.35312 18 8.82812Z"
+            d="M12.6122 11.2717L17.2467 6H16.1483L12.1252 10.5772L8.91039 6H5.20312L10.0638 12.9222L5.20312 18.45H6.30157L10.5507 13.6158L13.9459 18.45H17.6531L12.6122 11.2717ZM11.1082 12.9827L10.6157 12.2935L6.69702 6.80925H8.38405L11.5458 11.2352L12.0382 11.9244L16.1492 17.6781H14.4621L11.1082 12.9827Z"
             fill="white"
           />
         </svg>
@@ -40,7 +52,13 @@ export default function Footer() {
     {
       label: "Instagram",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="none"
+        >
           <path
             d="M0 12.5781C0 19.2055 5.37258 24.5781 12 24.5781C18.6274 24.5781 24 19.2055 24 12.5781C24 5.95071 18.6274 0.578125 12 0.578125C5.37258 0.578125 0 5.95071 0 12.5781Z"
             fill="#003F7C"
@@ -63,7 +81,13 @@ export default function Footer() {
     {
       label: "LinkedIn",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="none"
+        >
           <path
             d="M0 12.5781C0 19.2055 5.37258 24.5781 12 24.5781C18.6274 24.5781 24 19.2055 24 12.5781C24 5.95071 18.6274 0.578125 12 0.578125C5.37258 0.578125 0 5.95071 0 12.5781Z"
             fill="#003F7C"
@@ -81,9 +105,12 @@ export default function Footer() {
     <footer className="w-full py-20 bg-primaryBlue text-white">
       <div className="container mx-auto w-full rounded-2xl p-4 lg:p-10 flex flex-col lg:flex-row drop-shadow-md">
         <div className="w-full">
-          <h5 className="font-bold text-3xl max-w-lg">Taking energy into a new dimension</h5>
+          <h5 className="font-bold text-3xl max-w-lg">
+            Taking energy into a new dimension
+          </h5>
           <p className="me-10 lg:me-44 my-5 to-white/80">
-            Here At The GetEnergy, We Offer You The Most Affordable And Cheapest Services.
+            Here At The GetEnergy, We Offer You The Most Affordable And Cheapest
+            Services.
           </p>
         </div>
 
@@ -148,8 +175,15 @@ export default function Footer() {
               </div>
             ))}
           </div>
-          <p className="text-black">© 2023 GetEnergy Inc. All rights reserved.</p>
-          <Image src={"/images/logos/get-energy-logo.png"} alt="get energy logo" width={130} height={20} />
+          <p className="text-black">
+            © 2023 GetEnergy Inc. All rights reserved.
+          </p>
+          <Image
+            src={"/images/logos/get-energy-logo.png"}
+            alt="get energy logo"
+            width={130}
+            height={20}
+          />
         </div>
       </div>
     </footer>

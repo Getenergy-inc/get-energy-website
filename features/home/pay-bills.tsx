@@ -19,6 +19,8 @@ import {
   TransitionParentInViewFast,
   TransitionParentInViewSlow,
 } from "@/lib/utils/transitions";
+import Link from "next/link";
+import { DASHBOARD_URL } from "@/constants/variables";
 
 const PayBills = () => {
   const [selectedAction, setSelectedAction] = useState<number | null>(null);
@@ -57,7 +59,9 @@ const PayBills = () => {
                 </div>
                 <div className="space-y-3 max-w-lg">
                   <p className="text-xl font-semibold">{data.title}</p>
-                  <p className="text-zinc-400 leading-loose text-lg">{data.description}</p>
+                  <p className="text-zinc-400 leading-loose text-lg">
+                    {data.description}
+                  </p>
                 </div>
               </TransitionOpacity>
             ))}
@@ -110,7 +114,9 @@ const PayBills = () => {
                     <div className="w-[70%] flex items-center justify-center h-auto aspect-square">
                       <div
                         className={`${
-                          selectedAction === i + 1 ? "bg-[#c4c9d3]" : "bg-transparent"
+                          selectedAction === i + 1
+                            ? "bg-[#c4c9d3]"
+                            : "bg-transparent"
                         } bill-action w-full h-full flex cursor-pointer backdrop-blur-sm items-center transition-colors justify-center aspect-square rounded-2xl`}
                         onClick={() => selectAction(i + 1)}
                       >
@@ -121,18 +127,25 @@ const PayBills = () => {
                     </div>
                   </div>
 
-                  <p className="text-center md:text-sm text-xs">{action.label}</p>
+                  <p className="text-center md:text-sm text-xs">
+                    {action.label}
+                  </p>
                 </TransitionFromBottom>
               ))}
             </TransitionParentInViewFast>
             <div className="w-1/2 mx-auto md:mt-5 mt-3">
-              <button
-                className={`${
-                  selectedAction && "animate-bounce [animation-duration:1s]"
-                } rounded-full text-white bg-primaryBlue text-xs transition-colors duration-200 hover:bg-primaryBlueHover py-3 md:text-sm w-full`}
+              <Link
+                href={`${DASHBOARD_URL}/dashboard/get-energy`}
+                target="_blank"
               >
-                Proceed
-              </button>
+                <button
+                  className={`${
+                    selectedAction && "animate-bounce [animation-duration:1s]"
+                  } rounded-full text-white bg-primaryBlue text-xs transition-colors duration-200 hover:bg-primaryBlueHover py-3 md:text-sm w-full`}
+                >
+                  Proceed
+                </button>
+              </Link>
             </div>
           </div>
         </div>
