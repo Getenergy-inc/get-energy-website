@@ -174,8 +174,8 @@ export const JoinForm = () => {
         </form>
       ) : (
         <div className="flex items-center justify-center py-4">
-          <div className="flex items-center justify-center">
-            <div className="w-8 h-8 rounded-full grid place-content-center">
+          <div>
+            <div className="w-12 h-12 rounded-full grid mx-auto bg-primaryBlue/40 place-content-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="36"
