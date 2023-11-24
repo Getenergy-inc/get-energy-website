@@ -22,8 +22,8 @@ const Careers = () => {
   const jobContent = [
     [],
     [
-      { duration: "6 Weeks - 6 Months Training", role: "Web Designer & Developer", type: "Intern" },
-      { duration: "Part Time", role: "Front-end developer", type: "Volunteer" },
+      { duration: "6 Weeks - 6 Months Training", role: "Positions Available", type: "Intern" },
+      { duration: "Part Time", role: "Positions Available", type: "Volunteer" },
     ],
     [],
   ];

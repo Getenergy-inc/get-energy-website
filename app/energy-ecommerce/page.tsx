@@ -5,7 +5,17 @@ import WhatsInIt from "@/features/energy-ecommerce/what-in-it";
 import "./style.css";
 import BeforeProcess from "@/components/common/before-process";
 import EnergyEcomProcess from "@/features/energy-ecommerce/process";
-import BeforeFooterAction from "@/components/common/before-footer";
+import BeforeFooterAction, { JoinForm } from "@/components/common/before-footer";
+import {
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { XIcon } from "lucide-react";
 
 const EnergyEcommerce = () => {
   return (
@@ -50,27 +60,46 @@ const EnergyEcommerce = () => {
             <div className="px-10 space-y-8">
               <h4 className="text-4xl font-bold text-white">Join the Annual Energy Expo</h4>
 
-              <button className="flex items-center gap-4 px-6 py-3 rounded-full font-semibold bg-white/80 text-primaryBlue">
-                <span>Join Waitlist</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
-                  <path d="M7.10156 1.09375L12.0049 5.99705L7.10156 10.9004" fill="#003B6D" />
-                  <path
-                    d="M7.10156 1.09375L12.0049 5.99705L7.10156 10.9004"
-                    stroke="#003B6D"
-                    strokeWidth="1.86761"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path d="M12.0017 6.03906L1.57031 6.03906L12.0017 6.03906Z" fill="#003B6D" />
-                  <path
-                    d="M12.0017 6.03906L1.57031 6.03906"
-                    stroke="#003B6D"
-                    strokeWidth="1.86761"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+              <AlertDialog>
+                <AlertDialogTrigger>
+                  <button className="flex items-center gap-4 px-6 py-3 rounded-full font-semibold bg-white/80 text-primaryBlue">
+                    <span>Join Waitlist</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+                      <path d="M7.10156 1.09375L12.0049 5.99705L7.10156 10.9004" fill="#003B6D" />
+                      <path
+                        d="M7.10156 1.09375L12.0049 5.99705L7.10156 10.9004"
+                        stroke="#003B6D"
+                        strokeWidth="1.86761"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path d="M12.0017 6.03906L1.57031 6.03906L12.0017 6.03906Z" fill="#003B6D" />
+                      <path
+                        d="M12.0017 6.03906L1.57031 6.03906"
+                        stroke="#003B6D"
+                        strokeWidth="1.86761"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>
+                      <div className="flex items-center justify-between">
+                        <p className="font-extrabold">Join Waitlist</p>
+                        <AlertDialogCancel>
+                          <XIcon />
+                        </AlertDialogCancel>
+                      </div>
+                    </AlertDialogTitle>
+                  </AlertDialogHeader>
+                  <AlertDialogDescription>
+                    <JoinForm />
+                  </AlertDialogDescription>
+                </AlertDialogContent>
+              </AlertDialog>
             </div>
           </div>
           <div className="max-h-[28rem] rounded-r-[3rem] overflow-hidden">

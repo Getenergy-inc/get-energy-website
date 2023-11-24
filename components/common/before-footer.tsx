@@ -11,6 +11,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "../ui/alert-dialog";
+import { DASHBOARD_URL } from "@/constants/variables";
 
 interface Props {
   text: string;
@@ -49,7 +50,10 @@ const BeforeFooterAction: FC<Props> = ({ text, actionText, actionType }) => {
         );
       default:
         return (
-          <button className="flex mx-auto w-fit items-center gap-2 bg-primaryBlue rounded-lg px-6 py-3 text-white">
+          <button
+            className="flex mx-auto w-fit items-center gap-2 bg-primaryBlue rounded-lg px-6 py-3 text-white"
+            onClick={() => window.open(`${DASHBOARD_URL}/dashboard/get-energy`, "")}
+          >
             <span>{actionText ?? "Get Started"}</span>
           </button>
         );
@@ -77,7 +81,7 @@ const BeforeFooterAction: FC<Props> = ({ text, actionText, actionType }) => {
   );
 };
 
-const JoinForm = () => {
+export const JoinForm = () => {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <div className="grid grid-cols-2 text-black gap-4">

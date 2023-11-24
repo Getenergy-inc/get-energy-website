@@ -33,6 +33,12 @@ const GetElectricity = () => {
 
   const [meterNumber, setMeterNumber] = useState("");
 
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    window.open(`${DASHBOARD_URL}`, "");
+  };
+
   return (
     <>
       <header>
@@ -104,7 +110,10 @@ const GetElectricity = () => {
                 secure, and hassle-free. That&apos;s the GetEnergy promise!
               </p>
 
-              <button className="flex items-center gap-2 bg-primaryBlue rounded-md px-4 py-2 text-white">
+              <button
+                className="flex items-center gap-2 bg-primaryBlue rounded-md px-4 py-2 text-white"
+                onClick={() => window.open(`${DASHBOARD_URL}/dashboard/get-energy`, "")}
+              >
                 <span>Get Started</span>
                 <ArrowRight size={20} />
               </button>
@@ -144,7 +153,10 @@ const GetElectricity = () => {
                 ))}
               </div>
 
-              <button className="flex items-center gap-2 bg-primaryBlue rounded-md px-4 py-2 text-white">
+              <button
+                className="flex items-center gap-2 bg-primaryBlue rounded-md px-4 py-2 text-white"
+                onClick={() => window.open(`${DASHBOARD_URL}/dashboard/get-energy`, "")}
+              >
                 <span>Get Started</span>
                 <ArrowRight size={20} />
               </button>
@@ -160,7 +172,10 @@ const GetElectricity = () => {
                     unlock the door to monthly surprises.
                   </p>
 
-                  <button className="gap-2 bg-white text-primaryBlue rounded-xl px-4 py-3 font-bold">
+                  <button
+                    className="gap-2 bg-white text-primaryBlue rounded-xl px-4 py-3 font-bold"
+                    onClick={() => window.open(`${DASHBOARD_URL}/dashboard/get-energy`, "")}
+                  >
                     Get Started
                   </button>
                 </div>
@@ -204,20 +219,28 @@ const GetElectricity = () => {
               <div>
                 <p className="font-bold text-xl">Community Electricity Vending</p>
               </div>
-              <form onClick={(e) => e.preventDefault()}>
+              <form onSubmit={onSubmit}>
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label className="font-medium text-sm" htmlFor="communityName">
                         Community Name
                       </label>
-                      <input type="text" className="w-full outline-none p-3 rounded-sm border border-zinc-200" />
+                      <input
+                        type="text"
+                        className="w-full outline-none p-3 rounded-sm border border-zinc-200"
+                        required
+                      />
                     </div>
                     <div className="space-y-2">
                       <label className="font-medium text-sm" htmlFor="fullName">
                         Representative Full Name
                       </label>
-                      <input type="text" className="w-full outline-none p-3 rounded-sm border border-zinc-200" />
+                      <input
+                        type="text"
+                        className="w-full outline-none p-3 rounded-sm border border-zinc-200"
+                        required
+                      />
                     </div>
                   </div>
 
@@ -225,7 +248,7 @@ const GetElectricity = () => {
                     <label className="font-medium text-sm" htmlFor="communityAddress">
                       Community Address
                     </label>
-                    <input type="text" className="w-full outline-none p-3 rounded-sm border border-zinc-200" />
+                    <input type="text" className="w-full outline-none p-3 rounded-sm border border-zinc-200" required />
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
@@ -233,13 +256,21 @@ const GetElectricity = () => {
                       <label className="font-medium text-sm" htmlFor="cityOrTown">
                         City/Town
                       </label>
-                      <input type="text" className="w-full outline-none p-3 rounded-sm border border-zinc-200" />
+                      <input
+                        type="text"
+                        className="w-full outline-none p-3 rounded-sm border border-zinc-200"
+                        required
+                      />
                     </div>
                     <div className="space-y-2">
                       <label className="font-medium text-sm" htmlFor="country">
                         Country
                       </label>
-                      <input type="text" className="w-full outline-none p-3 rounded-sm border border-zinc-200" />
+                      <input
+                        type="text"
+                        className="w-full outline-none p-3 rounded-sm border border-zinc-200"
+                        required
+                      />
                     </div>
                   </div>
 
@@ -248,13 +279,21 @@ const GetElectricity = () => {
                       <label className="font-medium text-sm" htmlFor="phoneNumber">
                         Mobile Number
                       </label>
-                      <input type="text" className="w-full outline-none p-3 rounded-sm border border-zinc-200" />
+                      <input
+                        type="text"
+                        className="w-full outline-none p-3 rounded-sm border border-zinc-200"
+                        required
+                      />
                     </div>
                     <div className="space-y-2">
                       <label className="font-medium text-sm" htmlFor="email">
                         Email address
                       </label>
-                      <input type="text" className="w-full outline-none p-3 rounded-sm border border-zinc-200" />
+                      <input
+                        type="text"
+                        className="w-full outline-none p-3 rounded-sm border border-zinc-200"
+                        required
+                      />
                     </div>
                   </div>
                 </div>
