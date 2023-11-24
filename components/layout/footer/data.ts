@@ -2,27 +2,27 @@ export const products_data = [
   {
     _id: "products-1",
     title: "Get Electricity",
-    url: "/purchase-electricity",
+    url: "/get-electricity",
   },
   {
     _id: "products-2",
     title: "Pay Bills",
-    url: "#",
+    url: "/pay-bills",
   },
   {
     _id: "products-3",
     title: "Energy E-Commerce",
-    url: "#",
+    url: "/energy-ecommerce",
   },
-  {
-    _id: "products-4",
-    title: "Community Electricity Vending",
-    url: "#",
-  },
+  // {
+  //   _id: "products-4",
+  //   title: "Community Electricity Vending",
+  //   url: "#",
+  // },
   {
     _id: "products-5",
     title: "Invest in Energy",
-    url: "#",
+    url: "/invest",
   },
 ];
 
