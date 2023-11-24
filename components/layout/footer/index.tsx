@@ -26,7 +26,13 @@ export default function Footer() {
     {
       label: "Twitter",
       icon: (
-        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="M0 13C0 19.6274 5.37258 25 12 25C18.6274 25 24 19.6274 24 13C24 6.37258 18.6274 1 12 1C5.37258 1 0 6.37258 0 13Z"
             fill="#003F7C"
@@ -42,7 +48,13 @@ export default function Footer() {
     {
       label: "Instagram",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="none"
+        >
           <path
             d="M0 12.5781C0 19.2055 5.37258 24.5781 12 24.5781C18.6274 24.5781 24 19.2055 24 12.5781C24 5.95071 18.6274 0.578125 12 0.578125C5.37258 0.578125 0 5.95071 0 12.5781Z"
             fill="#003F7C"
@@ -66,7 +78,13 @@ export default function Footer() {
     {
       label: "LinkedIn",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="none"
+        >
           <path
             d="M0 12.5781C0 19.2055 5.37258 24.5781 12 24.5781C18.6274 24.5781 24 19.2055 24 12.5781C24 5.95071 18.6274 0.578125 12 0.578125C5.37258 0.578125 0 5.95071 0 12.5781Z"
             fill="#003F7C"
@@ -85,9 +103,12 @@ export default function Footer() {
     <footer className="w-full py-20 bg-primaryBlue text-white">
       <div className="container mx-auto w-full rounded-2xl p-4 lg:p-10 flex flex-col lg:flex-row drop-shadow-md">
         <div className="w-full">
-          <h5 className="font-bold text-3xl max-w-lg">Taking energy into a new dimension</h5>
+          <h5 className="font-bold text-3xl max-w-lg">
+            Taking energy into a new dimension
+          </h5>
           <p className="me-10 lg:me-44 my-5 to-white/80">
-            Here At The GetEnergy, We Offer You The Most Affordable And Cheapest Services.
+            Here At The GetEnergy, We Offer You The Most Affordable And Cheapest
+            Services.
           </p>
         </div>
 
@@ -122,18 +143,18 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="w-full">
+          <div className="w-full col-span-2">
             <h5 className="font-bold text-3xl">Get the App</h5>
             <div className="flex flex-col mt-3 gap-3">
               <button
-                className="text-xs lg:text-sm flex items-center text-white bg-black p-3 px-4 rounded-md hover:scale-[1.06]"
+                className="text-xs lg:text-sm flex items-center w-fit text-white bg-black p-3 px-4 rounded-md hover:scale-[1.06]"
                 type="button"
               >
                 <FaApple size="20px" className="me-2" />
                 <span>Get on Apple Store</span>
               </button>
               <button
-                className="text-xs border lg:border-0 lg:text-sm flex items-center text-black bg-white p-3 px-4 rounded-md hover:scale-[1.06]"
+                className="text-xs border lg:border-0 lg:text-sm flex items-center w-fit text-black bg-white p-3 px-4 rounded-md hover:scale-[1.06]"
                 type="button"
               >
                 <FaGooglePlay size="20px" className="me-2" />
@@ -158,7 +179,12 @@ export default function Footer() {
           <p className="text-black text-xs text-center sm:text-sm md:text-base">
             © 2023 GetEnergy Inc. All rights reserved.
           </p>
-          <Image src={"/images/logos/get-energy-logo.png"} alt="get energy logo" width={130} height={20} />
+          <Image
+            src={"/images/logos/get-energy-logo.png"}
+            alt="get energy logo"
+            width={130}
+            height={20}
+          />
         </div>
       </div>
     </footer>

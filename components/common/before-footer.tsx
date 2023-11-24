@@ -51,7 +51,9 @@ const BeforeFooterAction: FC<Props> = ({ text, actionText, actionType }) => {
         return (
           <button
             className="flex mx-auto w-fit items-center gap-2 bg-primaryBlue rounded-lg px-6 py-3 text-white"
-            onClick={() => window.open(`${DASHBOARD_URL}/dashboard/get-energy`, "")}
+            onClick={() =>
+              window.open(`${DASHBOARD_URL}/dashboard/get-energy`, "")
+            }
           >
             <span>{actionText ?? "Get Started"}</span>
           </button>
@@ -72,7 +74,9 @@ const BeforeFooterAction: FC<Props> = ({ text, actionText, actionType }) => {
       </div>
 
       <div className="space-y-10">
-        <p className="font-bold md:text-4xl text-3xl max-w-[80%] mx-auto text-center">{text}</p>
+        <p className="font-bold md:text-4xl sm:text-3xl text-xl max-w-[80%] mx-auto text-center">
+          {text}
+        </p>
 
         <div>{renderActionButton()}</div>
       </div>
@@ -120,7 +124,9 @@ export const JoinForm = () => {
       </div>
 
       <div className="w-1/2 mx-auto mt-4">
-        <button className="w-full mx-auto bg-primaryBlue text-white py-3 font-semibold rounded-xl">Proceed</button>
+        <button className="w-full mx-auto bg-primaryBlue text-white py-3 font-semibold rounded-xl">
+          Proceed
+        </button>
       </div>
     </form>
   );
