@@ -14,6 +14,7 @@ import {
 import { useLayoutEffect } from "react";
 import { useHomeStore } from ".";
 import { gsap } from "gsap";
+import JoinWaitlistButton from "./join-waitlist-btn";
 
 const InvestIn = () => {
   const { homeRef } = useHomeStore();
@@ -55,23 +56,26 @@ const InvestIn = () => {
                 </div>
                 <div className="space-y-3 max-w-lg">
                   <p className="text-xl font-semibold">{data.title}</p>
-                  <p className="text-zinc-400 leading-loose text-lg">{data.description}</p>
+                  <p className="text-zinc-400 leading-loose text-lg">
+                    {data.description}
+                  </p>
                 </div>
               </TransitionFromRight>
             ))}
           </TransitionParentInView>
 
           <TransitionFromBottomAlone className="grid place-content-center">
-            <button className="font-bold text-primaryBlue px-6 py-3 rounded-xl bg-primaryBlue/20">
-              Join Wait List
-            </button>
+            <JoinWaitlistButton />
           </TransitionFromBottomAlone>
         </div>
       </div>
 
       <TransitionParentInView className="relative flex justify-center -mt-10 z-50">
         <TransitionFromLeft className="z-[100] absolute bottom-20 -left-10">
-          <div className="py-4 px-8 text-sm bg-white shadow-xl rounded-xl" id="investCard">
+          <div
+            className="py-4 px-8 text-sm bg-white shadow-xl rounded-xl"
+            id="investCard"
+          >
             <div className="flex items-center gap-16 justify-between">
               <p className="font-medium">Investment</p>
               <p className="flex items-center gap-2 text-green-500">
@@ -80,7 +84,10 @@ const InvestIn = () => {
             </div>
             <div className="mt-2">
               {Array.from({ length: 2 }).map((_, i) => (
-                <div key={i} className="flex items-center justify-between text-zinc-400">
+                <div
+                  key={i}
+                  className="flex items-center justify-between text-zinc-400"
+                >
                   <p>N200,000</p>
                   <p>May 29, 2023</p>
                 </div>
