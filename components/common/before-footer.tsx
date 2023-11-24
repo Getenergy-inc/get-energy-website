@@ -89,7 +89,7 @@ export const JoinForm = () => {
   const [inputs, setInputs] = useState({
     fullName: "",
     email: "",
-    mobileNumber: "",
+    phone: "",
   });
 
   const [done, setDone] = useState(false);
@@ -99,7 +99,7 @@ export const JoinForm = () => {
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!inputs.fullName || !inputs.email || !inputs.mobileNumber) {
+    if (!inputs.fullName || !inputs.email || !inputs.phone) {
       return;
     }
 
@@ -153,10 +153,10 @@ export const JoinForm = () => {
               </label>
               <input
                 type="text"
-                name="mobileNumber"
+                name="phone"
                 className="w-full p-3 [border-width:1px] border-zinc-400 rounded-lg"
                 placeholder="Enter Mobile Number"
-                value={inputs.mobileNumber}
+                value={inputs.phone}
                 onChange={(e) => updateInput(e)}
                 required
               />
