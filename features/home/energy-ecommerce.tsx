@@ -11,7 +11,7 @@ import {
 
 const EnergyEcommerce = () => {
   return (
-    <section className="grid grid-cols-2 gap-10 relative" id="energy-ecommerce">
+    <section className="grid md:grid-cols-2 md:gap-10 gap-12 relative" id="energy-ecommerce">
       <div className="bg-[#fdfdfd] z-[50]">
         <TransitionFromLeftAloneSlow>
           <Image
@@ -26,7 +26,7 @@ const EnergyEcommerce = () => {
       <div className="z-50">
         <div className="space-y-8">
           <TransitionOpacityAlone>
-            <h3 className="font-bold text-4xl">Energy E-commerce</h3>
+            <h3 className="font-bold text-3xl md:text-4xl">Energy E-commerce</h3>
           </TransitionOpacityAlone>
           <TransitionParentInView className="space-y-6">
             {ecommerceData.map((data, i) => (

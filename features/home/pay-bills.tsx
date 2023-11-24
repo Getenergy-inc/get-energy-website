@@ -102,7 +102,7 @@ const PayBills = () => {
           </TransitionParentInViewSlow>
 
           {/* Content */}
-          <div className="w-11/12 h-full bg-white z-50 border shad-lg rounded-md md:px-12 px-6 md:py-8 py-4 relative">
+          <div className="md:w-11/12 w-full h-full bg-white z-50 border shad-lg rounded-md md:px-12 px-6 md:py-8 py-4 relative">
             <p className="font-bold text-xl">Buy Bills Swiftly</p>
 
             <TransitionParentInViewFast className="grid grid-cols-4 md:gap-x-10 gap-x-5 md:gap-y-8 gap-y-4 py-6">

@@ -58,9 +58,9 @@ const WhyChooseEcommerce = () => {
   ];
 
   return (
-    <div className="container mx-auto px-40 grid grid-cols-2 gap-16 mt-12">
+    <div className="container mx-auto md:px-40 grid md:grid-cols-2 md:gap-16 gap-8 md:mt-12 mt-6">
       {items.map((item, index) => (
-        <div key={index} className="p-8">
+        <div key={index} className="p-8 w-full">
           <div className="py-10 rounded-t-2xl bg-[#CCD8E2] grid place-content-center">{item.icon}</div>
           <div className="space-y-6 pt-6">
             <p className="font-bold text-3xl">{item.title}</p>

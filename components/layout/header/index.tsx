@@ -3,14 +3,14 @@ import { usePathname } from "next/navigation";
 import { links } from "./data";
 import Link from "next/link";
 import Logo from "../../logo";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { MenuIcon, XIcon } from "lucide-react";
 import { TransitionOpacity, TransitionOpacityAlone, TransitionParentFast } from "@/lib/utils/transitions";
 import { DASHBOARD_URL } from "@/constants/variables";
 
 export default function Header() {
-  const [show, setShow] = React.useState(false);
+  const [show, setShow] = useState(false);
   const location = usePathname();
 
   const toggleVisibility = () => setShow(!show);
@@ -51,7 +51,7 @@ export default function Header() {
 
   return (
     <nav ref={navRef} className="bg-white w-full flex items-center justify-center">
-      <div className="lg:hidden bg-white shadow-md shadow-zinc-200 rounded-b-xl w-full">
+      <div className="lg:hidden block bg-white shadow-md shadow-zinc-200 rounded-b-xl w-full">
         <div className="container mx-auto">
           <div className="w-full flex items-center justify-between py-3">
             <Logo size={100} id="logo" />

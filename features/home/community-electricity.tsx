@@ -28,8 +28,8 @@ const CommunityElectricityVending = () => {
   };
 
   return (
-    <section className="grid grid-cols-2 gap-20" id="community-electricity-vending">
-      <div className="relative flex py-10 pl-10 justify-center">
+    <section className="grid md:grid-cols-2 gap-20" id="community-electricity-vending">
+      <div className="relative flex py-5 md:py-10 md:pl-10 justify-center">
         <div className="absolute -top-10 left-0 z-10">
           <PeopleSVG />
         </div>
@@ -43,7 +43,7 @@ const CommunityElectricityVending = () => {
           </TransitionOpacityAlone>
           <form onSubmit={onSubmit}>
             <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="font-medium text-sm" htmlFor="communityName">
                     Community Name
@@ -70,7 +70,7 @@ const CommunityElectricityVending = () => {
                 <input type="text" className="w-full outline-none p-3 rounded-sm border border-zinc-200" required />
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="font-medium text-sm" htmlFor="cityOrTown">
                     City/Town
@@ -85,7 +85,7 @@ const CommunityElectricityVending = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="font-medium text-sm" htmlFor="phoneNumber">
                     Mobile Number
@@ -113,7 +113,7 @@ const CommunityElectricityVending = () => {
       <div className="relative">
         <div className="space-y-8">
           <TransitionOpacityAlone>
-            <h3 className="font-bold text-4xl">Community Electricity Vending</h3>
+            <h3 className="font-bold text-3xl md:text-4xl">Community Electricity Vending</h3>
           </TransitionOpacityAlone>
           <TransitionParentInView className="space-y-6">
             {vendingData.map((data, i) => (

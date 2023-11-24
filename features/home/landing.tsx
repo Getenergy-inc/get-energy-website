@@ -37,7 +37,7 @@ export default function Landing() {
 
   return (
     <header id="landing-header" className="relative overflow-hidden pb-20">
-      <div className="absolute lg:top-10 md:top-8 text-xs md:text-base top-5 left-0 w-full flex items-center justify-center">
+      <div className="absolute lg:top-10 md:top-8 md:flex hidden text-xs md:text-base top-5 left-0 w-full items-center justify-center">
         <span>
           We are hiring!!{" "}
           <Link href={"/careers"} className="font-semibold text-primaryBlue border-b">
@@ -50,26 +50,38 @@ export default function Landing() {
           <div className="space-y-5">
             <div className="overflow-hidden pb-2">
               <h1
-                className={`lg:text-start jumbo_text max-w-[40rem] lg:text-5xl md:text-4xl text-2xl md:font-black font-bold text-center md:text-start lg:leading-[65px] md:leading-[50px] leading-[30px]`}
+                className={`lg:text-start jumbo_text max-w-[40rem] lg:text-5xl text-[1.8rem] md:font-black font-extrabold lg:leading-[65px] md:leading-[50px]`}
               >
                 <span>Unlocking Sustainable Energy Solutions, Discover the Power of</span>
                 <span className="main-text ms-3 jumbo_gtext">GetEnergy</span>
               </h1>
             </div>
             <div className="overflow-hidden pb-2">
-              <p className="w-full md:text-start text-center lg:text-start jumbo_text max-w-[45rem] text-sm md:text-lg md:font-semibold mb-2">
+              <p className="w-full lg:text-start jumbo_text max-w-[45rem] text-sm md:text-lg md:font-semibold mb-2">
                 We are a leading provider of energy trading solutions, offering a comprehensive range of services to
                 clients in the energy sector.
               </p>
             </div>
           </div>
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex md:justify-center justify-start lg:justify-start -mt-2">
             <Link
-              className="bg-primaryBlue text-white px-10 jumbo_action font-semibold transition-colors py-4 p-3 rounded-2xl"
+              className="bg-primaryBlue text-white md:px-10 px-5 py-3 text-sm md:text-base jumbo_action font-semibold transition-colors md:rounded-2xl rounded-xl"
               href={DASHBOARD_URL}
             >
               Get Started
             </Link>
+          </div>
+
+          <div>
+            <p className="block md:hidden text-center">
+              We are hiring!!{" "}
+              <Link href={"/careers"} className="font-semibold text-primaryBlue border-b">
+                Check Now
+              </Link>
+            </p>
+            <div className="w-full md:hidden grid mt-4 place-content-center animate-bounce [animation-duration:1s] text-primaryBlue">
+              <MouseIcon />
+            </div>
           </div>
         </div>
 

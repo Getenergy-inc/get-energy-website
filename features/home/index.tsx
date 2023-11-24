@@ -29,7 +29,7 @@ export default function Home() {
     <main className="w-full bg-[#fdfdfd]" ref={homeRef}>
       <Landing />
       <UpdateMarquee />
-      <div className="container mx-auto space-y-64 mt-40">
+      <div className="container mx-auto md:space-y-64 space-y-40 md:mt-40 mt-20">
         <GetElectricitySection />
         <PayBills />
         <EnergyEcommerce />

@@ -23,7 +23,7 @@ const whatsInItData = [
 
 const WhatsInIt = () => {
   return (
-    <div className="container mx-auto grid grid-cols-2">
+    <div className="container mx-auto grid md:grid-cols-2">
       <div className="self-start">
         <Image
           src={"/images/bg/man-with-cards.png"}

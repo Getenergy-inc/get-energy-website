@@ -52,21 +52,20 @@ export default function Services() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
-          dots: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 700,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -138,17 +137,19 @@ export default function Services() {
             <p className="text-primaryBlue font-bold px-7 py-4 w-fit mx-auto rounded-full bg-white/90">Services</p>
           </TransitionOpacity>
           <TransitionOpacity>
-            <h3 className="font-extrabold text-white/70 text-4xl leading-relaxed">
+            <h3 className="font-extrabold text-white/70 text-3xl md:text-4xl leading-relaxed">
               Ignite Your World with <span className="text-white">GetEnergy</span> Transformative Powering Solutions
             </h3>
           </TransitionOpacity>
           <TransitionOpacity>
-            <p className="text-center text-white/70">We offer amazing services to suit our customer needs</p>
+            <p className="text-center text-white/70 text-sm md:text-base">
+              We offer amazing services to suit our customer needs
+            </p>
           </TransitionOpacity>
         </TransitionParentInView>
 
-        <div className="container mx-auto mt-16 flex items-center justify-between gap-6">
-          <Slider {...settings} className="w-full md:gap-10">
+        <div className="container mx-auto mt-16 flex items-center justify-between gap-6 px-6">
+          <Slider {...settings} className="w-full md:gap-10 px-4">
             {data.map((item, id) => (
               <div key={id} className="w-full px-8">
                 <TransitionOpacity className="w-full rounded-xl p-4 md:p-8 text-black py-12 space-y-4 bg-white">

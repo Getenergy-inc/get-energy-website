@@ -8,6 +8,7 @@ import { User2Icon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { investInEnergyData } from "./data";
+import { DASHBOARD_URL } from "@/constants/variables";
 
 export default function HowItWorks() {
   const [selectedStep, setSelectedStep] = useState(1);
@@ -21,7 +22,7 @@ export default function HowItWorks() {
     switch (selectedStep) {
       case 1:
         return (
-          <TransitionParentInView className="mt-16 grid grid-cols-2 gap-10 px-16">
+          <TransitionParentInView className="mt-16 grid md:grid-cols-2 gap-10 px-16">
             <TransitionOpacity className="space-y-10">
               <div className="flex gap-6">
                 <div className="w-24 h-24 flex-shrink-0 bg-white/60 p-4 rounded-2xl">
@@ -37,7 +38,10 @@ export default function HowItWorks() {
                 Create an account and join our community of energy traders, investors, and suppliers. For amazing energy
                 products
               </p>
-              <button className="px-6 py-3 rounded-full border-2 border-white/50 hover:bg-white hover:text-primaryBlue transition-colors duration-300">
+              <button
+                className="px-6 py-3 rounded-full border-2 border-white/50 hover:bg-white hover:text-primaryBlue transition-colors duration-300"
+                onClick={() => window.open(`${DASHBOARD_URL}`, "")}
+              >
                 Get Started
               </button>
             </TransitionOpacity>
@@ -61,7 +65,7 @@ export default function HowItWorks() {
       case 2:
         return (
           <div>
-            <TransitionParentInView className="mt-16 grid grid-cols-2 gap-10 px-16">
+            <TransitionParentInView className="mt-16 grid md:grid-cols-2 gap-10 px-16">
               <TransitionOpacity className="space-y-10">
                 <div className="flex gap-6">
                   <div className="w-24 h-24 flex-shrink-0 bg-white/60 p-4 rounded-2xl">
@@ -106,7 +110,7 @@ export default function HowItWorks() {
         );
       case 3:
         return (
-          <TransitionParentInView className="mt-16 grid grid-cols-2 gap-10 px-16">
+          <TransitionParentInView className="mt-16 grid md:grid-cols-2 gap-10 px-16">
             <TransitionOpacity className="space-y-10">
               <div className="flex gap-6">
                 <div className="w-24 h-24 flex-shrink-0 bg-white/60 p-4 rounded-2xl">
@@ -160,19 +164,19 @@ export default function HowItWorks() {
             <p className="text-primaryBlue font-bold px-7 py-4 w-fit mx-auto rounded-full bg-white/90">How it Works</p>
           </TransitionOpacity>
           <TransitionOpacity>
-            <h3 className="font-bold text-white text-4xl">
+            <h3 className="font-bold text-white md:text-4xl text-3xl">
               Our Working Process helps you to get the best from our platform
             </h3>
           </TransitionOpacity>
         </TransitionParentInViewFast>
 
-        <TransitionParentInViewFast className="grid grid-cols-3 gap-12 mt-10">
+        <TransitionParentInViewFast className="grid grid-cols-3 lg:gap-12 md:gap-10 gap-5 mt-10">
           {stepsData.map((data) => (
             <TransitionOpacity key={data.id}>
               <button
                 className={`${
                   selectedStep === data.id ? "bg-white text-primaryBlue" : "hover:bg-white hover:text-primaryBlue"
-                } py-5 text-lg font-semibold border-2 w-full rounded-xl transition-colors duration-300`}
+                } md:py-5 py-2 md:text-lg sm:text-base text-sm font-semibold border-2 w-full rounded-xl transition-colors duration-300`}
                 onClick={() => setSelectedStep(data.id)}
               >
                 0{data.id}. {data.label}

@@ -18,7 +18,7 @@ export default function GetElectricitySection() {
 
   return (
     <section id="get-electricity" className="relative">
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 md:gap-6 gap-12">
         <div className="w-full h-full relative">
           <TransitionParentInView className="w-full h-full absolute top-0 left-0">
             {/* Balls */}
@@ -64,7 +64,7 @@ export default function GetElectricitySection() {
         <div>
           <div className="space-y-8">
             <TransitionOpacityAlone>
-              <h3 className="font-bold text-4xl">Get Electricity</h3>
+              <h3 className="font-bold md:text-4xl text-3xl">Get Electricity</h3>
             </TransitionOpacityAlone>
             <TransitionParentInView className="space-y-6">
               {electricityData.map((data, i) => (

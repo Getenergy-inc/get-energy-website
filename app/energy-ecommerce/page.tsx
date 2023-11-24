@@ -21,22 +21,24 @@ const EnergyEcommerce = () => {
   return (
     <>
       <header className="" id="energy-ecom">
-        <div className="grid grid-cols-5 min-h-[30rem] container mx-auto">
-          <div className="flex items-center col-span-3 relative">
-            <div className="text-white space-y-2 pb-4">
-              <h1 className="font-extrabold text-5xl leading-relaxed">
+        <div className="grid md:grid-cols-5 min-h-[30rem] container mx-auto">
+          <div className="flex items-center md:col-span-3 relative">
+            <div className="text-white space-y-2 pb-4 text-center md:text-start">
+              <h1 className="font-extrabold md:text-5xl text-4xl md:leading-relaxed">
                 Energize Your Lifestyle with GetEnergy&apos;s E-Commerce Extravaganza!
               </h1>
-              <p>Welcome to the Future of Energy Shopping – Welcome to GetEnergy E-Commerce!</p>
+              <p className="sm:text-base text-sm">
+                Welcome to the Future of Energy Shopping – Welcome to GetEnergy E-Commerce!
+              </p>
 
-              <div className="rounded-full backdrop-blur-sm select-none flex items-center gap-1 px-4 py-2 border border-white/10 w-fit shadow-md absolute bottom-5">
-                <span className="w-2 h-2 rounded-full bg-white/50"></span>{" "}
+              <div className="rounded-full backdrop-blur-sm select-none text-sm md:text-base flex items-center gap-1 px-4 py-2 border border-white/10 w-fit shadow-md absolute bottom-5 left-4 md:left-0">
+                <span className="w-2 h-2 rounded-full bg-white/50 md:block hidden"></span>{" "}
                 <span>Discover, Connect, Transform: Your Energy, Your Choice</span>
               </div>
             </div>
           </div>
 
-          <div className="col-span-2 -ml-48">
+          <div className="col-span-2 -ml-48 md:block hidden">
             <Image
               src={"/images/bg/ecommerce-guy.png"}
               alt="a man holding A solar panel"
@@ -55,9 +57,12 @@ const EnergyEcommerce = () => {
 
         <WhatsInIt />
 
-        <div className="container mx-auto grid grid-cols-2 overflow-hidden">
-          <div id="energy-expo" className="flex items-center w-full h-full rounded-l-[3rem]">
-            <div className="px-10 space-y-8">
+        <div className="container mx-auto sm:grid flex flex-col-reverse grid-cols-2 overflow-hidden">
+          <div
+            id="energy-expo"
+            className="flex items-center w-full p-5 h-full rounded-b-md sm:rounded-b-none sm:rounded-l-[3rem]"
+          >
+            <div className="sm:px-10 space-y-8">
               <h4 className="text-4xl font-bold text-white">Join the Annual Energy Expo</h4>
 
               <AlertDialog>
@@ -102,7 +107,7 @@ const EnergyEcommerce = () => {
               </AlertDialog>
             </div>
           </div>
-          <div className="max-h-[28rem] rounded-r-[3rem] overflow-hidden">
+          <div className="sm:max-h-[25rem] max-h-[20rem] sm:rounded-l-none rounded-t-lg sm:rounded-r-[3rem] overflow-hidden">
             <Image
               src={"/images/bg/energy-expo.png"}
               alt="a man in a conference holding A mich"

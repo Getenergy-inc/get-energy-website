@@ -43,7 +43,7 @@ const GetElectricity = () => {
     <>
       <header>
         <div className="w-full relative">
-          <div className="w-full relative max-h-[35rem] overflow-hidden -top-10">
+          <div className="w-full relative max-h-[35rem] overflow-hidden lg:-top-10">
             <Image
               src={"/images/bg/get-elect.png"}
               alt="container-img"
@@ -54,7 +54,7 @@ const GetElectricity = () => {
           </div>
 
           <div className="relative w-full h-full container mx-auto">
-            <div className="absolute -bottom-8 left-0 container mx-auto">
+            <div className="md:absolute -bottom-8 mt-10 md:mt-0 left-0 container mx-auto">
               <div className="md:shadow-xl shadow-lg rounded-xl p-8 bg-white max-w-[30rem] z-50">
                 <div className="space-y-16">
                   <div className="space-y-6">
@@ -88,10 +88,10 @@ const GetElectricity = () => {
               </div>
             </div>
 
-            <div className="w-full hidden md:flex h-full -mt-20 z-[100] items-center justify-between container">
+            <div className="w-full flex h-full z-[100] -mt-[32rem] md:-mt-0 absolute md:static items-center justify-between container">
               <div></div>
-              <div className="shadow-2xl">
-                <Logo classnames="bg-white shadow-2xl p-3 px-10 rounded-2xl " size={250} />
+              <div className="shadow-2xl rounded-2xl">
+                <Logo classnames="bg-white shadow-2xl p-3 px-10 rounded-2xl " size={200} />
               </div>
             </div>
           </div>
@@ -100,9 +100,9 @@ const GetElectricity = () => {
 
       <main>
         <div className="space-y-32 my-32">
-          <div className="grid grid-cols-2 gap-4 container mx-auto items-center">
+          <div className="grid md:grid-cols-2 gap-4 container mx-auto items-center">
             <div className="space-y-4">
-              <h1 className="text-5xl font-bold">Electricity Vending with a Difference</h1>
+              <h1 className="md:text-5xl text-4xl font-bold">Electricity Vending with a Difference</h1>
               <p className="leading-relaxed text-lg">
                 At GetEnergy, we redefine the way you power up your life. Say goodbye to the hassle and hello to
                 convenience! <br />
@@ -129,7 +129,7 @@ const GetElectricity = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 container mx-auto items-center">
+          <div className="md:grid flex flex-col-reverse grid-cols-2 gap-10 container mx-auto items-center">
             <div className="grid place-content-center">
               <Image src={"/images/bg/get-com.png"} alt="spiral showing get energy's motive" width={700} height={700} />
             </div>
@@ -164,10 +164,10 @@ const GetElectricity = () => {
           </div>
 
           <div className="bg-primaryBlue text-white">
-            <div className="grid-cols-2 grid gap-20">
-              <div className="flex items-center pl-28 justify-center text-center py-8">
+            <div className="grid-cols-2 grid md:gap-20 gap-2">
+              <div className="flex items-center md:pl-28 pl-4 justify-center text-center py-8">
                 <div className="space-y-4">
-                  <p className="text-2xl leading-relaxed font-semibold">
+                  <p className="md:text-2xl text-[100%] leading-relaxed font-semibold">
                     Revitalize your power routine with <span className="font-bold">GetEnergy</span>! Vend seamlessly and
                     unlock the door to monthly surprises.
                   </p>
@@ -193,7 +193,7 @@ const GetElectricity = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 container mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 container mx-auto">
             <div className="space-y-5">
               <h3 className="text-4xl font-bold">Benefits from Community Electricity Vending</h3>
               <p className="leading-relaxed text-lg">
@@ -221,7 +221,7 @@ const GetElectricity = () => {
               </div>
               <form onSubmit={onSubmit}>
                 <div className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label className="font-medium text-sm" htmlFor="communityName">
                         Community Name
@@ -251,7 +251,7 @@ const GetElectricity = () => {
                     <input type="text" className="w-full outline-none p-3 rounded-sm border border-zinc-200" required />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label className="font-medium text-sm" htmlFor="cityOrTown">
                         City/Town
@@ -274,7 +274,7 @@ const GetElectricity = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label className="font-medium text-sm" htmlFor="phoneNumber">
                         Mobile Number
@@ -309,7 +309,7 @@ const GetElectricity = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 container mx-auto items-center">
+          <div className="grid md:grid-cols-2 md:gap-4 gap-12 container mx-auto items-center">
             <div className="grid place-content-center">
               <Image src={"/images/bg/why-get.png"} alt="why choose get energy" width={500} height={500} />
             </div>

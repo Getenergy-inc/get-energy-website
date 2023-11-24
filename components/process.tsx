@@ -15,14 +15,18 @@ interface Props {
 }
 
 const Process: React.FC<Props> = ({ data }) => {
-  const gridClass = classNames([`grid-cols-${data.length}`, "container relative grid grid-cols-1", "gap-2 lg:gap-12"]);
+  const gridClass = classNames([
+    `md:grid-cols-${data.length} sm:grid-cols-2 grid-cols-1`,
+    "container relative grid",
+    "gap-6 lg:gap-12",
+  ]);
 
   return (
     <div className="w-full flex justify-center my-20 py-20">
       <TransitionParentInView className={gridClass}>
         {data.map((item, id) => (
-          <TransitionOpacity className="lg:pe-10 text-center md:text-start mb-10 md:mb-0" key={id}>
-            <div className="flex items-center mb-3 justify-center md:justify-start">
+          <TransitionOpacity className="lg:pe-10 text-start mb-10 md:mb-0" key={id}>
+            <div className="flex items-center mb-3 justify-start">
               <h4 className="main-text font-bold text-3xl me-2">{item._id}</h4>
               <h5 className="font-bold text-xl">{item.title}</h5>
             </div>

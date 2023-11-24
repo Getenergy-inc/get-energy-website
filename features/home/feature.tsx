@@ -16,7 +16,7 @@ const Features = () => {
             </p>
           </TransitionOpacity>
           <TransitionOpacity>
-            <h3 className="font-bold text-black text-4xl">
+            <h3 className="font-bold text-black text-3xl md:text-4xl">
               Why it is <br /> Worth Choosing <span className="text-primaryBlue">GetEnergy</span>
             </h3>
           </TransitionOpacity>
@@ -25,17 +25,17 @@ const Features = () => {
           </TransitionOpacity>
         </TransitionParentInView>
 
-        <TransitionParentInViewFast className="container mx-auto gap-12 grid-cols-3 grid">
-          <TransitionFromBottom className="col-span-2 grid grid-cols-3 items-center gap-2 rounded-2xl p-12 bg-[#F5F8FE]">
-            <div className="col-span-2 space-y-1">
-              <h4 className="text-4xl font-semibold">All-in-One Convenience</h4>
-              <p className="text-lg max-w-md">
+        <TransitionParentInViewFast className="container mx-auto md:gap-12 gap-6 lg:grid-cols-3 grid-cols-1 md:grid-cols-2 grid">
+          <TransitionFromBottom className="lg:col-span-2 grid md:grid-cols-3 grid-cols-2 items-center gap-2 rounded-2xl p-12 bg-[#F5F8FE]">
+            <div className="lg:col-span-2 space-y-1">
+              <h4 className="lg:text-4xl md:text-3xl text-2xl font-semibold">All-in-One Convenience</h4>
+              <p className="md:text-lg sm:text-base text-sm max-w-md">
                 GetEnergy is your one-stop solution, offering a seamless blend of recharge services, stock options,
                 financial tools, and reliable electricity and energy solutions,all under one roof.
               </p>
             </div>
             <div className="bg-[#CCD8E2] rounded-[2rem] relative aspect-square">
-              <div className="absolute flex items-center justify-center w-[5.5rem] h-[5.5rem] shadow-xl rounded-full -top-2 -right-2 bg-white">
+              <div className="absolute flex items-center justify-center w-[4.4rem] md:w-[5.5rem] h-[4.4rem] md:h-[5.5rem] shadow-xl rounded-full -top-2 -right-2 bg-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="47" height="48" viewBox="0 0 47 48" fill="none">
                   <path
                     d="M11.75 6.00781V9.92448H15.6667V6.00781H11.75ZM31.3333 6.00781V9.92448H35.25V6.00781H31.3333ZM39.7404 8.53988L33.2917 14.9886L27.4167 9.11361L19.5833 16.9469L13.7083 11.0719L6.44873 18.3315L9.21794 21.1007L13.7083 16.6104L19.5833 22.4853L27.4167 14.652L33.2917 20.527L42.5096 11.3091L39.7404 8.53988ZM11.75 21.6745V25.5911H15.6667V21.6745H11.75ZM31.3333 21.6745V25.5911H35.25V21.6745H31.3333ZM11.75 29.5078V33.4245H15.6667V29.5078H11.75ZM31.3333 29.5078V33.4245H35.25V29.5078H31.3333ZM5.875 37.3411V41.2578H41.125V37.3411H5.875Z"
@@ -43,7 +43,7 @@ const Features = () => {
                   />
                 </svg>
               </div>
-              <div className="absolute flex items-center justify-center w-16 h-16 shadow-xl rounded-full top-0 left-4 bg-white">
+              <div className="absolute flex items-center justify-center md:w-16 md:h-16 w-12 h-12 shadow-xl rounded-full top-0 left-4 bg-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
                   <path
                     d="M18.7872 2.39062C15.1975 2.39062 11.9219 2.81916 9.34775 3.51772C7.02604 4.14878 5.25027 4.93247 4.34624 6.14762H3.75921C3.3072 6.14762 3.00781 6.44701 3.00781 6.89902V9.15322C3.00781 9.60524 3.3072 9.90462 3.75921 9.90462H33.8152C34.2672 9.90462 34.5666 9.60524 34.5666 9.15322V6.89902C34.5666 6.44701 34.2672 6.14762 33.8152 6.14762H33.2282C32.3242 4.93247 30.5484 4.14878 28.2267 3.51772C25.6525 2.81916 22.3769 2.39062 18.7872 2.39062ZM18.7872 3.89342C22.2595 3.89342 25.4471 4.29554 27.851 4.95008C29.0984 5.28762 30.114 5.71909 30.8566 6.14762H6.71785C7.46044 5.71909 8.47601 5.28762 9.72345 4.95008C12.1273 4.29554 15.3149 3.89342 18.7872 3.89342ZM4.36972 11.4074C5.27082 14.413 7.21976 16.2211 8.94857 18.4753C10.6011 20.6532 12.0246 22.5287 12.0246 24.1812V24.9326C12.0246 26.2094 13.002 27.1868 14.2788 27.1868H23.2956C24.5724 27.1868 25.5498 26.2094 25.5498 24.9326V24.1812C25.5498 22.5287 26.9734 20.6532 28.6259 18.4753C30.3547 16.2211 32.3036 14.4893 33.2047 11.4074H4.36972ZM13.5274 28.6896V31.6952C13.5274 32.972 14.5048 33.9494 15.7816 33.9494L17.2844 35.4522H20.29L21.7928 33.9494C23.0696 33.9494 24.047 32.972 24.047 31.6952V28.6896H13.5274Z"
@@ -51,7 +51,7 @@ const Features = () => {
                   />
                 </svg>
               </div>
-              <div className="absolute flex items-center justify-center w-16 h-16 shadow-xl rounded-full top-[40%] -left-4 bg-white">
+              <div className="absolute flex items-center justify-center md:w-16 md:h-16 w-12 h-12 shadow-xl rounded-full top-[40%] -left-4 bg-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
                   <path
                     d="M9.1306 6.21875C7.44843 6.21875 6.08594 7.58124 6.08594 9.26342V36.6654C6.08594 38.3476 7.44843 39.7101 9.1306 39.7101H11.5003C10.9766 38.8104 10.6529 37.7798 10.6529 36.6654V9.26342C10.6529 8.14907 10.9766 7.11845 11.5003 6.21875H9.1306ZM16.7423 6.21875C15.0601 6.21875 13.6976 7.58124 13.6976 9.26342V36.6654C13.6976 38.3476 15.0601 39.7101 16.7423 39.7101H36.5326C38.2148 39.7101 39.5773 38.3476 39.5773 36.6654V9.26342C39.5773 7.58124 38.2148 6.21875 36.5326 6.21875H16.7423ZM27.3986 18.3974H35.0103V26.0091L32.2808 23.2796L28.4749 27.0854C27.8797 27.6807 26.9175 27.6807 26.3223 27.0854L24.3539 25.1171L20.8633 28.6078C20.5664 28.9046 20.1767 29.0537 19.7869 29.0537C19.3972 29.0537 19.0075 28.9046 18.7106 28.6078C18.1154 28.0125 18.1154 27.0503 18.7106 26.4551L23.2776 21.8881C23.8728 21.2928 24.835 21.2928 25.4303 21.8881L27.3986 23.8564L30.1281 21.1269L27.3986 18.3974Z"
@@ -74,7 +74,7 @@ const Features = () => {
                   </defs>
                 </svg>
               </div>
-              <div className="absolute flex items-center justify-center w-16 h-16 shadow-xl rounded-full -bottom-4 right-[40%] bg-white">
+              <div className="absolute flex items-center justify-center md:w-16 md:h-16 w-12 h-12 shadow-xl rounded-full -bottom-4 right-[40%] bg-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="42" height="43" viewBox="0 0 42 43" fill="none">
                   <g clipPath="url(#clip0_5205_35403)">
                     <path
@@ -91,7 +91,7 @@ const Features = () => {
               </div>
             </div>
           </TransitionFromBottom>
-          <TransitionFromBottom className="rounded-2xl min-h-48 bg-[#F5F8FE] p-10">
+          <TransitionFromBottom className="rounded-2xl md:min-h-48 bg-[#F5F8FE] p-10">
             <div className="space-y-4">
               <div className="w-full flex justify-between relative h-32 overflow-hidden bg-[#32ACED] rounded-xl">
                 <div className="h-full w-1/3 grid place-content-center">
@@ -109,7 +109,7 @@ const Features = () => {
               </p>
             </div>
           </TransitionFromBottom>
-          <TransitionFromBottom className="rounded-2xl min-h-48 bg-[#F5F8FE] p-10">
+          <TransitionFromBottom className="rounded-2xl md:min-h-48 bg-[#F5F8FE] p-10">
             <div className="space-y-4">
               <div className="w-full relative h-32 overflow-hidden bg-[#FFC173] rounded-xl">
                 <div className="h-full w-1/3 grid place-content-center">
@@ -127,7 +127,7 @@ const Features = () => {
               </p>
             </div>
           </TransitionFromBottom>
-          <TransitionFromBottom className="rounded-2xl min-h-48 bg-[#F5F8FE] p-10">
+          <TransitionFromBottom className="rounded-2xl md:min-h-48 bg-[#F5F8FE] p-10">
             <div className="space-y-4">
               <div className="w-full relative h-32 overflow-hidden bg-[#7D7AFF] rounded-xl">
                 <div className="h-full w-1/3 grid place-content-center">
@@ -145,7 +145,7 @@ const Features = () => {
               </p>
             </div>
           </TransitionFromBottom>
-          <TransitionFromBottom className="rounded-2xl min-h-48 bg-[#F5F8FE] p-10">
+          <TransitionFromBottom className="rounded-2xl md:min-h-48 bg-[#F5F8FE] p-10">
             <div className="space-y-4">
               <div className="w-full relative h-32 overflow-hidden bg-[#F54BC3] rounded-xl">
                 <div className="h-full w-1/3 grid place-content-center">

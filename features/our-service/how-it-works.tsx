@@ -4,7 +4,7 @@ import Process from "./process";
 const HowItWorksServices = () => {
   return (
     <div className="mt-40 container mx-auto">
-      <div className="w-full grid grid-cols-2 items-center gap-8 p-12">
+      <div className="w-full grid md:grid-cols-2 items-center gap-8 p-12">
         <TransitionOpacityAlone>
           <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl">
             Our Working Process <br /> helps you to get the best from our platform

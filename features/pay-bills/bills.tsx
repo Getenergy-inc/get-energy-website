@@ -85,7 +85,7 @@ const billsData = [
 
 const Bills = () => {
   return (
-    <div className="grid grid-cols-4 gap-10 container mx-auto">
+    <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-10 container mx-auto">
       {billsData.map((bill, id) => (
         <>
           {!bill.notContent ? (
@@ -95,7 +95,7 @@ const Bills = () => {
               <p>{bill.description}</p>
             </div>
           ) : (
-            <div key={id} className="col-span-2 row-span-3 px-8">
+            <div key={id} className="col-span-2 row-span-3 hidden md:block px-8">
               <div className="rounded-xl w-full h-full">
                 <Image
                   src={"/images/bg/ios.svg"}

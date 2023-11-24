@@ -36,7 +36,7 @@ const InvestIn = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 gap-20 relative" id="invest-in-energy">
+    <div className="grid md:grid-cols-2 gap-20 relative" id="invest-in-energy">
       <div className="relative">
         {/* Boxes */}
         <div className="w-6 h-6 bg-primaryBlue rounded rotate-45 absolute -top-32 left-10"></div>

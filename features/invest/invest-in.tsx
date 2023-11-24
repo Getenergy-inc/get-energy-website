@@ -38,7 +38,7 @@ const InvestIn = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 relative" id="what-to-invest">
+    <div className="grid md:grid-cols-2 gap-10 md:gap-0 relative" id="what-to-invest">
       {/* line */}
       <Line />
 
@@ -101,7 +101,7 @@ const Line = () => (
     height="499"
     viewBox="0 0 1053 499"
     fill="none"
-    className="absolute right-28 top-56"
+    className="absolute right-28 top-56 hidden md:block"
   >
     <path
       d="M1007.52 2L1037.11 2V2C1044.78 2 1051 8.21693 1051 15.8859L1051 136.648L1051 181.832L1051 230.719L1051 295C1051 311.569 1037.57 325 1021 325L128 325L93.5758 325C77.0072 325 63.5758 338.431 63.5758 355L63.5758 466.41C63.5758 489.642 38.3051 504.058 18.3067 492.233L0.999979 482"

@@ -41,7 +41,7 @@ export default function Form() {
     <div className="w-full flex justify-center my-10">
       <div className="container relative">
         <div className="max-w-3xl mx-auto bg-primaryBlue text-white flex items-center justify-center rounded-lg p-4">
-          <div className="flex items-center gap-8">
+          <div className="md:flex grid items-center gap-8">
             {data.map((item) => (
               <div className="flex items-center gap-1" key={item._id}>
                 <Image src={item.icon} alt="contact-us" className="me-3" />
@@ -57,7 +57,7 @@ export default function Form() {
             <p className="text-gray-700 my-4">We offer 24/7 Services to our customers</p>
 
             <form className="w-full" onSubmit={handleSubmit(onSubmit)} noValidate>
-              <div className="w-full grid grid-cols-2 gap-3 mt-10">
+              <div className="w-full grid md:grid-cols-2 gap-3 mt-10">
                 <div>
                   <input
                     className="py-3 px-4 bg-white border-transparent drop-shadow-2xl w-full outline-none rounded-md duration-200"

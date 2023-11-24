@@ -17,18 +17,18 @@ const PayBills = () => {
   return (
     <>
       <header>
-        <div className="bg-[#afb7c6]">
-          <div className="grid grid-cols-2 container mx-auto">
-            <div className="flex items-center">
+        <div className="bg-[#afb7c6] -mt-20 md:-mt-0">
+          <div className="grid md:grid-cols-2 grid-cols-5 container mx-auto mt-10 md:mt-0 pt-16 md:pt-0">
+            <div className="flex items-center col-span-3 md:col-span-1">
               <div className="space-y-6">
-                <h1 className="text-5xl font-bold">Pay Bills, Your Way!</h1>
-                <p>
+                <h1 className="md:text-5xl sm:text-4xl text-2xl font-bold">Pay Bills, Your Way!</h1>
+                <p className="md:text-base text-sm">
                   Dreading the monthly bill payment marathon? Fear not! GetEnergy brings you a one-stop solution for all
                   your payments, putting you back in control of your time and finances.{" "}
                 </p>
               </div>
             </div>
-            <div>
+            <div className="col-span-2 md:col-span-1">
               <Image
                 src={"/images/bg/pay-bills.png"}
                 alt="a woman holding a phone with getenergy's logo"
@@ -43,9 +43,9 @@ const PayBills = () => {
         <div className="my-32 space-y-32">
           <Bills />
 
-          <div className="grid grid-cols-2 gap-4 container mx-auto items-center">
+          <div className="grid md:grid-cols-2 md:gap-4 gap-8 container mx-auto items-center">
             <div className="space-y-6">
-              <h3 className="text-4xl font-bold">Why Choose GetEnergy for Bill Payments?</h3>
+              <h3 className="md:text-4xl text-3xl font-bold">Why Choose GetEnergy for Bill Payments?</h3>
 
               <div className="space-y-4 pr-8">
                 {whyReasons.map((data, id) => (

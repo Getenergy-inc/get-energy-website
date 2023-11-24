@@ -198,16 +198,19 @@ const OurValues = () => {
   ];
 
   return (
-    <div className="space-y-8 container mx-auto">
+    <div className="space-y-8 container mx-auto mt-8 md:mt-2">
       <p className="text-primaryBlue text-center font-bold px-7 py-4 w-fit mx-auto rounded-full bg-primaryBlue/20">
         Our values
       </p>
       <p className="font-extrabold text-4xl max-w-xl mx-auto text-center">The story and values behind our company</p>
 
-      <TransitionParentInView className="grid grid-cols-2 gap-10">
+      <TransitionParentInView className="grid md:grid-cols-2 gap-10">
         {values.map((value, index) => (
-          <TransitionOpacity key={index} className="p-6 flex gap-8 bg-[#F9F9F9] rounded-xl">
-            <span className="flex-shrink-0">{value.icon}</span>
+          <TransitionOpacity
+            key={index}
+            className="p-6 flex gap-8 md:bg-[#F9F9F9] bg-white shadow-xl md:shadow-none shadow-zinc-200 rounded-xl"
+          >
+            <span className="flex-shrink-0 md:block hidden">{value.icon}</span>
             <div className="space-y-2">
               <p className="text-xl font-bold">{value.title}</p>
               <p className="text-[#797979] text-lg">{value.body}</p>

@@ -91,14 +91,14 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="w-full mt-10 -ml-10 lg:mt-0 grid grid-cols-3 gap-3">
+        <div className="container mx-auto mt-10 md:-ml-10 lg:mt-0 grid lg:grid-cols-3 grid-cols-2 gap-3">
           <div className="w-full">
             <h5 className="font-bold text-3xl">Products</h5>
             <div className="flex flex-col mt-3 gap-2">
               {products_data.map((link) => (
                 <Link
                   key={link._id}
-                  href="#"
+                  href={link.url}
                   className="hover:border-white/50 border-transparent font-light border-b duration-300 w-fit"
                 >
                   {link.title}
@@ -143,9 +143,10 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
       <div className="container mx-auto">
-        <div className="w-full p-4 bg-white rounded-xl flex items-center justify-between">
-          <div className="flex items-center gap-4">
+        <div className="w-full md:p-4 p-2 bg-white rounded-xl flex items-center justify-between">
+          <div className="flex items-center md:gap-4 gap-2">
             {socialLinks.map((item, i) => (
               <div key={i} className="cursor-pointer" title={item.label}>
                 <Link href={item.link} target="_blank">
@@ -154,7 +155,9 @@ export default function Footer() {
               </div>
             ))}
           </div>
-          <p className="text-black">© 2023 GetEnergy Inc. All rights reserved.</p>
+          <p className="text-black text-xs text-center sm:text-sm md:text-base">
+            © 2023 GetEnergy Inc. All rights reserved.
+          </p>
           <Image src={"/images/logos/get-energy-logo.png"} alt="get energy logo" width={130} height={20} />
         </div>
       </div>

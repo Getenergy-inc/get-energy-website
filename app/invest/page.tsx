@@ -9,9 +9,9 @@ const Invest = () => {
   return (
     <>
       <header id="invest-jumbo">
-        <div className="flex items-center py-40 justify-center container mx-auto w-4/5">
+        <div className="flex items-center md:py-40 py-20 justify-center container mx-auto sm:w-4/5">
           <div className="text-white/80 space-y-2 pb-4 text-center">
-            <h1 className="font-extrabold text-5xl leading-relaxed">
+            <h1 className="font-extrabold md:text-5xl text-3xl leading-relaxed">
               Invest in Power, Invest in the Future: Your Gateway to{" "}
               <span className="text-white">Energy Commodities!</span>
             </h1>
@@ -19,13 +19,16 @@ const Invest = () => {
         </div>
       </header>
       <main>
-        <Logo classnames="bg-white shadow-2xl p-3 px-10 rounded-2xl title_header_con ml-auto -mt-10" size={250} />
+        <Logo
+          classnames="bg-white shadow-2xl p-3 px-10 rounded-2xl title_header_con hidden md:block ml-auto -mt-10"
+          size={250}
+        />
 
         <div className="container mx-auto space-y-36 my-32">
           <InvestIn />
 
-          <div className="grid items-center grid-cols-2 relative gap-16">
-            <div className="p-10 z-50">
+          <div className="md:grid flex flex-col-reverse items-center grid-cols-2 relative gap-16">
+            <div className="md:p-10 z-50">
               <Image
                 src={"/images/bg/hand-coin.png"}
                 alt="a guy holding a piggy bank"
@@ -36,10 +39,10 @@ const Invest = () => {
               />
             </div>
             <div className="space-y-5">
-              <h2 className="text-4xl leading-relaxed font-bold">
+              <h2 className="md:text-4xl text-3xl leading-relaxed font-bold">
                 Tokenization: Your Passport to Eventful Investments
               </h2>
-              <p className="text-xl leading-loose text-zinc-600">
+              <p className="md:text-xl text-base leading-loose text-zinc-600">
                 Experience the power of tokenization! 🚀 Your investments are tokenized, making them flexible, secure,
                 and easily tradable. Join events, track your portfolio, and watch your investments thrive in real-time.
               </p>
@@ -48,15 +51,15 @@ const Invest = () => {
             <Line />
           </div>
 
-          <div className="grid items-center relative grid-cols-2 gap-16">
+          <div className="grid items-center relative md:grid-cols-2 gap-16">
             <div className="space-y-5">
               <h2 className="text-4xl leading-relaxed font-bold">Investment Insurance: Your Safety Net</h2>
-              <p className="text-xl leading-loose text-zinc-600">
+              <p className="md:text-xl text-base leading-loose text-zinc-600">
                 Experience the power of tokenization! 🚀 Your investments are tokenized, making them flexible, secure,
                 and easily tradable. Join events, track your portfolio, and watch your investments thrive in real-time.
               </p>
             </div>
-            <div className="p-10 z-50 relative">
+            <div className="md:p-10 z-50 relative">
               <Image
                 src={"/images/bg/invest-main-man.png"}
                 alt="a guy holding a piggy bank"
@@ -70,8 +73,8 @@ const Invest = () => {
             <Line2 />
           </div>
 
-          <div className="min-h-[25rem] gap-4 rounded-2xl bg-primaryBlue z-50 grid grid-cols-3">
-            <div className="col-span-2 pl-10 py-20 z-50">
+          <div className="min-h-[25rem] gap-4 rounded-2xl bg-primaryBlue px-5 md:p-0 z-50 grid grid-cols-3">
+            <div className="md:col-span-2 col-span-3 md:pl-10 py-10 z-50">
               <div className="w-full h-full bg-white/80 min-h-[28rem] rounded-2xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 h-full w-full">
                   <Image
@@ -86,8 +89,10 @@ const Invest = () => {
 
                 <div className="absolute top-0 left-0 h-full w-full backdrop-blur grid place-content-center">
                   <div className="space-y-4 text-center px-16">
-                    <h4 className="text-3xl font-bold leading-relaxed">Investment Calculator (Coming Soon!)</h4>
-                    <p className="text-lg font-semibold">
+                    <h4 className="md:text-3xl text-xl font-bold leading-relaxed">
+                      Investment Calculator (Coming Soon!)
+                    </h4>
+                    <p className="md:text-lg text-sm font-semibold">
                       Stay tuned for our Investment Calculator! A tool designed to empower you with insights – calculate
                       potential returns, assess risks, and plan your investment journey with confidence.
                     </p>
@@ -95,7 +100,7 @@ const Invest = () => {
                 </div>
               </div>
             </div>
-            <div className="grid place-content-center p-6 z-50">
+            <div className="md:grid place-content-center hidden md:p-6 z-50">
               <Image
                 src={"/images/bg/money.svg"}
                 alt="currencies with naira at the center"
@@ -132,7 +137,7 @@ const Line = () => (
     height="491"
     viewBox="0 0 797 491"
     fill="none"
-    className="absolute top-[60%] left-56"
+    className="absolute hidden md:block top-[60%] left-56"
   >
     <path
       d="M34.8414 2L12.4872 2V2C6.69528 2 2.00002 6.69526 2.00002 12.4872L2.00002 136.648L2.00003 181.832L2.00003 230.719L2.00002 295C2.00002 311.569 15.4315 325 32 325L699.085 325L717.74 325C734.309 325 747.74 338.431 747.74 355L747.74 458.979C747.74 483.352 775.809 497.024 795 482V482"
@@ -163,7 +168,7 @@ const Line2 = () => (
     height="746"
     viewBox="0 0 376 746"
     fill="none"
-    className="absolute top-[30%] -right-10"
+    className="absolute hidden md:block top-[30%] -right-10"
   >
     <path
       opacity="0.8"

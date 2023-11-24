@@ -56,7 +56,7 @@ const Careers = () => {
             </div>
 
             {jobContent[index].length > 0 ? (
-              <TransitionParentInViewFast className="grid grid-cols-2 gap-12 container mx-auto mt-16 px-32">
+              <TransitionParentInViewFast className="grid md:grid-cols-2 gap-12 container mx-auto mt-16 md:px-32">
                 {jobContent[index].map((data, id) => (
                   <div
                     key={id}
@@ -65,7 +65,7 @@ const Careers = () => {
                     <p className="font-bold text-xl">
                       {data.role} <span className="text-sm font-light">({data.type})</span>
                     </p>
-                    <div className="text-lg flex items-center gap-4">
+                    <div className="md:text-lg flex items-center md:gap-4 gap-2">
                       <p>Lagos, Nigeria</p> <span>|</span> <span>{data.duration}</span>
                     </div>
 
