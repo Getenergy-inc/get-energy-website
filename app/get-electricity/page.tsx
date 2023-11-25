@@ -190,7 +190,7 @@ const GetElectricity = () => {
             <div className="absolute top-0 left-0 w-full h-full md:hidden">
               <Image
                 src={"/images/bg/happy-family.png"}
-                alt="spiral showing get energy's motive"
+                alt="happy family"
                 width={700}
                 height={700}
                 className="w-full h-full object-cover"

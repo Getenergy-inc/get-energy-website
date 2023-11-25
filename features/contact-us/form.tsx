@@ -15,7 +15,7 @@ export default function Form() {
     {
       _id: "contact-1",
       text: "info@getenergy.com.ng",
-      icon: assets.contact_icon_1,
+      icon: "/images/bg/get-energy-contact.png",
     },
     {
       _id: "contact-2",
@@ -44,7 +44,13 @@ export default function Form() {
           <div className="md:flex grid items-center gap-8">
             {data.map((item) => (
               <div className="flex items-center gap-1" key={item._id}>
-                <Image src={item.icon} alt="contact-us" className="me-3" />
+                <Image
+                  src={item.icon}
+                  alt="contact-us"
+                  className="me-3"
+                  width={50}
+                  height={50}
+                />
                 <p className="text-white text-sm font-semibold">{item.text}</p>
               </div>
             ))}
@@ -54,9 +60,15 @@ export default function Form() {
         <div className="w-full md:w-2/4 mx-auto mt-[8rem] 2xl:w-2/5 md:h-[550px] bg-white rounded-2xl shadow-xl">
           <div className="w-full h-full p-10">
             <h2 className="text-5xl font-medium">Contact Us</h2>
-            <p className="text-gray-700 my-4">We offer 24/7 Services to our customers</p>
+            <p className="text-gray-700 my-4">
+              We offer 24/7 Services to our customers
+            </p>
 
-            <form className="w-full" onSubmit={handleSubmit(onSubmit)} noValidate>
+            <form
+              className="w-full"
+              onSubmit={handleSubmit(onSubmit)}
+              noValidate
+            >
               <div className="w-full grid md:grid-cols-2 gap-3 mt-10">
                 <div>
                   <input
@@ -64,9 +76,18 @@ export default function Form() {
                     placeholder="Your name"
                     type="text"
                     required
-                    {...register("name", { required: { value: true, message: "Please provide your name" } })}
+                    {...register("name", {
+                      required: {
+                        value: true,
+                        message: "Please provide your name",
+                      },
+                    })}
                   />
-                  {errors.name && <p className="text-sm font-semibold text-red-500">{errors.name.message}</p>}
+                  {errors.name && (
+                    <p className="text-sm font-semibold text-red-500">
+                      {errors.name.message}
+                    </p>
+                  )}
                 </div>
                 <div>
                   <input
@@ -80,21 +101,35 @@ export default function Form() {
                         message: "Please provide your email address",
                       },
                       pattern: {
-                        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                        value:
+                          /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                         message: "Invalid email format",
                       },
                     })}
                   />
-                  {errors.email && <p className="text-sm font-semibold text-red-500">{errors.email.message}</p>}
+                  {errors.email && (
+                    <p className="text-sm font-semibold text-red-500">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
               </div>
               <div>
                 <textarea
                   className="mt-6 h-[180px] w-full drop-shadow-2xl border-transparent resize-none duration-200 outline-none rounded-lg p-3"
                   placeholder="Enter your message here..."
-                  {...register("message", { required: { value: true, message: "Message cannot be empty" } })}
+                  {...register("message", {
+                    required: {
+                      value: true,
+                      message: "Message cannot be empty",
+                    },
+                  })}
                 />
-                {errors.message && <p className="text-sm font-semibold text-red-500">{errors.message.message}</p>}
+                {errors.message && (
+                  <p className="text-sm font-semibold text-red-500">
+                    {errors.message.message}
+                  </p>
+                )}
               </div>
 
               <button className="mt-5 flex items-center group rounded-full p-2 ps-3 main-bg text-white">

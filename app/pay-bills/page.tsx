@@ -29,28 +29,44 @@ const PayBills = () => {
   return (
     <>
       <header>
-        <div className="bg-[#afb7c6] py-20 md:-mt-0">
-          <div className="grid md:grid-cols-2 container mx-auto mt-10 md:pt-0">
-            <div className="flex items-center md:col-span-1">
-              <div className="space-y-6 text-center">
-                <h1 className="md:text-5xl sm:text-4xl text-3xl font-bold">
-                  Pay Bills, Your Way!
-                </h1>
-                <p className="md:text-base text-sm">
-                  Dreading the monthly bill payment marathon? Fear not!
-                  GetEnergy brings you a one-stop solution for all your
-                  payments, putting you back in control of your time and
-                  finances.{" "}
-                </p>
+        <div className="bg-[#afb7c6] py-20 md:pb-0 md:pt-4 md:-mt-0 relative min-h-[20rem] md:min-h-[30rem]">
+          <div className="absolute top-0 left-0 w-full h-full md:hidden">
+            <Image
+              src={"/images/bg/person-waiting-food-restaurant.jpg"}
+              alt="person waiting food restaurant"
+              width={700}
+              height={700}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="duration-300 bg-black/50 md:bg-transparent absolute top-0 left-0 w-full h-full"></div>
+
+          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            <div className="grid md:grid-cols-2 container mx-auto md:mt-10 md:pt-0 text-white md:text-black">
+              <div className="flex items-center md:col-span-1">
+                <div className="space-y-6 text-center md:text-start">
+                  <h1 className="md:text-5xl sm:text-4xl text-3xl font-bold">
+                    Pay Bills, Your Way!
+                  </h1>
+                  <p className="md:text-base text-sm">
+                    Dreading the monthly bill payment marathon? Fear not!
+                    GetEnergy brings you a one-stop solution for all your
+                    payments, putting you back in control of your time and
+                    finances.{" "}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="col-span-2 hidden md:block md:col-span-1">
-              <Image
-                src={"/images/bg/pay-bills.png"}
-                alt="a woman holding a phone with getenergy's logo"
-                width={500}
-                height={500}
-              />
+              <div className="col-span-2 place-content-end hidden md:grid md:col-span-1 overflow-hidden">
+                <div className="overflow-hidden max-w-[500px] max-h-[500px] grid place-content-end mt-4">
+                  <Image
+                    src={"/images/bg/pay-bills.png"}
+                    alt="a woman holding a phone with getenergy's logo"
+                    width={500}
+                    height={500}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
