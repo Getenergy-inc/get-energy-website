@@ -55,8 +55,8 @@ const Invest = () => {
             <div className="space-y-5">
               <h2 className="text-4xl leading-relaxed font-bold">Investment Insurance: Your Safety Net</h2>
               <p className="md:text-xl text-base leading-loose text-zinc-600">
-                Experience the power of tokenization! 🚀 Your investments are tokenized, making them flexible, secure,
-                and easily tradable. Join events, track your portfolio, and watch your investments thrive in real-time.
+                Your investments, your security! GetEnergy introduces investment insurance to safeguard your financial
+                interests. Enjoy peace of mind as you invest in the future of energy.
               </p>
             </div>
             <div className="md:p-10 z-50 relative">
