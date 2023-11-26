@@ -6,11 +6,7 @@ import Logo from "../../logo";
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { MenuIcon, XIcon } from "lucide-react";
-import {
-  TransitionOpacity,
-  TransitionOpacityAlone,
-  TransitionParentFast,
-} from "@/lib/utils/transitions";
+import { TransitionOpacity, TransitionOpacityAlone, TransitionParentFast } from "@/lib/utils/transitions";
 import { DASHBOARD_URL } from "@/constants/variables";
 
 export default function Header() {
@@ -55,11 +51,8 @@ export default function Header() {
 
   return (
     <>
-      <nav
-        ref={navRef}
-        className="bg-white w-full flex items-center justify-center"
-      >
-        <div className="lg:hidden block bg-white shadow-md shadow-zinc-200 rounded-b-xl w-full">
+      <nav ref={navRef} className="bg-white w-full flex items-center justify-center">
+        <div className="md:hidden block bg-white shadow-md shadow-zinc-200 rounded-b-xl w-full">
           <div className="container mx-auto">
             <div className="w-full flex items-center justify-between py-3">
               <Logo size={100} id="logo" />
@@ -84,12 +77,10 @@ export default function Header() {
         </div>
 
         <div className="bg-white rounded-b-[2rem] hidden lg:block w-full big-shadow z-10">
-          <div className="hidden lg:flex container w-full items-center py-4 justify-between">
+          <div className="hidden md:flex container w-full items-center py-4 justify-between">
             <Logo size={100} />
 
-            <div className="flex items-center gap-3 overflow-hidden">
-              {output}
-            </div>
+            <div className="flex items-center gap-3 overflow-hidden">{output}</div>
 
             <div>
               <Link href={DASHBOARD_URL} target="_blank">
@@ -103,7 +94,7 @@ export default function Header() {
       </nav>
 
       <aside
-        className={`fixed right-0 top-0 overflow-hidden min-h-screen ${
+        className={`fixed right-0 top-0 overflow-hidden min-h-screen block md:hidden ${
           show ? "w-full" : "w-0"
         } z-[1000]`}
       >
@@ -114,9 +105,7 @@ export default function Header() {
           onClick={toggleVisibility}
         >
           <div
-            className={`${
-              show ? "w-3/5" : "w-0"
-            } bg-white min-h-screen rounded-l-md duration-300 absolute right-0 p-4`}
+            className={`${show ? "w-3/5" : "w-0"} bg-white min-h-screen rounded-l-md duration-300 absolute right-0 p-4`}
           >
             {show && (
               <div className="md:hidden flex flex-col space-y-4 w-full my-2">
