@@ -51,7 +51,7 @@ jobs:
 
       - name: Update ECS service
         run: |
-          aws ecs update-service --cluster get-energy-website --service get-energy-website --task-definition get-energy-website --force-new-deployment
+          aws ecs update-service --cluster getenergy-website --service getenergy-website --task-definition getenergy-website --force-new-deployment
 
   create-production-image:
     if: github.ref == 'refs/heads/main'
@@ -97,4 +97,4 @@ jobs:
 
       - name: Update ECS service
         run: |
-          aws ecs update-service --cluster get-energy-website --service get-energy-website --task-definition get-energy-website --force-new-deployment
+          aws ecs update-service --cluster getenergy-website --service getenergy-website --task-definition getenergy-website --force-new-deployment
