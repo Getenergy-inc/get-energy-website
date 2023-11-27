@@ -1,7 +1,7 @@
 # Use the official Node.js xx image as the base image
 FROM  node:18-alpine
 
-ENV SITE_URL=http://getenergy.ng
+ENV SITE_URL=https://getenergy.ng
 
 ENV NEXT_PUBLIC_API_URL=https://api.getenergy.ng/api/v1
 ENV NEXT_PUBLIC_DASHBOARD_URL=https://dashboard.getenergy.ng
