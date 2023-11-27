@@ -1,4 +1,4 @@
-name: get-energy-website
+name: getenergy-website
 
 on:
   push:
