@@ -3,12 +3,12 @@ name: getenergy-website
 on:
   push:
     branches:
-      - 'feature-deploy'
+      - 'dev'
       - 'main'
 
 jobs:
   create-staging-image:
-    if: github.ref == 'refs/heads/feature-deploy'
+    if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     name: Build and push the Docker image to ECR
     steps:
@@ -37,7 +37,7 @@ jobs:
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
 
   deploy-stagingt-image:
-    if: github.ref == 'refs/heads/feature-deploy'
+    if: github.ref == 'refs/heads/dev'
     name: Deploy the new Docker image to ECS
     runs-on: ubuntu-latest
     needs: create-staging-image
