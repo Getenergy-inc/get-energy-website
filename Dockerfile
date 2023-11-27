@@ -1,6 +1,7 @@
 # Use the official Node.js xx image as the base image
 FROM  node:18-alpine
 
+ENV SITE_URL=http://getenergy.ng
 # Set the working directory to /app
 WORKDIR /usr/src/app
 
@@ -8,6 +9,8 @@ WORKDIR /usr/src/app
 COPY tsconfig*.json .
 COPY package*.json .
 COPY yarn.lock .
+
+COPY .env .env
 
 # Install the app's dependencies
 RUN yarn install
