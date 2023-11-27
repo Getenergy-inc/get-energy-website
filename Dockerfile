@@ -2,6 +2,13 @@
 FROM  node:18-alpine
 
 ENV SITE_URL=http://getenergy.ng
+
+ENV NEXT_PUBLIC_API_URL=https://api.getenergy.ng/api/v1
+ENV NEXT_PUBLIC_DASHBOARD_URL=https://dashboard.getenergy.ng
+ENV NEXT_PUBLIC_GET_STARTED_ADDRESS=https://dashboard.getenergy.ng
+ENV NEXT_PUBLIC_INTERN_FORM_URL=https://forms.gle/yKcaBXTbJij7nkRq6
+ENV NEXT_PUBLIC_VOLUNTEER_FORM_URL=https://forms.gle/ry1ns72EMi7TCfxz9
+ENV NEXT_PUBLIC_WAITLIST_URL=https://4e9ggpej5so.typeform.com/to/dAh3NSqp
 # Set the working directory to /app
 WORKDIR /usr/src/app
 
