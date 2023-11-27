@@ -10,8 +10,6 @@ COPY tsconfig*.json .
 COPY package*.json .
 COPY yarn.lock .
 
-COPY .env .env
-
 # Install the app's dependencies
 RUN yarn install
 
