@@ -6,6 +6,7 @@ import { montserrat, satoshi } from "@/lib/utils/fonts";
 import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
   title: "GetEnergy - Energy Products & Services",
   description:
     "Discover sustainable energy solutions and products at your convenience which includes energy equipments, commodities and services",
