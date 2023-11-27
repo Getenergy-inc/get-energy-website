@@ -1,64 +1,96 @@
+"use client";
 import { variables } from "@/constants";
-import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Dropdown } from "flowbite-react";
-
-const LandingImage = dynamic(() => import('./landing-img'), { ssr: false });
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { useHomeStore } from ".";
+import dynamic from "next/dynamic";
+import { MouseIcon } from "lucide-react";
+import { DASHBOARD_URL } from "@/constants/variables";
 
 export default function Landing() {
-    return (
-        <div className="w-full flex flex-col lg:flex-row items-center py-10 p-0 lg:pt-24">
-            <div className="w-full lg:w-7/12">
-                <h1 className="text-start md:text-center lg:text-start text-5xl font-bold p-4 lg:pe-32 leading-[50px]">
-                    <span>Unlocking Sustainable Energy Solutions, Discover the Power of</span>
-                    <span className="main-text ms-3">GetEnergy</span>
-                </h1>
-                <p className="w-full text-start md:text-center lg:text-start text-sm p-4 lg:pe-72 mb-2">
-                    We are a leading provider of
-                    energy trading solutions,
-                    offering a comprehnsive range of
-                    services to clients in the energy sector
-                </p>
-                {/**
-                <div className="flex justify-center lg:justify-start">
-                    <Link className="main-button p-3 px-10 text-sm rounded-full" href={variables.GET_STARTED_ADDRESS}>
-                        Get Started
-                    </Link>
-                </div>
-                */}
-                <div className="flex justify-center lg:justify-start my-10">
-                    
-                    <div className="flex items-center justify-center">
-                        <Link className="main-button p-2 px-6 rounded-full" href={variables.WAITLIST_ADDRESS}>
-                            Join Wait List
-                        </Link>
-                        <div className='main-button p-2 px-6 rounded-full mx-4'>
-                            <Dropdown className='font-medium text-xl' inline={true} label="Join Us">
-                        
-                                <Dropdown.Item>
-                                    <Link href={variables.INTERN_FORM_URL}>As an Intern</Link>
-                                </Dropdown.Item>
-                                <Dropdown.Item>
-                                    <Link href={variables.VOLUNTEER_FORM_URL}>As a Volunteer</Link>
-                                </Dropdown.Item>
-                                
-                            </Dropdown>
-                        </div>
-                    </div>
-                   
-                    
-                    
-                </div>
-                
-            </div>
+  const { homeRef } = useHomeStore();
 
-            <div className="w-2/3 lg:w-5/12 mt-20 lg:mt-0 flex justify-center">
-                <LandingImage />
-                <div
-                    className="hidden lg:block lg:w-[500px] lg:h-[800px] absolute top-0 right-0"
-                    style={{ background: 'rgba(102, 153, 204, 0.6)' }}
-                />
+  useEffect(() => {
+    const cxt = gsap.context(() => {
+      const tl = gsap.timeline();
+      tl.from(".jumbo_text", {
+        opacity: 0,
+        delay: 0.5,
+        ease: "circ",
+        yPercent: 100,
+        stagger: { amount: 0.2 },
+      })
+        .from(".jumbo_gtext", { opacity: 0 })
+        .from(".jumbo_action", {
+          opacity: 0,
+          stagger: { amount: 0.1 },
+        });
+    }, homeRef);
+
+    return () => cxt.revert();
+  }, []);
+
+  const LandingIllus = dynamic(() => import("./landing-illus"), {
+    loading: () => <div className="w-16 h-16 border-primaryBlue border-t-transparent animate-spin rounded-full"></div>,
+  });
+
+  return (
+    <header id="landing-header" className="relative overflow-hidden pb-20">
+      <div className="absolute lg:top-10 md:top-8 md:flex hidden text-xs md:text-base top-5 left-0 w-full items-center justify-center">
+        <span>
+          We are hiring!!{" "}
+          <Link href={"/careers"} className="font-semibold text-primaryBlue border-b">
+            Check Now
+          </Link>
+        </span>
+      </div>
+      <div className="w-full flex flex-col md:grid z-[50] container mx-auto grid-cols-5 mt-[3rem] gap-6 items-center">
+        <div className="w-full col-span-3 space-y-10">
+          <div className="space-y-5">
+            <div className="overflow-hidden pb-2">
+              <h1
+                className={`lg:text-start jumbo_text max-w-[40rem] lg:text-5xl text-[1.8rem] md:font-black font-extrabold lg:leading-[65px] md:leading-[50px]`}
+              >
+                <span>Unlocking Sustainable Energy Solutions, Discover the Power of</span>
+                <span className="main-text ms-3 jumbo_gtext">GetEnergy</span>
+              </h1>
             </div>
+            <div className="overflow-hidden pb-2">
+              <p className="w-full lg:text-start jumbo_text max-w-[45rem] text-sm md:text-lg md:font-semibold mb-2">
+                We are a leading provider of energy trading solutions, offering a comprehensive range of services to
+                clients in the energy sector.
+              </p>
+            </div>
+          </div>
+          <div className="flex md:justify-center justify-start lg:justify-start -mt-2">
+            <Link
+              className="bg-primaryBlue text-white md:px-10 px-5 py-3 text-sm md:text-base jumbo_action font-semibold transition-colors md:rounded-2xl rounded-xl"
+              href={DASHBOARD_URL}
+            >
+              Get Started
+            </Link>
+          </div>
+
+          <div>
+            <p className="block md:hidden text-center">
+              We are hiring!!{" "}
+              <Link href={"/careers"} className="font-semibold text-primaryBlue border-b">
+                Check Now
+              </Link>
+            </p>
+            <div className="w-full md:hidden grid mt-4 place-content-center animate-bounce [animation-duration:1s] text-primaryBlue">
+              <MouseIcon />
+            </div>
+          </div>
         </div>
-    )
+
+        <LandingIllus />
+      </div>
+
+      <div className="w-full md:grid hidden place-content-center animate-bounce [animation-duration:1s] text-primaryBlue">
+        <MouseIcon />
+      </div>
+    </header>
+  );
 }

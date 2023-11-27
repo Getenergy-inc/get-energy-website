@@ -1,3 +1,4 @@
+"use client";
 import TitleHeader from "@/components/title-header";
 import Info from "@/components/info";
 import Form from "./form";
@@ -17,13 +18,9 @@ export default function ContactUs() {
 
   return (
     <div className="w-full">
-      <TitleHeader
-        location="Contact Us"
-        type="1"
-        title="Contact Us"
-      />
+      <TitleHeader location="Contact Us" type="3" title="Contact Us" />
       <Info body={body} />
       <Form />
     </div>
-  )
+  );
 }

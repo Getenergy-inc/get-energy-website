@@ -1,29 +1,45 @@
-import AmazingDiscount from "./amazing-discount";
-import FAQs from "./faqs";
-import FastestWay from "./fastest-way";
-import GlobalBrands from "./global-brands";
+"use client";
+import GetElectricitySection from "./get-elect";
+import UpdateMarquee from "./update-marquee";
 import Landing from "./landing";
-import OurService from "./our-services";
-import WhoAreWe from "./who-are-we";
-import Download from "./download";
-import HowItWorks from "../our-service/how-it-works";
-import Process from "../our-service/process";
+import Services from "./services";
+import HowItWorks from "./how-it-works";
+import { RefObject } from "react";
+import { create } from "zustand";
+import Features from "./feature";
+import KnowUsMore from "./know-us-more";
 import "react-tooltip/dist/react-tooltip.css";
+import PayBills from "./pay-bills";
+import EnergyEcommerce from "./energy-ecommerce";
+import InvestIn from "./invest-in";
+import CommunityElectricityVending from "./community-electricity";
 
+interface HomeStore {
+  homeRef: RefObject<HTMLDivElement>;
+}
+
+export const useHomeStore = create<HomeStore>((set) => ({
+  homeRef: null as unknown as RefObject<HTMLDivElement>,
+}));
 
 export default function Home() {
-    return (
-        <div className="container mx-auto w-full bg-white">
-            <Landing />
-            <FastestWay />
-            <WhoAreWe />
-            <OurService />
-            <AmazingDiscount />
-            <GlobalBrands />
-            {/* <FAQs /> */}
-            <HowItWorks />
-            <Process />
-            <Download />
-        </div>
-    )
+  const { homeRef } = useHomeStore();
+
+  return (
+    <main className="w-full bg-[#fdfdfd]" ref={homeRef}>
+      <Landing />
+      <UpdateMarquee />
+      <div className="container mx-auto md:space-y-64 space-y-40 md:mt-40 mt-20">
+        <GetElectricitySection />
+        <PayBills />
+        <EnergyEcommerce />
+        <InvestIn />
+        <CommunityElectricityVending />
+      </div>
+      <Services />
+      <Features />
+      <HowItWorks />
+      <KnowUsMore />
+    </main>
+  );
 }

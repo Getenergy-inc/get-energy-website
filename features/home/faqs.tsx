@@ -1,5 +1,6 @@
+"use client";
 import { assets } from "@/constants";
-import { faq_data } from '../faq/general_data'
+import { faq_data } from "../faq/general_data";
 import Image from "next/image";
 import FAQ from "../faq/faq";
 
@@ -15,5 +16,5 @@ export default function FAQs() {
         ))}
       </div>
     </div>
-  )
+  );
 }
