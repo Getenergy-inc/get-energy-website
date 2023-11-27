@@ -186,10 +186,10 @@ export default function Services() {
           </TransitionOpacity>
         </TransitionParentInView>
 
-        {/* <div className="container mx-auto mt-16 flex items-center justify-between gap-6 px-6">
-          <Slider {...settings} className="w-full md:gap-10 px-4">
-            {data.map((item, id) => (
-              <div key={id} className="w-full px-8">
+        <div className="container mx-auto mt-16 flex items-center justify-between gap-6 px-6">
+          <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 md:gap-10 gap-8 px-4">
+            {data.slice(0, 3).map((item, id) => (
+              <div key={id} className="w-full">
                 <TransitionOpacity className="w-full rounded-xl p-4 md:p-8 text-black py-12 space-y-4 bg-white">
             
                   <div
@@ -204,8 +204,8 @@ export default function Services() {
                 </TransitionOpacity>
               </div>
             ))}
-          </Slider>
-        </div> */}
+          </div>
+        </div>
       </section>
     </>
   );
