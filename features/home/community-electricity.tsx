@@ -3,6 +3,7 @@ import { vendingData } from "./data";
 import { useForm } from "react-hook-form";
 import { FormEvent } from "react";
 import { DASHBOARD_URL } from "@/constants/variables";
+import JoinWaitlistButton from "./join-waitlist-btn";
 
 interface Inputs {
   communityName: string;
@@ -130,9 +131,7 @@ const CommunityElectricityVending = () => {
           </TransitionParentInView>
 
           <TransitionOpacityAlone className="grid place-content-center">
-            <button className="font-bold text-primaryBlue px-6 py-3 rounded-xl bg-primaryBlue/20">
-              Join Wait List
-            </button>
+            <JoinWaitlistButton />
           </TransitionOpacityAlone>
         </div>
       </div>

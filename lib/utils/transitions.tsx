@@ -56,7 +56,7 @@ export const TransitionParent: React.FC<TransitionProps> = (props) => {
       variants={defaultParentVariant}
       initial="initial"
       animate="animate"
-      className={`${props.className} ${addClass && addClass}`}
+      className={`${props.className} ${addClass ?? ""}`}
       onClick={onClick}
     >
       {children}
@@ -72,7 +72,7 @@ export const TransitionParentInView: React.FC<TransitionProps> = (props) => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className={`${props.className} ${addClass && addClass}`}
+      className={`${props.className} ${addClass ?? ""}`}
       onClick={onClick}
     >
       {children}
@@ -88,7 +88,7 @@ export const TransitionParentInViewFast: React.FC<TransitionProps> = (props) => 
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className={`${props.className} ${addClass && addClass}`}
+      className={`${props.className} ${addClass ?? ""}`}
       onClick={onClick}
     >
       {children}
@@ -104,7 +104,7 @@ export const TransitionParentInViewSlow: React.FC<TransitionProps> = (props) => 
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className={`${props.className} ${addClass && addClass}`}
+      className={`${props.className} ${addClass ?? ""}`}
       onClick={onClick}
     >
       {children}
@@ -119,7 +119,7 @@ export const TransitionParentFast: React.FC<TransitionProps> = (props) => {
       variants={defaultParentFastVariant}
       initial="initial"
       animate="animate"
-      className={`${props.className} ${addClass && addClass}`}
+      className={`${props.className} ${addClass ?? ""}`}
       onClick={onClick}
     >
       {children}
@@ -132,7 +132,7 @@ export const TransitionParentFast: React.FC<TransitionProps> = (props) => {
 export const TransitionFromLeft: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
-    <motion.div variants={fromLeftVariant} className={`${props.className} ${addClass && addClass}`} onClick={onClick}>
+    <motion.div variants={fromLeftVariant} className={`${props.className} ${addClass ?? ""}`} onClick={onClick}>
       {children}
     </motion.div>
   );
@@ -141,7 +141,7 @@ export const TransitionFromLeft: React.FC<TransitionProps> = (props) => {
 export const TransitionFromRight: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
-    <motion.div variants={fromRightVariant} className={`${props.className} ${addClass && addClass}`} onClick={onClick}>
+    <motion.div variants={fromRightVariant} className={`${props.className} ${addClass ?? ""}`} onClick={onClick}>
       {children}
     </motion.div>
   );
@@ -150,7 +150,7 @@ export const TransitionFromRight: React.FC<TransitionProps> = (props) => {
 export const TransitionFromBottom: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
-    <motion.div variants={fromBottomVariant} className={`${props.className} ${addClass && addClass}`} onClick={onClick}>
+    <motion.div variants={fromBottomVariant} className={`${props.className} ${addClass ?? ""}`} onClick={onClick}>
       {children}
     </motion.div>
   );
@@ -159,11 +159,7 @@ export const TransitionFromBottom: React.FC<TransitionProps> = (props) => {
 export const TransitionOpacity: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
-    <motion.div
-      variants={opacityAloneVariant}
-      className={`${props.className} ${addClass && addClass}`}
-      onClick={onClick}
-    >
+    <motion.div variants={opacityAloneVariant} className={`${props.className} ${addClass ?? ""}`} onClick={onClick}>
       {children}
     </motion.div>
   );
@@ -178,7 +174,7 @@ export const TransitionOpacityAlone: React.FC<TransitionProps> = (props) => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className={`${props.className} ${addClass && addClass}`}
+      className={`${props.className} ${addClass ?? ""}`}
       onClick={onClick}
     >
       {children}
@@ -195,7 +191,7 @@ export const TransitionFromTopAlone: React.FC<TransitionProps> = (props) => {
       whileInView="animate"
       viewport={{ once: true }}
       exit="exit"
-      className={`${props.className} ${addClass && addClass}`}
+      className={`${props.className} ${addClass ?? ""}`}
       onClick={onClick}
     >
       {children}
@@ -212,7 +208,7 @@ export const TransitionFromBottomAlone: React.FC<TransitionProps> = (props) => {
       whileInView="animate"
       viewport={{ once: true }}
       exit="exit"
-      className={`${props.className} ${addClass && addClass}`}
+      className={`${props.className} ${addClass ?? ""}`}
       onClick={onClick}
     >
       {children}
@@ -229,7 +225,7 @@ export const TransitionFromLeftAlone: React.FC<TransitionProps> = (props) => {
       whileInView="animate"
       viewport={{ once: true }}
       exit="exit"
-      className={`${props.className} ${addClass && addClass}`}
+      className={`${props.className} ${addClass ?? ""}`}
       onClick={onClick}
     >
       {children}
@@ -246,7 +242,7 @@ export const TransitionFromLeftAloneSlow: React.FC<TransitionProps> = (props) =>
       whileInView="animate"
       viewport={{ once: true }}
       exit="exit"
-      className={`${props.className} ${addClass && addClass}`}
+      className={`${props.className} ${addClass ?? ""}`}
       onClick={onClick}
     >
       {children}
@@ -263,7 +259,7 @@ export const TransitionFromRightAlone: React.FC<TransitionProps> = (props) => {
       whileInView="animate"
       viewport={{ once: true }}
       exit="exit"
-      className={`${props.className} ${addClass && addClass}`}
+      className={`${props.className} ${addClass ?? ""}`}
       onClick={onClick}
     >
       {children}
@@ -280,7 +276,7 @@ export const TransitionFromRightAloneSlow: React.FC<TransitionProps> = (props) =
       whileInView="animate"
       viewport={{ once: true }}
       exit="exit"
-      className={`${props.className} ${addClass && addClass}`}
+      className={`${props.className} ${addClass ?? ""}`}
       onClick={onClick}
     >
       {children}

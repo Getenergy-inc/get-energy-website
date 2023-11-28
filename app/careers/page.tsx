@@ -15,16 +15,16 @@ type Content = {
 };
 
 const Careers = () => {
-  const jobHeads = ["Full Time", "Intern", "Contract"];
+  const jobHeads = ["Intern", "Contract", "Full Time"];
   const [current, setCurrent] = useState(jobHeads[0]);
   const [index, setIndex] = useState(0);
 
   const jobContent = [
-    [],
     [
       { duration: "6 Weeks - 6 Months Training", role: "Positions Available", type: "Intern" },
       { duration: "Part Time", role: "Positions Available", type: "Volunteer" },
     ],
+    [],
     [],
   ];
 

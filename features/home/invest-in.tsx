@@ -56,9 +56,7 @@ const InvestIn = () => {
                 </div>
                 <div className="space-y-3 max-w-lg">
                   <p className="text-xl font-semibold">{data.title}</p>
-                  <p className="text-zinc-400 leading-loose text-lg">
-                    {data.description}
-                  </p>
+                  <p className="text-zinc-400 leading-loose text-lg">{data.description}</p>
                 </div>
               </TransitionFromRight>
             ))}
@@ -71,11 +69,8 @@ const InvestIn = () => {
       </div>
 
       <TransitionParentInView className="relative flex justify-center -mt-10 z-50">
-        <TransitionFromLeft className="z-[100] absolute bottom-20 -left-10">
-          <div
-            className="py-4 px-8 text-sm bg-white shadow-xl rounded-xl"
-            id="investCard"
-          >
+        <TransitionFromLeft className="z-[100] absolute bottom-20 left-0">
+          <div className="py-4 px-8 text-sm bg-white shadow-xl rounded-xl" id="investCard">
             <div className="flex items-center gap-16 justify-between">
               <p className="font-medium">Investment</p>
               <p className="flex items-center gap-2 text-green-500">
@@ -84,10 +79,7 @@ const InvestIn = () => {
             </div>
             <div className="mt-2">
               {Array.from({ length: 2 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="flex items-center justify-between text-zinc-400"
-                >
+                <div key={i} className="flex items-center justify-between text-zinc-400">
                   <p>N200,000</p>
                   <p>May 29, 2023</p>
                 </div>
@@ -96,7 +88,7 @@ const InvestIn = () => {
           </div>
         </TransitionFromLeft>
 
-        <TransitionFromBottom className="z-50">
+        <TransitionFromBottom className="z-50 ml-auto">
           <Image
             src={"/images/bg/man-holding-piggy-bank.png"}
             alt="a guy holding a piggy bank"

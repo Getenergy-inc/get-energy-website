@@ -12,6 +12,7 @@ import { useState } from "react";
 import { RightToLeftSVG } from "@/components/common/ltr";
 import {
   TransitionFromBottom,
+  TransitionFromRightAlone,
   TransitionFromRightAloneSlow,
   TransitionOpacity,
   TransitionOpacityAlone,
@@ -45,7 +46,7 @@ const PayBills = () => {
   ];
 
   return (
-    <section className="grid md:grid-cols-2 gap-20 relative" id="pay-bills">
+    <section className="grid md:grid-cols-2 gap-20 md:gap-32 relative" id="pay-bills">
       <div>
         <div className="space-y-8">
           <TransitionOpacityAlone>
@@ -67,7 +68,7 @@ const PayBills = () => {
         </div>
       </div>
 
-      <TransitionFromRightAloneSlow className="pt-8 z-50">
+      <TransitionFromRightAlone className="pt-8 z-50">
         <div className="relative w-full h-full">
           {/* Logos and shapes */}
           <TransitionParentInViewSlow>
@@ -102,7 +103,7 @@ const PayBills = () => {
           </TransitionParentInViewSlow>
 
           {/* Content */}
-          <div className="md:w-11/12 w-full h-full bg-white z-50 border shad-lg rounded-md md:px-12 px-6 md:py-8 py-4 relative">
+          <div className="w-full h-full bg-white z-50 border shad-lg rounded-md md:px-12 px-6 md:py-8 py-4 relative">
             <p className="font-bold text-xl">Buy Bills Swiftly</p>
 
             <TransitionParentInViewFast className="grid grid-cols-4 md:gap-x-10 gap-x-5 md:gap-y-8 gap-y-4 py-6">
@@ -150,7 +151,7 @@ const PayBills = () => {
             </div>
           </div>
         </div>
-      </TransitionFromRightAloneSlow>
+      </TransitionFromRightAlone>
 
       <div className="absolute top-[30%] left-[4%] z-10">
         <RightToLeftSVG />

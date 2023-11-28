@@ -4,21 +4,13 @@ import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { useHomeStore } from ".";
 import { assets } from "@/constants";
+import { bulbImage } from "@/constants/assets";
 
 export default function LandingImage() {
   const { homeRef } = useHomeStore();
 
   useLayoutEffect(() => {
     const cxt = gsap.context(() => {
-      // const tl = gsap.timeline({
-      //   scrollTrigger: {
-      //     trigger: ".main",
-      //     start: "top top",
-      //     end: "bottom top",
-      //     scrub: 1,
-      //   },
-      // });
-
       gsap
         .timeline()
         .from(".bulb", { opacity: 0, xPercent: 10 })
@@ -35,7 +27,7 @@ export default function LandingImage() {
       <div className="w-full bg-transparent md:block hidden select-none main h-auto aspect-square col-span-2 animate-spin [animation-duration:40s] rounded-full relative">
         <div className="w-full h-full top-0 left-0 [animation-duration:40s] direction-reverse absolute animate-spin rounded-full">
           <Image
-            src={"/images/bg/bulb_png.png"}
+            src={bulbImage}
             alt="a bulb"
             width={585}
             height={585}
