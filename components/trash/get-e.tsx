@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import styles from "./style.module.scss";
+// import styles from "./style.module.scss";
 
 const GetElectricity = () => {
   const vendingTypes = [
@@ -44,10 +44,10 @@ const GetElectricity = () => {
     <>
       <header>
         <div className="w-full relative">
-          <div className="w-full relative min-h-[20rem] md:min-h-[34rem] overflow-hidden lg:-top-10 pb-10 grid place-content-center">
+          <div className="w-full relative min-h-[20rem] md:min-h-[30rem] overflow-hidden lg:-top-10 grid place-content-center">
             <div className="absolute top-0 left-0 w-full h-full">
               <Image
-                src={"/images/bg/space.jpg"}
+                src={"/images/bg/get-elect.png"}
                 alt="container-img"
                 width={1400}
                 height={490}
@@ -57,67 +57,29 @@ const GetElectricity = () => {
             </div>
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 md:hidden flex items-center justify-center text-center">
               <p className="text-shadow font-extrabold space-y-1">
-                <span className={`${styles.getE} text-white lg:text-5xl md:text-4xl`}>GetEnergy Pay</span>
+                <span className={`${styles.getE} text-white text-4xl`}>GetEnergy Pay</span>
                 <br /> <span className="text-lg font-bold text-white">Where Bills Are Settled in a Click</span>
               </p>
             </div>
-            <div className="absolute top-0 left-0 w-full h-full bg-black/20 hidden md:block"></div>
-            {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#fdfdfd] via-transparent via-10% md:block flex items-center justify-center text-center"></div> */}
+            <div className="absolute top-0 left-0 w-full h-full bg-black/10 hidden md:block"></div>
+            {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#fdfdfd] via-transparent via-30% md:hidden flex items-center justify-center text-center"></div> */}
           </div>
 
-          <div className="absolute -top-5 left-0 w-full h-full hidden place-content-center mx-auto px-4 md:grid">
+          <div className="absolute top-0 left-0 w-full h-full grid place-content-center mx-auto px-4">
             <div className="w-full h-full grid grid-cols-2 gap-10 container mx-auto">
               <div className="flex items-center">
                 <h1 className="text-white text-shadow text-4xl font-extrabold">
                   GetEnergy Pay: <br /> Where Bills Are Settled in a Click
                 </h1>
               </div>
-              <div>
-                <div className="md:min-h-[16rem]">
-                  <div className="relative w-full h-full container mx-auto">
-                    <div className="top-0 mt-20 md:mt-0 left-0">
-                      <div className="md:shadow-xl shadow-lg rounded-xl p-8 bg-white max-w-[30rem] ml-auto z-50">
-                        <div className="space-y-16">
-                          <div className="space-y-6">
-                            <h3 className="font-bold text-xl">Get Electricity Swiftly!!</h3>
-                            <div className="">
-                              <label htmlFor="meterNumber">Meter Number</label>
-                              <input
-                                type="text"
-                                className="w-full border bg-transparent text-sm p-3 outline-none focus:border-zinc-500 transition-colors duration-300 rounded-lg border-zinc-200"
-                                placeholder="Enter Meter Number"
-                                value={meterNumber}
-                                onChange={(e) => setMeterNumber(e.target.value)}
-                              />
-                            </div>
-                          </div>
-
-                          <div>
-                            {meterNumber.length > 5 ? (
-                              <Link href={`${DASHBOARD_URL}/dashboard/get-energy`} target="_blank">
-                                <button className="w-full rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3">
-                                  Proceed
-                                </button>
-                              </Link>
-                            ) : (
-                              <button className="w-full rounded-full text-white bg-primaryBlue/50 transition-colors duration-200 hover:bg-primaryBlueHover/50 py-3">
-                                Proceed
-                              </button>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div></div>
             </div>
           </div>
         </div>
       </header>
 
       <main>
-        <div className="md:min-h-[16rem] block md:hidden">
+        <div className="md:min-h-[16rem]">
           <div className="relative w-full h-full container mx-auto">
             <div className="md:absolute top-0 mt-20 md:mt-0 left-0">
               <div className="md:shadow-xl shadow-lg rounded-xl p-8 bg-white max-w-[30rem] z-50">
@@ -150,6 +112,13 @@ const GetElectricity = () => {
                     )}
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="w-full h-full z-[100] md:flex hidden md:-mt-12 absolute md:static items-center justify-between container">
+              <div></div>
+              <div className="shadow-2xl rounded-2xl">
+                <Logo classnames="bg-white shadow-2xl p-3 px-10 rounded-2xl " size={200} />
               </div>
             </div>
           </div>

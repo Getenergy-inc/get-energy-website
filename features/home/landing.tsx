@@ -82,7 +82,7 @@ export default function Landing() {
       </div>
 
       <div className="w-full md:grid hidden place-content-center text-primaryBlue">
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-4 text-sm md:text-base">
           <p className="block md:text-center">
             We are hiring!!{" "}
             <Link href={"/careers"} className="font-semibold text-primaryBlue border-b">
