@@ -57,7 +57,7 @@ const GetElectricity = () => {
             </div>
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 md:hidden flex items-center justify-center text-center">
               <p className="text-shadow font-extrabold space-y-1">
-                <span className={`${styles.getE} text-white text-4xl`}>GetEnergy Pay</span>
+                <span className={`text-white text-4xl`}>GetEnergy Pay</span>
                 <br /> <span className="text-lg font-bold text-white">Where Bills Are Settled in a Click</span>
               </p>
             </div>
