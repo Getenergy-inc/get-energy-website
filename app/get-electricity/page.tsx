@@ -130,7 +130,9 @@ const GetElectricity = () => {
                     unlock the door to monthly surprises.
                   </p>
 
-                  <GetStartedBtn />
+                  <div className="grid place-content-center">
+                    <GetStartedBtn />
+                  </div>
                 </div>
               </div>
               <div className="hidden md:block overflow-hidden rounded-l-[4rem]">
