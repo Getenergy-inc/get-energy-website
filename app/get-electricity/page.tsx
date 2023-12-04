@@ -1,45 +1,11 @@
-"use client";
 import BeforeFooterAction from "@/components/common/before-footer";
-import Logo from "@/components/logo";
-import { DASHBOARD_URL } from "@/constants/variables";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import styles from "./style.module.scss";
+import MeterInput, { ElectMeterInput2 } from "@/features/get-electricity/get-electricity-form";
+import ElectVending from "@/features/get-electricity/electricity-vending";
+import { benefits, vendingTypes, whyReasons } from "@/lib/store/lists";
+import GetStartedBtn from "@/features/get-electricity/get-started-btn";
 
 const GetElectricity = () => {
-  const vendingTypes = [
-    "Community Vending",
-    "Green Energy",
-    "Power generation",
-    "Solar powered system",
-    "Distribution of Meters communities. ",
-    "CNG Gas Generator",
-  ];
-
-  const benefits = [
-    "Empowering Communities",
-    "Enhanced Accessibility",
-    "Convenient Payment Methods",
-    "Quick Issue Resolution",
-  ];
-
-  const whyReasons = [
-    "Seamless Transactions: Quick, secure, and easy electricity token purchases.",
-    "Community-Focused: Tailored solutions for estates and gated communities.",
-    "Smart Metering: Take control of your energy consumption with our advanced meters.",
-    "Green Power Options: Embrace a sustainable future with our green energy solutions.",
-  ];
-
-  const [meterNumber, setMeterNumber] = useState("");
-
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    window.open(`${DASHBOARD_URL}`, "");
-  };
-
   return (
     <>
       <header>
@@ -47,17 +13,16 @@ const GetElectricity = () => {
           <div className="w-full relative min-h-[20rem] md:min-h-[34rem] overflow-hidden lg:-top-10 pb-10 grid place-content-center">
             <div className="absolute top-0 left-0 w-full h-full">
               <Image
-                src={"/images/bg/space.jpg"}
+                src={"/images/bg/get-elect.png"}
                 alt="container-img"
                 width={1400}
                 height={490}
                 className="w-full h-full object-cover"
-                quality={100}
               />
             </div>
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 md:hidden flex items-center justify-center text-center">
               <p className="text-shadow font-extrabold space-y-1">
-                <span className={`${styles.getE} text-white lg:text-5xl md:text-4xl`}>GetEnergy Pay</span>
+                <span className={`text-white lg:text-5xl md:text-4xl`}>GetEnergy Pay</span>
                 <br /> <span className="text-lg font-bold text-white">Where Bills Are Settled in a Click</span>
               </p>
             </div>
@@ -76,37 +41,7 @@ const GetElectricity = () => {
                 <div className="md:min-h-[16rem]">
                   <div className="relative w-full h-full container mx-auto">
                     <div className="top-0 mt-20 md:mt-0 left-0">
-                      <div className="md:shadow-xl shadow-lg rounded-xl p-8 bg-white max-w-[30rem] ml-auto z-50">
-                        <div className="space-y-16">
-                          <div className="space-y-6">
-                            <h3 className="font-bold text-xl">Get Electricity Swiftly!!</h3>
-                            <div className="">
-                              <label htmlFor="meterNumber">Meter Number</label>
-                              <input
-                                type="text"
-                                className="w-full border bg-transparent text-sm p-3 outline-none focus:border-zinc-500 transition-colors duration-300 rounded-lg border-zinc-200"
-                                placeholder="Enter Meter Number"
-                                value={meterNumber}
-                                onChange={(e) => setMeterNumber(e.target.value)}
-                              />
-                            </div>
-                          </div>
-
-                          <div>
-                            {meterNumber.length > 5 ? (
-                              <Link href={`${DASHBOARD_URL}/dashboard/get-energy`} target="_blank">
-                                <button className="w-full rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3">
-                                  Proceed
-                                </button>
-                              </Link>
-                            ) : (
-                              <button className="w-full rounded-full text-white bg-primaryBlue/50 transition-colors duration-200 hover:bg-primaryBlueHover/50 py-3">
-                                Proceed
-                              </button>
-                            )}
-                          </div>
-                        </div>
-                      </div>
+                      <MeterInput />
                     </div>
                   </div>
                 </div>
@@ -120,37 +55,7 @@ const GetElectricity = () => {
         <div className="md:min-h-[16rem] block md:hidden">
           <div className="relative w-full h-full container mx-auto">
             <div className="md:absolute top-0 mt-20 md:mt-0 left-0">
-              <div className="md:shadow-xl shadow-lg rounded-xl p-8 bg-white max-w-[30rem] z-50">
-                <div className="space-y-16">
-                  <div className="space-y-6">
-                    <h3 className="font-bold text-xl">Get Electricity Swiftly!!</h3>
-                    <div className="">
-                      <label htmlFor="meterNumber">Meter Number</label>
-                      <input
-                        type="text"
-                        className="w-full border bg-transparent text-sm p-3 outline-none focus:border-zinc-500 transition-colors duration-300 rounded-lg border-zinc-200"
-                        placeholder="Enter Meter Number"
-                        value={meterNumber}
-                        onChange={(e) => setMeterNumber(e.target.value)}
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    {meterNumber.length > 5 ? (
-                      <Link href={`${DASHBOARD_URL}/dashboard/get-energy`} target="_blank">
-                        <button className="w-full rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3">
-                          Proceed
-                        </button>
-                      </Link>
-                    ) : (
-                      <button className="w-full rounded-full text-white bg-primaryBlue/50 transition-colors duration-200 hover:bg-primaryBlueHover/50 py-3">
-                        Proceed
-                      </button>
-                    )}
-                  </div>
-                </div>
-              </div>
+              <ElectMeterInput2 />
             </div>
           </div>
         </div>
@@ -165,13 +70,7 @@ const GetElectricity = () => {
                 secure, and hassle-free. That&apos;s the GetEnergy promise!
               </p>
 
-              <button
-                className="flex items-center gap-2 bg-primaryBlue rounded-md px-4 py-2 text-white"
-                onClick={() => window.open(`${DASHBOARD_URL}/dashboard/get-energy`, "")}
-              >
-                <span>Get Started</span>
-                <ArrowRight size={20} />
-              </button>
+              <GetStartedBtn />
             </div>
             <div className="grid place-content-center">
               <Image
@@ -208,13 +107,7 @@ const GetElectricity = () => {
                 ))}
               </div>
 
-              <button
-                className="flex items-center gap-2 bg-primaryBlue rounded-md px-4 py-2 text-white"
-                onClick={() => window.open(`${DASHBOARD_URL}/dashboard/get-energy`, "")}
-              >
-                <span>Get Started</span>
-                <ArrowRight size={20} />
-              </button>
+              <GetStartedBtn />
             </div>
           </div>
 
@@ -237,12 +130,7 @@ const GetElectricity = () => {
                     unlock the door to monthly surprises.
                   </p>
 
-                  <button
-                    className="gap-2 bg-white text-primaryBlue rounded-xl py-2 px-4 md:py-3 text-sm md:text-base font-bold"
-                    onClick={() => window.open(`${DASHBOARD_URL}/dashboard/get-energy`, "")}
-                  >
-                    Get Started
-                  </button>
+                  <GetStartedBtn />
                 </div>
               </div>
               <div className="hidden md:block overflow-hidden rounded-l-[4rem]">
@@ -280,98 +168,7 @@ const GetElectricity = () => {
               </div>
             </div>
 
-            <div className="w-full space-y-4 border rounded-xl p-6 bg-white shadow-2xl z-20">
-              <div>
-                <p className="font-bold text-xl">Community Electricity Vending</p>
-              </div>
-              <form onSubmit={onSubmit}>
-                <div className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="font-medium text-sm" htmlFor="communityName">
-                        Community Name
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full outline-none p-3 rounded-sm border border-zinc-200"
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="font-medium text-sm" htmlFor="fullName">
-                        Representative Full Name
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full outline-none p-3 rounded-sm border border-zinc-200"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="font-medium text-sm" htmlFor="communityAddress">
-                      Community Address
-                    </label>
-                    <input type="text" className="w-full outline-none p-3 rounded-sm border border-zinc-200" required />
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="font-medium text-sm" htmlFor="cityOrTown">
-                        City/Town
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full outline-none p-3 rounded-sm border border-zinc-200"
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="font-medium text-sm" htmlFor="country">
-                        Country
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full outline-none p-3 rounded-sm border border-zinc-200"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="font-medium text-sm" htmlFor="phoneNumber">
-                        Mobile Number
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full outline-none p-3 rounded-sm border border-zinc-200"
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="font-medium text-sm" htmlFor="email">
-                        Email address
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full outline-none p-3 rounded-sm border border-zinc-200"
-                        required
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <Link href={`${DASHBOARD_URL}/dashboard/get-energy`} target="_blank">
-                  <div className="flex item-center mt-5 justify-center">
-                    <button className="w-full rounded-full text-white bg-primaryBlue transition-colors duration-200 hover:bg-primaryBlueHover py-3">
-                      Proceed
-                    </button>
-                  </div>
-                </Link>
-              </form>
-            </div>
+            <ElectVending />
           </div>
 
           <div className="grid md:grid-cols-2 md:gap-4 gap-12 container mx-auto items-center">

@@ -12,9 +12,9 @@ import {
   TransitionParentInView,
 } from "@/lib/utils/transitions";
 import { useLayoutEffect } from "react";
-import { useHomeStore } from ".";
 import { gsap } from "gsap";
 import JoinWaitlistButton from "./join-waitlist-btn";
+import { useHomeStore } from "@/lib/store";
 
 const InvestIn = () => {
   const { homeRef } = useHomeStore();

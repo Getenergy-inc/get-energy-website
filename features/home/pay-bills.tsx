@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import PhoneIcon from "@/components/common/icons/phone.icon";
 import WifiIcon from "@/components/common/icons/wifi.icon";

@@ -1,3 +1,5 @@
+"use client";
+
 import { TransitionOpacity, TransitionOpacityAlone, TransitionParentInViewFast } from "@/lib/utils/transitions";
 import Image from "next/image";
 

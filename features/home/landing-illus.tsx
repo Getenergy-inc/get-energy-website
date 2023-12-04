@@ -2,9 +2,9 @@
 import Image from "next/image";
 import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
-import { useHomeStore } from ".";
 import { assets } from "@/constants";
 import { bulbImage } from "@/constants/assets";
+import { useHomeStore } from "@/lib/store";
 
 export default function LandingImage() {
   const { homeRef } = useHomeStore();

@@ -1,3 +1,5 @@
+"use client";
+
 import { TransitionFromRight, TransitionOpacityAlone, TransitionParentInView } from "@/lib/utils/transitions";
 import { vendingData } from "./data";
 import { useForm } from "react-hook-form";
