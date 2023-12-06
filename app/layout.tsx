@@ -2,27 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "@/lib/utils/providers";
 import Header from "@/components/layout/header";
-import { montserrat, satoshi } from "@/lib/utils/fonts";
+import { montserrat } from "@/lib/utils/fonts";
 import Footer from "@/components/layout/footer";
+import { energyKeywords } from "@/lib/store/lists";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL!),
-  title: "GetEnergy - Energy Products & Services",
+  metadataBase: new URL(process.env.SITE_URL || "https://getenergy.ng"),
+  title: {
+    default: "GetEnergy - Energy Products & Services",
+    template: `%s | GetEnergy`,
+  },
   description:
     "Discover sustainable energy solutions and products at your convenience which includes energy equipments, commodities and services",
-  keywords: [
-    "get energy",
-    "getEnergy",
-    "energy products",
-    "renewable energy",
-    "solar power",
-    "wind power",
-    "energy efficiency",
-    "sustainability",
-    "energy consulting",
-    "clean energy",
-    "Energy Management",
-  ],
+  keywords: energyKeywords,
   openGraph: {
     title: "GetEnergy - Energy Products & Services",
     description:

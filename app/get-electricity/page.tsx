@@ -5,6 +5,14 @@ import ElectVending from "@/features/get-electricity/electricity-vending";
 import { benefits, vendingTypes, whyReasons } from "@/lib/store/lists";
 import GetStartedBtn from "@/features/get-electricity/get-started-btn";
 
+export const metadata = {
+  title: "Get Electricity",
+  description: `Get Electricity with Ease at GetEnergy. Our streamlined process allows you to effortlessly purchase electricity online. Experience convenience, reliability, and seamless transactions. Power up your life at the click of a button with GetEnergy – Your Trusted Source for Instant Electricity.`,
+  alternates: {
+    canonical: "/get-electricity",
+  },
+};
+
 const GetElectricity = () => {
   return (
     <>

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import WhyChooseEcommerce from "@/features/energy-ecommerce/why-choose";
 import WhatsInIt from "@/features/energy-ecommerce/what-in-it";
-
 import "./style.css";
 import BeforeProcess from "@/components/common/before-process";
 import EnergyEcomProcess from "@/features/energy-ecommerce/process";
@@ -16,6 +15,14 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { XIcon } from "lucide-react";
+
+export const metadata = {
+  title: "Energy Ecommerce",
+  description: `GetEnergy E-commerce: Explore a world of convenience and choice. Shop high-quality products, discover exclusive deals, and stay ahead of trends. Your satisfaction is our priority at GetEnergy – Where Shopping Meets Energy Innovation.`,
+  alternates: {
+    canonical: "/energy-ecommerce",
+  },
+};
 
 const EnergyEcommerce = () => {
   return (

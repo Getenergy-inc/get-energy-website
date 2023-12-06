@@ -5,6 +5,14 @@ import InvestIn from "@/features/invest/invest-in";
 import InvestProcess from "@/features/invest/process";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Invest",
+  description: `Explore Investment Opportunities at GetEnergy. Our Invest page invites you to be part of the energy revolution. Discover lucrative options, fuel your financial growth, and contribute to a sustainable future. Invest confidently with GetEnergy – Empowering Your Portfolio for a Bright Tomorrow.`,
+  alternates: {
+    canonical: "/invest",
+  },
+};
+
 const Invest = () => {
   return (
     <>
