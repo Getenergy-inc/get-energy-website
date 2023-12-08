@@ -12,6 +12,7 @@ import EnergyEcommerce from "./energy-ecommerce";
 import InvestIn from "./invest-in";
 import CommunityElectricityVending from "./community-electricity";
 import HomeWrapper from "./wrapper";
+import GetFuel from "./get-fuel";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <div className="container mx-auto md:space-y-72 space-y-40 md:mt-40 mt-20">
           <GetElectricitySection />
           <PayBills />
+          <GetFuel/>
           <EnergyEcommerce />
           <InvestIn />
           <CommunityElectricityVending />

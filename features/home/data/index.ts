@@ -24,6 +24,17 @@ export const billsData = [
   },
 ];
 
+export const getFuelData = [
+  {
+    title: "Uncompromised Quality",
+    description: `At GetFuel, we prioritize quality assurance, delivering fuels that meet and exceed industry standards. Trust us for a clean, efficient, and reliable fueling experience.`,
+  },
+  {
+    title: "Convenient Redefined",
+    description: `Enjoy the ease of fuel procurement with GetFuel. From the comfort of your home or business, request top-notch fuels, and experience seamless delivery at your convenience.`,
+  },
+];
+
 export const ecommerceData = [
   {
     title: "Extensive Product Range",
