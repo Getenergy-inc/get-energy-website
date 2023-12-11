@@ -19,11 +19,11 @@ export const links = [
     title: "Energy E-Commerce",
     url: "/energy-ecommerce",
   },
-  // {
-  //   _id: "link-6",
-  //   title: "Contact Us",
-  //   url: "/contact-us",
-  // },
+  {
+    _id: "link-6",
+    title: "Get Fuel",
+    url: "/get-fuel",
+  },
   {
     _id: "link-7",
     title: "Invest in Energy",

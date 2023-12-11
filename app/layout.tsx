@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "@/lib/utils/providers";
-import Header from "@/components/layout/header";
+import Navbar from "@/components/layout/navbar";
 import { montserrat } from "@/lib/utils/fonts";
 import Footer from "@/components/layout/footer";
 import { energyKeywords } from "@/lib/store/lists";
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={montserrat.className}>
         <Providers>
-          <Header />
+          <Navbar />
           {children}
           <Footer />
         </Providers>

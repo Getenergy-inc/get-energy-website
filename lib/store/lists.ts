@@ -114,3 +114,22 @@ export const whyReasonsPayBills = [
     body: "Stay in the know with real-time updates on your payments.",
   },
 ];
+
+export const getFuelData = [
+  {
+    heading: "Fuel Variety",
+    body: "Choose from a range of fuels including Regular Gasoline, Eco-Friendly Biofuel, and Supercharged Racing Fuel.",
+  },
+  {
+    heading: "Competitive Prices",
+    body: "Enjoy competitive fuel prices.",
+  },
+  {
+    heading: "Reliable Delivery",
+    body: "Count on prompt and reliable fuel delivery to your doorstep or business.",
+  },
+  {
+    heading: "Bulk Orders for Businesses",
+    body: "For corporate clients, streamline your fuel needs with easy bulk ordering options.",
+  },
+];

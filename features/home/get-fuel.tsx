@@ -10,7 +10,6 @@ import {
   TransitionOpacityAlone,
   TransitionParentInView,
 } from "@/lib/utils/transitions";
-import JoinWaitlistButton from "./join-waitlist-btn";
 import Link from "next/link";
 import { DASHBOARD_URL } from "@/constants/variables";
 
@@ -44,11 +43,10 @@ const GetFuel = () => {
           <TransitionFromBottomAlone className="grid place-content-center">
             <div>
               <Link href={DASHBOARD_URL} target="_blank">
-              <button className="font-bold text-primaryBlue px-6 py-3 rounded-xl bg-primaryBlue/20">
-                Get Started
-              </button>
+                <button className="font-bold text-primaryBlue px-6 py-3 rounded-xl bg-primaryBlue/20">
+                  Get Started
+                </button>
               </Link>
-             
             </div>
           </TransitionFromBottomAlone>
         </div>
