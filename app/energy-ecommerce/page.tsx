@@ -1,7 +1,6 @@
 import Image from "next/image";
 import WhyChooseEcommerce from "@/features/energy-ecommerce/why-choose";
 import WhatsInIt from "@/features/energy-ecommerce/what-in-it";
-
 import "./style.css";
 import BeforeProcess from "@/components/common/before-process";
 import EnergyEcomProcess from "@/features/energy-ecommerce/process";
@@ -17,38 +16,59 @@ import {
 } from "@/components/ui/alert-dialog";
 import { XIcon } from "lucide-react";
 
+export const metadata = {
+  title: "Energy Ecommerce",
+  description: `GetEnergy E-commerce: Explore a world of convenience and choice. Shop high-quality products, discover exclusive deals, and stay ahead of trends. Your satisfaction is our priority at GetEnergy – Where Shopping Meets Energy Innovation.`,
+  alternates: {
+    canonical: "/energy-ecommerce",
+  },
+};
+
 const EnergyEcommerce = () => {
   return (
     <>
-      <header className="" id="energy-ecom">
-        <div className="grid md:grid-cols-5 min-h-[30rem] container mx-auto">
-          <div className="flex items-center md:col-span-3 relative">
-            <div className="text-white space-y-2 pb-4 text-center md:text-start">
-              <h1 className="font-extrabold md:text-5xl text-4xl md:leading-relaxed">
-                Energize Your Lifestyle with GetEnergy&apos;s E-Commerce Extravaganza!
-              </h1>
-              <p className="sm:text-base text-sm">
-                Welcome to the Future of Energy Shopping – Welcome to GetEnergy E-Commerce!
-              </p>
+      <header className="relative min-h-[30rem] flex items-end overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full">
+          <Image
+            src={"/images/bg/energy-e-bg.png"}
+            alt="background"
+            width={1980}
+            height={700}
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-              <div className="rounded-full backdrop-blur-sm select-none text-sm md:text-base flex items-center gap-1 px-4 py-2 border border-white/10 w-fit shadow-md absolute bottom-5 left-4 md:left-0">
-                <span className="w-2 h-2 rounded-full bg-white/50 md:block hidden"></span>{" "}
-                <span>Discover, Connect, Transform: Your Energy, Your Choice</span>
+        <div className="absolute top-0 left-0 w-full h-full md:flex md:items-end items-center justify-center">
+          <div className="grid md:grid-cols-5 container mx-auto w-full h-full">
+            <div className="flex items-center md:col-span-3 relative">
+              <div className="text-white space-y-2 pb-4 text-center mb-8 md:text-start">
+                <h1 className="font-extrabold lg:text-5xl text-4xl lg:leading-relaxed">
+                  Energize Your Lifestyle with GetEnergy&apos;s E-Commerce Extravaganza!
+                </h1>
+                <p className="sm:text-base text-sm">
+                  Welcome to the Future of Energy Shopping – Welcome to GetEnergy E-Commerce!
+                </p>
+
+                <div className="rounded-full backdrop-blur-sm select-none text-sm md:text-base flex items-center gap-1 px-4 py-2 border border-white/10 w-fit shadow-md absolute bottom-5 left-4 md:left-0">
+                  <span className="w-2 h-2 rounded-full bg-white/50 md:block hidden"></span>{" "}
+                  <span>Discover, Connect, Transform: Your Energy, Your Choice</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="col-span-2 -ml-48 md:block hidden">
-            <Image
-              src={"/images/bg/ecommerce-guy.png"}
-              alt="a man holding A solar panel"
-              width={700}
-              height={700}
-              className="w-full h-full object-cover"
-            />
+            <div className="col-span-2 -ml-48 md:block hidden">
+              <Image
+                src={"/images/bg/ecommerce-guy.png"}
+                alt="a man holding A solar panel"
+                width={700}
+                height={700}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </header>
+
       <main className="pb-32 space-y-32">
         <section className="mt-28">
           <h2 className="text-3xl text-center font-bold">Why Choose GetEnergy E-Commerce?</h2>

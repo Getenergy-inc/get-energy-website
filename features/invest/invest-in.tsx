@@ -2,9 +2,9 @@
 import { TransitionFromBottom, TransitionFromLeft, TransitionParentInView } from "@/lib/utils/transitions";
 import { ArrowUpIcon } from "lucide-react";
 import Image from "next/image";
-import { useHomeStore } from "../home";
 import { gsap } from "gsap";
 import { useLayoutEffect } from "react";
+import { useHomeStore } from "@/lib/store";
 
 const whatToInvestData = [
   {

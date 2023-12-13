@@ -6,10 +6,10 @@ import Logo from "../../logo";
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { MenuIcon, XIcon } from "lucide-react";
-import { TransitionOpacity, TransitionOpacityAlone, TransitionParentFast } from "@/lib/utils/transitions";
+import { TransitionOpacity, TransitionOpacityAlone } from "@/lib/utils/transitions";
 import { DASHBOARD_URL } from "@/constants/variables";
 
-export default function Header() {
+export default function Navbar() {
   const [show, setShow] = useState(false);
   const location = usePathname();
 
@@ -42,7 +42,6 @@ export default function Header() {
         className={`px-2 py-1 transition-colors duration-200 nav_link font-semibold text-sm lg:mb-0 ${
           location === link.url && "text-[#003b6d]"
         }`}
-        onClick={toggleVisibility}
       >
         {link.title}
       </Link>

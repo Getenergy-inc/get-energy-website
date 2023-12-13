@@ -108,16 +108,18 @@ export default function UpdateMarquee() {
           <div className="m-scroll w-full flex items-center absolute">
             {/* {brandData.map((brand, idx) => (
               <div
-                className="mx-28 cursor-pointer hover:scale-[1.01]"
+                className="mx-12 cursor-pointer hover:scale-[1.01]"
                 style={{ transition: "0.4s ease-in-out all" }}
                 key={idx}
               >
                 {brand}
               </div>
             ))} */}
-            {Array.from({ length: 5 }).map((_, i) => (
-              <div key={i} className="mx-28">
-                <p>Energy Updates Coming Soon...</p>
+            {Array.from({ length: 1 }).map((_, i) => (
+              <div key={i} className="mx-12">
+                <p>
+                  Flash Sale Alert! Grab Your Energy Tokens at Jaw-Dropping Prices - Limited Stock, Maximum Savings!
+                </p>
               </div>
             ))}
           </div>
@@ -125,16 +127,18 @@ export default function UpdateMarquee() {
           <div className="n-scroll w-full flex items-center absolute">
             {/* {brandData.map((brand, idx) => (
               <div
-                className="mx-28 cursor-pointer hover:scale-[1.01]"
+                className="mx-12 cursor-pointer hover:scale-[1.01]"
                 style={{ transition: "0.4s ease-in-out all" }}
                 key={idx + 20}
               >
                 {brand}
               </div>
             ))} */}
-            {Array.from({ length: 5 }).map((_, i) => (
-              <div key={i} className="mx-28">
-                <p>Energy Updates Coming Soon...</p>
+            {Array.from({ length: 1 }).map((_, i) => (
+              <div key={i} className="mx-12">
+                <p>
+                  Flash Sale Alert! Grab Your Energy Tokens at Jaw-Dropping Prices - Limited Stock, Maximum Savings!
+                </p>
               </div>
             ))}
           </div>

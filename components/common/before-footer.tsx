@@ -11,7 +11,7 @@ import {
   AlertDialogTrigger,
 } from "../ui/alert-dialog";
 import { DASHBOARD_URL } from "@/constants/variables";
-import { publicApi } from "@/lib/utils/configs/axiosInstance";
+import { publicApi } from "@/lib/configs/axiosInstance";
 
 interface Props {
   text: string;

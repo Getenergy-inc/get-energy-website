@@ -11,10 +11,11 @@ import quick_buy_img_2 from "@/assets/quick-buy/quick-buy-img-2.png";
 
 // LANDING
 import frame_1 from "@/assets/landing-assets/frame-1.svg";
-import frame_2 from "@/assets/landing-assets/frame-2.svg";
+import frame_2 from "@/assets/landing-assets/ecommerce.svg";
 import frame_3 from "@/assets/landing-assets/frame-3.svg";
 import frame_4 from "@/assets/landing-assets/frame-4.svg";
 import frame_5 from "@/assets/landing-assets/frame-5.svg";
+import frame_fuel from "@/assets/landing-assets/fuel.svg";
 import landing_1 from "@/assets/landing-assets/landing-1.png";
 import landing_2 from "@/assets/landing-assets/landing-2.png";
 import landing_3 from "@/assets/landing-assets/landing-3.png";
@@ -75,6 +76,7 @@ export {
   frame_1,
   frame_2,
   frame_3,
+  frame_fuel,
   frame_4,
   frame_5,
   landing_1,

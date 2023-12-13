@@ -1,12 +1,11 @@
 "use client";
-import { variables } from "@/constants";
 import Link from "next/link";
 import { useEffect } from "react";
 import { gsap } from "gsap";
-import { useHomeStore } from ".";
 import dynamic from "next/dynamic";
 import { MouseIcon } from "lucide-react";
 import { DASHBOARD_URL } from "@/constants/variables";
+import { useHomeStore } from "@/lib/store";
 
 export default function Landing() {
   const { homeRef } = useHomeStore();
@@ -14,13 +13,14 @@ export default function Landing() {
   useEffect(() => {
     const cxt = gsap.context(() => {
       const tl = gsap.timeline();
-      tl.from(".jumbo_text", {
-        opacity: 0,
-        delay: 0.5,
-        ease: "circ",
-        yPercent: 100,
-        stagger: { amount: 0.2 },
-      })
+      tl.set("#landing-header", { visibility: "visible" })
+        .from(".jumbo_text", {
+          opacity: 0,
+          delay: 0.5,
+          ease: "circ",
+          yPercent: 100,
+          stagger: { amount: 0.2 },
+        })
         .from(".jumbo_gtext", { opacity: 0 })
         .from(".jumbo_action", {
           opacity: 0,
@@ -36,7 +36,7 @@ export default function Landing() {
   });
 
   return (
-    <header id="landing-header" className="relative overflow-hidden pb-20">
+    <header id="landing-header" className="relative invisible overflow-hidden pb-20">
       <div className="absolute lg:top-10 md:top-8 md:flex hidden text-xs md:text-base top-5 left-0 w-full items-center justify-center"></div>
       <div className="w-full flex flex-col md:grid z-[50] container mx-auto grid-cols-5 mt-[3rem] gap-6 items-center">
         <div className="w-full col-span-3 space-y-10">
@@ -82,7 +82,7 @@ export default function Landing() {
       </div>
 
       <div className="w-full md:grid hidden place-content-center text-primaryBlue">
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-4 text-sm md:text-base">
           <p className="block md:text-center">
             We are hiring!!{" "}
             <Link href={"/careers"} className="font-semibold text-primaryBlue border-b">

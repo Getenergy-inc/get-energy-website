@@ -5,10 +5,25 @@ import InvestIn from "@/features/invest/invest-in";
 import InvestProcess from "@/features/invest/process";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Invest",
+  description: `Explore Investment Opportunities at GetEnergy. Our Invest page invites you to be part of the energy revolution. Discover lucrative options, fuel your financial growth, and contribute to a sustainable future. Invest confidently with GetEnergy – Empowering Your Portfolio for a Bright Tomorrow.`,
+  alternates: {
+    canonical: "/invest",
+  },
+};
+
 const Invest = () => {
   return (
     <>
-      <header id="invest-jumbo">
+      <header className="relative">
+        <Image
+          src={"/images/bg/invest-bg.png"}
+          alt="background"
+          width={1980}
+          height={700}
+          className="w-full h-full object-cover absolute -z-[1] top-0 left-0"
+        />
         <div className="flex items-center md:py-40 py-20 justify-center container mx-auto sm:w-4/5">
           <div className="text-white/80 space-y-2 pb-4 text-center">
             <h1 className="font-extrabold md:text-5xl text-3xl leading-relaxed">

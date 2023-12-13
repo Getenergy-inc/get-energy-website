@@ -39,36 +39,33 @@ export default function Form() {
 
   return (
     <div className="w-full flex justify-center my-10">
-      <div className="container relative">
-        <div className="max-w-3xl mx-auto bg-primaryBlue text-white flex items-center justify-center rounded-lg p-4">
-          <div className="md:flex grid items-center gap-8">
+      <div className="container shadow-lg bg-white grid-cols-5 lg:gap-24 md:gap-20 md:grid flex flex-col-reverse relative">
+        <div className="col-span-2 px-8 w-full py-16 my-4 mx-2 bg-primaryBlue text-white rounded-lg p-4 relative overflow-hidden">
+          <div className="flex flex-col gap-8">
             {data.map((item) => (
               <div className="flex items-center gap-1" key={item._id}>
-                <Image
-                  src={item.icon}
-                  alt="contact-us"
-                  className="me-3"
-                  width={50}
-                  height={50}
-                />
+                <Image src={item.icon} alt="contact-us" className="me-3" width={50} height={50} />
                 <p className="text-white text-sm font-semibold">{item.text}</p>
               </div>
             ))}
           </div>
+
+          <div className="flex items-center justify-center relative -right-1/2 -bottom-10">
+            <div className="absolute top-0 left-0 flex items-center w-64 h-64 justify-center">
+              <div className="bg-white/10 rounded-full w-full h-full"></div>
+            </div>
+            <div className="absolute top-[74px] left-[51px] flex items-center w-52 h-52 justify-center">
+              <div className="bg-white/10 rounded-full w-full h-full"></div>
+            </div>
+          </div>
         </div>
 
-        <div className="w-full md:w-2/4 mx-auto mt-[8rem] 2xl:w-2/5 md:h-[550px] bg-white rounded-2xl shadow-xl">
+        <div className="w-full col-span-3 mx-auto  rounded-2xl">
           <div className="w-full h-full p-10">
             <h2 className="text-5xl font-medium">Contact Us</h2>
-            <p className="text-gray-700 my-4">
-              We offer 24/7 Services to our customers
-            </p>
+            <p className="text-gray-700 my-4">We offer 24/7 Services to our customers</p>
 
-            <form
-              className="w-full"
-              onSubmit={handleSubmit(onSubmit)}
-              noValidate
-            >
+            <form className="w-full" onSubmit={handleSubmit(onSubmit)} noValidate>
               <div className="w-full grid md:grid-cols-2 gap-3 mt-10">
                 <div>
                   <input
@@ -83,11 +80,7 @@ export default function Form() {
                       },
                     })}
                   />
-                  {errors.name && (
-                    <p className="text-sm font-semibold text-red-500">
-                      {errors.name.message}
-                    </p>
-                  )}
+                  {errors.name && <p className="text-sm font-semibold text-red-500">{errors.name.message}</p>}
                 </div>
                 <div>
                   <input
@@ -101,17 +94,12 @@ export default function Form() {
                         message: "Please provide your email address",
                       },
                       pattern: {
-                        value:
-                          /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                         message: "Invalid email format",
                       },
                     })}
                   />
-                  {errors.email && (
-                    <p className="text-sm font-semibold text-red-500">
-                      {errors.email.message}
-                    </p>
-                  )}
+                  {errors.email && <p className="text-sm font-semibold text-red-500">{errors.email.message}</p>}
                 </div>
               </div>
               <div>
@@ -125,11 +113,7 @@ export default function Form() {
                     },
                   })}
                 />
-                {errors.message && (
-                  <p className="text-sm font-semibold text-red-500">
-                    {errors.message.message}
-                  </p>
-                )}
+                {errors.message && <p className="text-sm font-semibold text-red-500">{errors.message.message}</p>}
               </div>
 
               <button className="mt-5 flex items-center group rounded-full p-2 ps-3 main-bg text-white">
