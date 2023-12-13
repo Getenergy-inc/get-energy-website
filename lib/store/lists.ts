@@ -1,0 +1,135 @@
+export const vendingTypes = [
+  "Community Vending",
+  "Green Energy",
+  "Power generation",
+  "Solar powered system",
+  "Distribution of Meters communities. ",
+  "CNG Gas Generator",
+];
+
+export const benefits = [
+  "Empowering Communities",
+  "Enhanced Accessibility",
+  "Convenient Payment Methods",
+  "Quick Issue Resolution",
+];
+
+export const whyReasons = [
+  "Seamless Transactions: Quick, secure, and easy electricity token purchases.",
+  "Community-Focused: Tailored solutions for estates and gated communities.",
+  "Smart Metering: Take control of your energy consumption with our advanced meters.",
+  "Green Power Options: Embrace a sustainable future with our green energy solutions.",
+];
+
+export const energyKeywords = [
+  "Diesel Supply",
+  "Diesel Fuel Supplier",
+  "Diesel Trading",
+  "Diesel Purchase",
+  "Diesel Sales",
+  "Electricity Provider",
+  "Power Generation",
+  "Energy Solutions",
+  "Renewable Energy",
+  "Sustainable Power",
+  "Airtime Purchase",
+  "Mobile Recharge",
+  "Online Energy Market",
+  "Energy Marketplace",
+  "Diesel Delivery",
+  "Bulk Diesel",
+  "Electricity Plans",
+  "Energy Packages",
+  "Green Energy Options",
+  "Off-Grid Power",
+  "Energy Services",
+  "Power Distribution",
+  "Energy Trading Platform",
+  "Eco-Friendly Energy",
+  "Online Diesel Marketplace",
+  "Electric Power Solutions",
+  "Diesel Price Trends",
+  "Energy Efficiency",
+  "Emergency Power Supply",
+  "Mobile Top-Up",
+  // Additional Keywords
+  "Energy Provider",
+  "Power Supplier",
+  "Energy Trading",
+  "Power Solutions",
+  "Clean Energy",
+  "Fuel Supply",
+  "Grid Power",
+  "Smart Grid Technology",
+  "Alternative Energy",
+  "Fuel Delivery",
+  "Utility Services",
+  "Green Power",
+  "Power Management",
+  "Energy Consumption",
+  "Digital Energy Market",
+  "Smart Energy Solutions",
+  "Mobile Wallet Recharge",
+  "Electricity Rates",
+  "Emergency Diesel Supply",
+  // E-commerce Keywords
+  "Online Marketplace",
+  "E-commerce Platform",
+  "Shop Online",
+  "Buy and Sell",
+  "Online Shopping",
+  "Marketplace App",
+  "Retail Therapy",
+  "E-shop",
+  "Online Store",
+  "Shopping Cart",
+  "Product Catalog",
+  "Secure Payments",
+  "E-commerce Solutions",
+  "Discounted Items",
+  "Virtual Storefront",
+  "Internet Retail",
+  "Consumer Goods",
+  "Shopping Experience",
+  "Digital Commerce",
+  "E-marketplace",
+  "Retail Marketplace",
+];
+
+export const whyReasonsPayBills = [
+  {
+    heading: "Wide Range of Services",
+    body: "Pay for everything in one place, no more jumping between apps.",
+  },
+  {
+    heading: "Secure Transactions",
+    body: "Your financial data, our top priority. Feel safe with every payment.",
+  },
+  {
+    heading: "Time-Saving Convenience",
+    body: "No more queues or late fees – pay bills on your schedule.",
+  },
+  {
+    heading: "Transparent Tracking",
+    body: "Stay in the know with real-time updates on your payments.",
+  },
+];
+
+export const getFuelData = [
+  {
+    heading: "Fuel Variety",
+    body: "Choose from a range of fuels including Regular Gasoline, Eco-Friendly Biofuel, and Supercharged Racing Fuel.",
+  },
+  {
+    heading: "Competitive Prices",
+    body: "Enjoy competitive fuel prices.",
+  },
+  {
+    heading: "Reliable Delivery",
+    body: "Count on prompt and reliable fuel delivery to your doorstep or business.",
+  },
+  {
+    heading: "Bulk Orders for Businesses",
+    body: "For corporate clients, streamline your fuel needs with easy bulk ordering options.",
+  },
+];

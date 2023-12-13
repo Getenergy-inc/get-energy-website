@@ -2,9 +2,9 @@
 import { TransitionFromBottom, TransitionFromLeft, TransitionParentInView } from "@/lib/utils/transitions";
 import { ArrowUpIcon } from "lucide-react";
 import Image from "next/image";
-import { useHomeStore } from "../home";
 import { gsap } from "gsap";
 import { useLayoutEffect } from "react";
+import { useHomeStore } from "@/lib/store";
 
 const whatToInvestData = [
   {
@@ -59,7 +59,7 @@ const InvestIn = () => {
         </div>
       </div>
 
-      <TransitionParentInView className="relative flex justify-center -mt-10 z-50">
+      <TransitionParentInView className="relative flex justify-center ml-auto -mt-10 z-50">
         <TransitionFromLeft className="z-[100] absolute bottom-20 -left-10">
           <div className="py-4 px-8 text-sm bg-white shadow-xl rounded-xl" id="investCard">
             <div className="flex items-center gap-16 justify-between">
@@ -86,7 +86,7 @@ const InvestIn = () => {
             width={400}
             height={600}
             draggable={false}
-            className="z-50"
+            className="z-50 ml-auto"
           />
         </TransitionFromBottom>
       </TransitionParentInView>

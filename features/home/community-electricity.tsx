@@ -1,8 +1,11 @@
+"use client";
+
 import { TransitionFromRight, TransitionOpacityAlone, TransitionParentInView } from "@/lib/utils/transitions";
 import { vendingData } from "./data";
 import { useForm } from "react-hook-form";
 import { FormEvent } from "react";
 import { DASHBOARD_URL } from "@/constants/variables";
+import JoinWaitlistButton from "./join-waitlist-btn";
 
 interface Inputs {
   communityName: string;
@@ -29,6 +32,31 @@ const CommunityElectricityVending = () => {
 
   return (
     <section className="grid md:grid-cols-2 gap-20" id="community-electricity-vending">
+      <div className="relative">
+        <div className="space-y-8">
+          <TransitionOpacityAlone>
+            <h3 className="font-bold text-3xl md:text-4xl">Community Electricity Vending</h3>
+          </TransitionOpacityAlone>
+          <TransitionParentInView className="space-y-6">
+            {vendingData.map((data, i) => (
+              <TransitionFromRight key={i} className="flex items-center gap-8">
+                <div className="flex-shrink-0 w-12 rounded-full h-12 shadow-xl bg-white flex items-center justify-center">
+                  <span className="font-bold text-2xl">{i + 1}.</span>
+                </div>
+                <div className="space-y-3 max-w-lg">
+                  <p className="text-xl font-semibold">{data.title}</p>
+                  <p className="text-zinc-400 leading-loose text-lg">{data.description}</p>
+                </div>
+              </TransitionFromRight>
+            ))}
+          </TransitionParentInView>
+
+          <TransitionOpacityAlone className="grid place-content-center">
+            <JoinWaitlistButton />
+          </TransitionOpacityAlone>
+        </div>
+      </div>
+
       <div className="relative flex py-5 md:py-10 md:pl-10 justify-center">
         <div className="absolute -top-10 left-0 z-10">
           <PeopleSVG />
@@ -108,33 +136,6 @@ const CommunityElectricityVending = () => {
             </div>
           </form>
         </TransitionOpacityAlone>
-      </div>
-
-      <div className="relative">
-        <div className="space-y-8">
-          <TransitionOpacityAlone>
-            <h3 className="font-bold text-3xl md:text-4xl">Community Electricity Vending</h3>
-          </TransitionOpacityAlone>
-          <TransitionParentInView className="space-y-6">
-            {vendingData.map((data, i) => (
-              <TransitionFromRight key={i} className="flex items-center gap-8">
-                <div className="flex-shrink-0 w-12 rounded-full h-12 shadow-xl bg-white flex items-center justify-center">
-                  <span className="font-bold text-2xl">{i + 1}.</span>
-                </div>
-                <div className="space-y-3 max-w-lg">
-                  <p className="text-xl font-semibold">{data.title}</p>
-                  <p className="text-zinc-400 leading-loose text-lg">{data.description}</p>
-                </div>
-              </TransitionFromRight>
-            ))}
-          </TransitionParentInView>
-
-          <TransitionOpacityAlone className="grid place-content-center">
-            <button className="font-bold text-primaryBlue px-6 py-3 rounded-xl bg-primaryBlue/20">
-              Join Wait List
-            </button>
-          </TransitionOpacityAlone>
-        </div>
       </div>
     </section>
   );
