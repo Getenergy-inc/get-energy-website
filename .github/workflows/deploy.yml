@@ -4,13 +4,13 @@ on:
   push:
     branches:
       - 'dev'
-      - 'feature-deploy'
+      - 'main'
 
 jobs:
   deploy-production:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/feature-deploy'
-    
+    if: github.ref == 'refs/heads/main'
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
