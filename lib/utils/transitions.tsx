@@ -25,7 +25,7 @@ interface TransitionProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElemen
   onClick?: () => void;
 }
 
-const windowSize = window.innerWidth;
+const windowSize = typeof window !== "undefined" ? window.innerWidth : 1000;
 
 export const TransitionElement: React.FC<TransitionProps> = ({ children }) => {
   return (

@@ -9,7 +9,7 @@ import { useHomeStore } from "@/lib/store";
 
 export default function Landing() {
   const { homeRef } = useHomeStore();
-  const windowSize = window.innerWidth;
+  const windowSize = typeof window !== "undefined" ? window.innerWidth : 1024;
 
   useEffect(() => {
     if (windowSize > 768) {

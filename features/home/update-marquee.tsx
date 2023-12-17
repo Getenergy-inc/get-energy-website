@@ -52,7 +52,7 @@ export default function UpdateMarquee() {
       />
     </svg>,
     <svg xmlns="http://www.w3.org/2000/svg" width="92" height="38" viewBox="0 0 92 38" fill="none" key={"sdsasw"}>
-      <g clip-path="url(#clip0_5126_43077)">
+      <g clipPath="url(#clip0_5126_43077)">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
