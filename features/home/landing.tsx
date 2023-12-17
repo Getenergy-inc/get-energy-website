@@ -9,26 +9,29 @@ import { useHomeStore } from "@/lib/store";
 
 export default function Landing() {
   const { homeRef } = useHomeStore();
+  const windowSize = window.innerWidth;
 
   useEffect(() => {
-    const cxt = gsap.context(() => {
-      const tl = gsap.timeline();
-      tl.set("#landing-header", { visibility: "visible" })
-        .from(".jumbo_text", {
-          opacity: 0,
-          delay: 0.5,
-          ease: "circ",
-          yPercent: 100,
-          stagger: { amount: 0.2 },
-        })
-        .from(".jumbo_gtext", { opacity: 0 })
-        .from(".jumbo_action", {
-          opacity: 0,
-          stagger: { amount: 0.1 },
-        });
-    }, homeRef);
+    if (windowSize > 768) {
+      const cxt = gsap.context(() => {
+        const tl = gsap.timeline();
+        tl.set("#landing-header", { visibility: "visible" })
+          .from(".jumbo_text", {
+            opacity: 0,
+            delay: 0.5,
+            ease: "circ",
+            yPercent: 100,
+            stagger: { amount: 0.2 },
+          })
+          .from(".jumbo_gtext", { opacity: 0 })
+          .from(".jumbo_action", {
+            opacity: 0,
+            stagger: { amount: 0.1 },
+          });
+      }, homeRef);
 
-    return () => cxt.revert();
+      return () => cxt.revert();
+    }
   }, []);
 
   const LandingIllus = dynamic(() => import("./landing-illus"), {
@@ -36,7 +39,7 @@ export default function Landing() {
   });
 
   return (
-    <header id="landing-header" className="relative invisible overflow-hidden pb-20">
+    <header id="landing-header" className={`relative ${windowSize > 768 ? "invisible" : ""} overflow-hidden pb-20`}>
       <div className="absolute lg:top-10 md:top-8 md:flex hidden text-xs md:text-base top-5 left-0 w-full items-center justify-center"></div>
       <div className="w-full flex flex-col md:grid z-[50] container mx-auto grid-cols-5 mt-[3rem] gap-6 items-center">
         <div className="w-full col-span-3 space-y-10">
