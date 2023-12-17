@@ -41,7 +41,7 @@ export default function Landing() {
   return (
     <header id="landing-header" className={`relative ${windowSize > 768 ? "invisible" : ""} overflow-hidden pb-20`}>
       <div className="absolute lg:top-10 md:top-8 md:flex hidden text-xs md:text-base top-5 left-0 w-full items-center justify-center"></div>
-      <div className="w-full flex flex-col md:grid z-[50] container mx-auto grid-cols-5 mt-[3rem] gap-6 items-center">
+      <div className="w-full flex flex-col md:grid z-[50] container mx-auto grid-cols-5 md:mt-[10rem] mt-[5rem] bg-[#fdfdfd] gap-6 items-center">
         <div className="w-full col-span-3 space-y-10">
           <div className="space-y-5">
             <div className="overflow-hidden pb-2">
