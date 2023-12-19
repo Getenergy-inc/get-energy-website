@@ -24,7 +24,7 @@ const GetFuel = () => {
           height={700}
           className="w-full h-full object-cover absolute -z-[1] top-0 left-0"
         />
-        <div className="flex items-center md:py-32 py-20 justify-center container mx-auto sm:w-4/5">
+        <div className="flex items-center md:py-32 mt-[5rem] py-20 justify-center container mx-auto sm:w-4/5">
           <div className="text-white/80 space-y-2 pb-4 text-center">
             <h1 className="font-bold md:text-5xl text-3xl leading-relaxed">
               Smart Fueling, Seamless Experience <br />

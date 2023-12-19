@@ -25,9 +25,16 @@ interface TransitionProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElemen
   onClick?: () => void;
 }
 
+const windowSize = typeof window !== "undefined" ? window.innerWidth : 1000;
+
 export const TransitionElement: React.FC<TransitionProps> = ({ children }) => {
   return (
-    <motion.div variants={transElementVariant} initial="initial" whileInView="animate" viewport={{ once: true }}>
+    <motion.div
+      variants={windowSize > 768 ? transElementVariant : {}}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+    >
       {children}
     </motion.div>
   );
@@ -36,7 +43,7 @@ export const TransitionElement: React.FC<TransitionProps> = ({ children }) => {
 export const TransitionStart: React.FC<TransitionProps> = ({ children }) => {
   return (
     <motion.div
-      variants={transStartVariant}
+      variants={windowSize > 768 ? transStartVariant : {}}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
@@ -53,7 +60,7 @@ export const TransitionParent: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={defaultParentVariant}
+      variants={windowSize > 768 ? defaultParentVariant : {}}
       initial="initial"
       animate="animate"
       className={`${props.className} ${addClass ?? ""}`}
@@ -68,7 +75,7 @@ export const TransitionParentInView: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={defaultParentVariantInView}
+      variants={windowSize > 768 ? defaultParentVariantInView : {}}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
@@ -84,7 +91,7 @@ export const TransitionParentInViewFast: React.FC<TransitionProps> = (props) => 
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={defaultParentVariantInViewFast}
+      variants={windowSize > 768 ? defaultParentVariantInViewFast : {}}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
@@ -100,7 +107,7 @@ export const TransitionParentInViewSlow: React.FC<TransitionProps> = (props) => 
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={defaultParentVariantInViewSlow}
+      variants={windowSize > 768 ? defaultParentVariantInViewSlow : {}}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
@@ -116,7 +123,7 @@ export const TransitionParentFast: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={defaultParentFastVariant}
+      variants={windowSize > 768 ? defaultParentFastVariant : {}}
       initial="initial"
       animate="animate"
       className={`${props.className} ${addClass ?? ""}`}
@@ -132,7 +139,11 @@ export const TransitionParentFast: React.FC<TransitionProps> = (props) => {
 export const TransitionFromLeft: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
-    <motion.div variants={fromLeftVariant} className={`${props.className} ${addClass ?? ""}`} onClick={onClick}>
+    <motion.div
+      variants={windowSize > 768 ? fromLeftVariant : {}}
+      className={`${props.className} ${addClass ?? ""}`}
+      onClick={onClick}
+    >
       {children}
     </motion.div>
   );
@@ -141,7 +152,11 @@ export const TransitionFromLeft: React.FC<TransitionProps> = (props) => {
 export const TransitionFromRight: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
-    <motion.div variants={fromRightVariant} className={`${props.className} ${addClass ?? ""}`} onClick={onClick}>
+    <motion.div
+      variants={windowSize > 768 ? fromRightVariant : {}}
+      className={`${props.className} ${addClass ?? ""}`}
+      onClick={onClick}
+    >
       {children}
     </motion.div>
   );
@@ -150,7 +165,11 @@ export const TransitionFromRight: React.FC<TransitionProps> = (props) => {
 export const TransitionFromBottom: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
-    <motion.div variants={fromBottomVariant} className={`${props.className} ${addClass ?? ""}`} onClick={onClick}>
+    <motion.div
+      variants={windowSize > 768 ? fromBottomVariant : {}}
+      className={`${props.className} ${addClass ?? ""}`}
+      onClick={onClick}
+    >
       {children}
     </motion.div>
   );
@@ -159,7 +178,11 @@ export const TransitionFromBottom: React.FC<TransitionProps> = (props) => {
 export const TransitionOpacity: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
-    <motion.div variants={opacityAloneVariant} className={`${props.className} ${addClass ?? ""}`} onClick={onClick}>
+    <motion.div
+      variants={windowSize > 768 ? opacityAloneVariant : {}}
+      className={`${props.className} ${addClass ?? ""}`}
+      onClick={onClick}
+    >
       {children}
     </motion.div>
   );
@@ -170,7 +193,7 @@ export const TransitionOpacityAlone: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={opacityAloneVariant}
+      variants={windowSize > 768 ? opacityAloneVariant : {}}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
@@ -186,7 +209,7 @@ export const TransitionFromTopAlone: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={fromTopAloneVariant}
+      variants={windowSize > 768 ? fromTopAloneVariant : {}}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
@@ -203,7 +226,7 @@ export const TransitionFromBottomAlone: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={fromBottomAloneVariant}
+      variants={windowSize > 768 ? fromBottomAloneVariant : {}}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
@@ -220,7 +243,7 @@ export const TransitionFromLeftAlone: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={fromLeftAloneVariant}
+      variants={windowSize > 768 ? fromLeftAloneVariant : {}}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
@@ -237,7 +260,7 @@ export const TransitionFromLeftAloneSlow: React.FC<TransitionProps> = (props) =>
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={fromLeftAloneVariantSlow}
+      variants={windowSize > 768 ? fromLeftAloneVariantSlow : {}}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
@@ -254,7 +277,7 @@ export const TransitionFromRightAlone: React.FC<TransitionProps> = (props) => {
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={fromRightAloneVariant}
+      variants={windowSize > 768 ? fromRightAloneVariant : {}}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
@@ -271,7 +294,7 @@ export const TransitionFromRightAloneSlow: React.FC<TransitionProps> = (props) =
   const { addClass, children, onClick } = props;
   return (
     <motion.div
-      variants={fromRightAloneVariantSlow}
+      variants={windowSize > 768 ? fromRightAloneVariantSlow : {}}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}

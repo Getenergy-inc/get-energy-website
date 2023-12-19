@@ -38,7 +38,7 @@ const EnergyEcommerce = () => {
           />
         </div>
 
-        <div className="absolute top-0 left-0 w-full h-full md:flex md:items-end items-center justify-center">
+        <div className="absolute top-0 left-0 w-full pt-6 h-full md:flex md:items-end items-center justify-center">
           <div className="grid md:grid-cols-5 container mx-auto w-full h-full">
             <div className="flex items-center md:col-span-3 relative">
               <div className="text-white space-y-2 pb-4 text-center mb-8 md:text-start">

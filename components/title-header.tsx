@@ -40,7 +40,7 @@ export default function TitleHeader(props: TitleHeaderProps) {
         </h1>
       </div>
 
-      <div className="absolute top-0 w-full left-0 h-full hidden md:block">
+      <div className="absolute top-0 w-full left-0 h-full hidden md:block pt-6">
         <TransitionOpacity className="hidden w-full h-full md:flex items-center justify-between container mx-auto">
           <h1 className="p-4 md:p-0 text-shadow text-6xl 2xl:text-7xl text-white font-extrabold title_header_con">
             {props.title}

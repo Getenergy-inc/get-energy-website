@@ -13,9 +13,30 @@ export default function Navbar() {
   const [show, setShow] = useState(false);
   const location = usePathname();
 
-  const toggleVisibility = () => setShow(!show);
+  const toggleVisibility = () => {
+    document.body.style.overflowY = show ? "auto" : "hidden";
+
+    setShow(!show);
+  };
 
   const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+    let prevScrollpos = window.scrollY;
+    window.onscroll = () => {
+      const currentScrollPos = window.scrollY;
+      if (prevScrollpos > currentScrollPos) {
+        navRef.current!.style.top = "0";
+      } else {
+        navRef.current!.style.top = "-80px";
+      }
+
+      prevScrollpos = currentScrollPos;
+    };
+
+    // return () => window.removeEventListener('scroll', () => {})
+  }, []);
 
   useEffect(() => {
     const cxt = gsap.context(() => {
@@ -50,7 +71,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav ref={navRef} className="bg-white w-full flex items-center justify-center">
+      <nav
+        ref={navRef}
+        className="bg-white w-full rounded-b-[2rem]flex items-center duration-200 justify-center fixed top-0 left-0 z-[100]"
+      >
         <div className="lg:hidden block bg-white shadow-md shadow-zinc-200 rounded-b-xl w-full">
           <div className="container mx-auto">
             <div className="w-full flex items-center justify-between py-3">
@@ -74,8 +98,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-
-        <div className="bg-white rounded-b-[2rem] hidden lg:block w-full big-shadow z-10">
+        <div className="bg-white rounded-b-[2rem] hidden lg:block w-full shadow-xl z-10">
           <div className="hidden lg:flex container w-full items-center py-4 justify-between">
             <Logo size={100} />
 
